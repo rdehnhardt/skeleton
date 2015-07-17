@@ -4,11 +4,11 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content=""/>
+    <meta name="description" content="{{ config('app.description') }}"/>
     <meta name="author" content=""/>
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Front - @yield('title', 'Missing title')</title>
+    <title>{{ config('app.name') }} - @yield('title', 'Missing title')</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="{{ elixir('css/front.css') }}"/>
