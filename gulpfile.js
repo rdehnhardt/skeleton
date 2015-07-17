@@ -10,7 +10,8 @@ elixir(function(mix) {
  mix.scripts([
   "jquery/dist/jquery.js",
   "jquery.easing/jquery.easing.js",
-  "bootstrap-sass/assets/javascripts/bootstrap.js"
+     "bootstrap-sass/assets/javascripts/bootstrap.js",
+     "sweetalert/dist/sweetalert.min.js"
  ], 'public/js/back/vendor.js', 'node_modules');
 
  mix.scripts([

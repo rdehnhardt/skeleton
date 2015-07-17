@@ -5,11 +5,11 @@
 		"delete-record.js"
 	],
 	"names": [],
-	"mappings": "AAAA;AACA;AACA;AACA;AACA;AACA;AACA;ACNA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA",
+	"mappings": "AAAA;AACA;AACA;AACA;AACA;AACA;AACA;ACNA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA",
 	"file": "app.js",
 	"sourcesContent": [
 		"$(document).ready(function () {\n\n    $(this).on('click', 'a', function (e) {\n        $(this).blur();\n    });\n\n});",
-		"$(document).ready(function () {\n\n    $(this).on('submit', '.delete-record', function (e) {\n        if (!confirm('This operation will remove this record.\\n\\nContinue?')) {\n            e.preventDefault();\n        }\n    });\n\n});"
+		"$(document).ready(function () {\n\n    $(this).on('submit', '.delete-record', function (e) {\n        swal({\n            title: \"Are you sure?\",\n            text: \"You will not be able to recover this record!\",\n            type: \"warning\",\n            showCancelButton: true,\n            confirmButtonColor: \"#DD6B55\",\n            confirmButtonText: \"Yes, delete it!\",\n            closeOnConfirm: false\n        }, function () {\n            swal(\"Deleted!\", \"Your record has been deleted.\", \"success\");\n        });\n    });\n\n});"
 	],
 	"sourceRoot": "/source/"
 }

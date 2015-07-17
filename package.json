@@ -4,7 +4,8 @@
     "bootswatch": "^3.3.5",
     "gulp": "^3.8.8",
     "jquery": "^2.1.4",
-    "jquery.easing": "^1.3.2"
+    "jquery.easing": "^1.3.2",
+    "sweetalert": "^1.0.1"
   },
   "dependencies": {
     "laravel-elixir": "^2.0.0",
