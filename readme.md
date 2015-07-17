@@ -45,7 +45,7 @@ gulp watch
 gulp --production
 ```
 
-# Screenshots
+# Back Screenshots
 
 ## Login
 ![alt text](https://raw.githubusercontent.com/rdehnhardt/skeleton/master/public/img/screen/skeleton-auth.jpg "Login")
