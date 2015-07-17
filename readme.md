@@ -2,10 +2,12 @@
 
 To use this project, make a fork
 
-## Admin user ans password
+## Admin user and password
 
+```
 user: admin@domain.com
 pass: admin
+```
 
 ## How to install
 
