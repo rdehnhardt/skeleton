@@ -1,12 +1,14 @@
 {
 	"version": 3,
 	"sources": [
+		"blur-link.js",
 		"delete-record.js"
 	],
 	"names": [],
-	"mappings": "AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA",
+	"mappings": "AAAA;AACA;AACA;AACA;AACA;AACA;AACA;ACNA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA",
 	"file": "app.js",
 	"sourcesContent": [
+		"$(document).ready(function () {\n\n    $(this).on('click', 'a', function (e) {\n        $(this).blur();\n    });\n\n});",
 		"$(document).ready(function () {\n\n    $(this).on('submit', '.delete-record', function (e) {\n        if (!confirm('This operation will remove this record.\\n\\nContinue?')) {\n            e.preventDefault();\n        }\n    });\n\n});"
 	],
 	"sourceRoot": "/source/"

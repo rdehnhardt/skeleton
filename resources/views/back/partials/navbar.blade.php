@@ -21,6 +21,7 @@
 
                     <ul class="dropdown-menu">
                         <li><a href="{{ route('back.foo.bar.index') }}">Bar</a></li>
+                        <li><a href="{{ route('dashboard.panel') }}">Panel with tabs</a></li>
                     </ul>
                 </li>
             </ul>
