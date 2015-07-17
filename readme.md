@@ -7,25 +7,31 @@ To use this project, make a fork
 First make storage folder writable. 
 
 ```
-composer install
+cp .env.example .env
 ```
 
-and
+```
+composer install
+```
 
 ```
 php artisan migrate --seed
 ```
 
-# Elixir
+# Front-end development
 
 ```
 npm install
 ```
 
-and 
-
 ```
 gulp watch
+```
+
+## Make production
+
+```
+gulp --production
 ```
 
 # Screenshots
