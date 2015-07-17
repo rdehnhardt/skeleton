@@ -2,6 +2,11 @@
 
 To use this project, make a fork
 
+## Admin user ans password
+
+user: admin@domain.com
+pass: admin
+
 ## How to install
 
 First make storage folder writable. 
