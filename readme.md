@@ -30,3 +30,9 @@ gulp watch
 
 ## Login
 ![alt text](https://raw.githubusercontent.com/rdehnhardt/skeleton/master/public/img/screen/skeleton-auth.jpg "Login")
+
+## Dashboard
+![alt text](https://raw.githubusercontent.com/rdehnhardt/skeleton/master/public/img/screen/skeleton-dashboard.jpg "Dashboard")
+
+## List
+![alt text](https://raw.githubusercontent.com/rdehnhardt/skeleton/master/public/img/screen/skeleton-list.jpg "List")
