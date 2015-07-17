@@ -8,7 +8,7 @@
     <meta name="author" content=""/>
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Painel - @yield('title', 'Missing title')</title>
+    <title>Front - @yield('title', 'Missing title')</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="{{ elixir('css/front.css') }}"/>
