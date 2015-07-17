@@ -4,6 +4,8 @@ To use this project, make a fork
 
 ## How to install
 
+First make storage folder writable. 
+
 ```
 composer install
 ```
