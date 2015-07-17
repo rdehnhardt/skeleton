@@ -33,7 +33,7 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 {!! Form::openFormActions() !!}
-                                {!! Form::submit('Create', ['class' => 'btn btn-primary form-action']) !!}
+                                {!! Form::submit('Save', ['class' => 'btn btn-primary form-action']) !!}
                                 {!! Form::closeFormActions() !!}
                             </div>
                         </div>
