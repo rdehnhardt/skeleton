@@ -1,0 +1,21 @@
+main {
+  padding: 5%;
+
+  .container-fluid {
+    width: 400px;
+  }
+
+  .panel-body {
+    padding: 30px 40px;
+  }
+
+  .no-label {
+    label {
+      display: none;
+    }
+  }
+
+  .form-actions {
+    margin-bottom: 20px;
+  }
+}

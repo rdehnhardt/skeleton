@@ -1,0 +1,20 @@
+.panel {
+  .panel-heading {
+    .panel-title {
+      &.pull-left {
+        padding-top: 8.5px;
+      }
+    }
+
+    .form-control {
+      width: 200px;
+      float: right;
+    }
+  }
+
+  &-default {
+    border: 1px solid #ccc;
+    border-bottom: 2px solid #bbb;
+    border-top: 1px solid #ddd;
+  }
+}
