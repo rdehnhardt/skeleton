@@ -5,3 +5,6 @@ Homestead.yaml
 
 composer.lock
 .idea
+
+public/css
+public/js
