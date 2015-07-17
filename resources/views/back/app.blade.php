@@ -31,7 +31,7 @@
 
 @include('back.partials.footer')
 
-<script src="{{ elixir('js/vendor-back.js') }}"></script>
-<script src="{{ elixir('js/back.js') }}"></script>
+<script src="{{ elixir('js/back/vendor.js') }}"></script>
+<script src="{{ elixir('js/back/app.js') }}"></script>
 </body>
 </html>

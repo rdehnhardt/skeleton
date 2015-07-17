@@ -1,7 +1,10 @@
 {
   "private": true,
   "devDependencies": {
-    "gulp": "^3.8.8"
+    "bootswatch": "^3.3.5",
+    "gulp": "^3.8.8",
+    "jquery": "^2.1.4",
+    "jquery.easing": "^1.3.2"
   },
   "dependencies": {
     "laravel-elixir": "^2.0.0",

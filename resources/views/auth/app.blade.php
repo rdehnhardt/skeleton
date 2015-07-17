@@ -43,7 +43,7 @@
     </div>
 </main>
 
-<script src="{{ elixir('js/vendor-auth.js') }}"></script>
-<script src="{{ elixir('js/auth.js') }}"></script>
+<script src="{{ elixir('js/auth/vendor.js') }}"></script>
+<script src="{{ elixir('js/auth/app.js') }}"></script>
 </body>
 </html>

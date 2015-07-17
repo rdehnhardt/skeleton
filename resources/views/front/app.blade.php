@@ -22,7 +22,7 @@
 <body>
 @yield('content')
 
-<script src="{{ elixir('js/vendor-front.js') }}"></script>
-<script src="{{ elixir('js/front.js') }}"></script>
+<script src="{{ elixir('js/front/vendor.js') }}"></script>
+<script src="{{ elixir('js/front/app.js') }}"></script>
 </body>
 </html>

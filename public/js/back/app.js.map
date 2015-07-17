@@ -1,0 +1,13 @@
+{
+	"version": 3,
+	"sources": [
+		"delete-record.js"
+	],
+	"names": [],
+	"mappings": "AAAA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA",
+	"file": "app.js",
+	"sourcesContent": [
+		"$(document).ready(function () {\n\n    $(this).on('submit', '.delete-record', function (e) {\n        if (!confirm('This operation will remove this record.\\n\\nContinue?')) {\n            e.preventDefault();\n        }\n    });\n\n});"
+	],
+	"sourceRoot": "/source/"
+}
