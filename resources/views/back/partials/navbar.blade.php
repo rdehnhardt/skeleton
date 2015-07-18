@@ -9,7 +9,7 @@
                 <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="#">Project name</a>
+            <a class="navbar-brand" href="#">{{ config('app.name') }}</a>
         </div>
 
         <div id="navbar" class="collapse navbar-collapse">
