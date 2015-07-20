@@ -1,9 +1,9 @@
 @extends('back.app')
 
-@section('title', 'Foo » Bar')
+@section('title', 'System » Users')
 
 @section('page-actions')
-    <a href="{{ route('back.foo.bar.create') }}" class="btn btn-primary"><i class="fa fa-plus"></i> Create</a>
+    <a href="{{ route('back.system.users.create') }}" class="btn btn-primary"><i class="fa fa-plus"></i> Create</a>
 @stop
 
 @section('content')
@@ -14,7 +14,7 @@
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="panel panel-default">
                             <div class="panel-heading">
-                                <h3 class="panel-title">List of bar</h3>
+                                <h3 class="panel-title">List of users</h3>
                             </div>
 
                             <div class="panel-body">
@@ -40,8 +40,8 @@
                                         <thead>
                                         <tr>
                                             <th width="5%">#</th>
-                                            <th>Title</th>
-                                            <th>Status</th>
+                                            <th>Name</th>
+                                            <th>Email</th>
                                             <th width="1%">&nbsp;</th>
                                         </tr>
                                         </thead>
@@ -49,20 +49,14 @@
                                         @foreach($records as $record)
                                             <tr>
                                                 <td>{{ $record->id }}</td>
-                                                <td>{{ $record->title }}</td>
-                                                <td>
-                                                    @if ($record->status)
-                                                        <span class="label label-success">Active</span>
-                                                    @else
-                                                        <span class="label label-danger">Inactive</span>
-                                                    @endif
-                                                </td>
+                                                <td>{{ $record->name }}</td>
+                                                <td>{{ $record->email }}</td>
                                                 <td class="table-actions">
-                                                    {!! Form::open(['method' => 'get', 'route' => ['back.foo.bar.edit', $record->id]]) !!}
+                                                    {!! Form::open(['method' => 'get', 'route' => ['back.system.users.edit', $record->id]]) !!}
                                                     {!! Form::button('editar', ['type' => 'submit', 'class' => 'btn btn-default btn-xs']) !!}
                                                     {!! Form::close() !!}
 
-                                                    {!! Form::open(['method' => 'delete', 'class' => 'delete-record', 'data-confirm' => 'You will not be able to recover this record!', 'route' => ['back.foo.bar.destroy', $record->id]]) !!}
+                                                    {!! Form::open(['method' => 'delete', 'class' => 'delete-record', 'data-confirm' => 'You will not be able to recover this record!', 'route' => ['back.system.users.destroy', $record->id]]) !!}
                                                     {!! Form::button('remover', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs']) !!}
                                                     {!! Form::close() !!}
                                                 </td>

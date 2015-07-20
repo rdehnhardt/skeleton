@@ -2,6 +2,7 @@
   "private": true,
   "devDependencies": {
     "bootswatch": "^3.3.5",
+    "font-awesome": "^4.3.0",
     "gulp": "^3.8.8",
     "jquery": "^2.1.4",
     "jquery.easing": "^1.3.2",

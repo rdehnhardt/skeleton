@@ -540,7 +540,7 @@
 
 		if (type === "function" || jQuery.isWindow(obj)) {
 			return false;
-		}
+	}
 
 		if (obj.nodeType === 1 && length) {
 			return true;
@@ -990,7 +990,7 @@
 							if (seed[(j = matchIndexes[i])]) {
 								seed[j] = !(matches[j] = seed[j]);
 				}
-						}
+			}
 					});
 				});
 			}
@@ -1700,7 +1700,7 @@
 											while ((node = node[dir])) {
 												if (ofType ? node.nodeName.toLowerCase() === name : node.nodeType === 1) {
 													return false;
-												}
+									}
 											}
 											// Reverse direction for :only-* (if we haven't yet done so)
 											start = dir = type === "only" && !start && "nextSibling";
@@ -1788,7 +1788,7 @@
 									while (i--) {
 										idx = indexOf(seed, matched[i]);
 										seed[idx] = !( matches[idx] = matched[i] );
-									}
+						}
 								}) :
 								function (elem) {
 									return fn(elem, 0, args);
@@ -2155,7 +2155,7 @@
 						while (i--) {
 							if (!matchers[i](elem, context, xml)) {
 								return false;
-							}
+				}
 			}
 						return true;
 					} :
@@ -2253,7 +2253,7 @@
 									if ((elem = matcherOut[i])) {
 										// Restore matcherIn since elem is not yet a final match
 										temp.push((matcherIn[i] = elem));
-									}
+						}
 					}
 								postFinder(null, (matcherOut = []), temp, xml);
 							}
@@ -2280,7 +2280,7 @@
 							postFinder(null, results, matcherOut, xml);
 						} else {
 							push.apply(results, matcherOut);
-						}
+			}
 					}
 				});
 			}
@@ -2323,7 +2323,7 @@
 								if (Expr.relative[tokens[j].type]) {
 									break;
 					}
-							}
+				}
 							return setMatcher(
 								i > 1 && elementMatcher(matchers),
 								i > 1 && toSelector(
@@ -2957,7 +2957,7 @@
 			return this.add(selector == null ?
 					this.prevObject : this.prevObject.filter(selector)
 			);
-		}
+	}
 	});
 
 	function sibling(cur, dir) {
@@ -3164,14 +3164,14 @@
 								if (firing) {
 									if (index <= firingLength) {
 										firingLength--;
-									}
+								}
 									if (index <= firingIndex) {
 										firingIndex--;
 									}
 								}
 						}
 						});
-					}
+				}
 					return this;
 				},
 				// Check if a given callback is in the list.
@@ -3199,7 +3199,7 @@
 					stack = undefined;
 					if (!memory) {
 						self.disable();
-					}
+				}
 					return this;
 				},
 				// Is it locked?
@@ -3215,8 +3215,8 @@
 							stack.push(args);
 						} else {
 							fire(args);
+						}
 					}
-				}
 					return this;
 				},
 				// Call all the callbacks with the given arguments
@@ -3247,11 +3247,11 @@
 				promise = {
 					state: function () {
 						return state;
-					},
+				},
 					always: function () {
 						deferred.done(arguments).fail(arguments);
 						return this;
-					},
+				},
 					then: function (/* fnDone, fnFail, fnProgress */) {
 						var fns = arguments;
 						return jQuery.Deferred(function (newDefer) {
@@ -3268,11 +3268,11 @@
 									} else {
 										newDefer[tuple[0] + "With"](this === promise ? newDefer.promise() : this, fn ? [returned] : arguments);
 									}
-							});
+								});
 							});
 							fns = null;
 						}).promise();
-				},
+					},
 					// Get a promise for this deferred
 					// If obj is provided, the promise aspect is added to the object
 					promise: function (obj) {
@@ -3364,7 +3364,7 @@
 						--remaining;
 				}
 			}
-			}
+		}
 
 			// If we're not waiting on anything, resolve the master
 			if (!remaining) {
@@ -3705,7 +3705,7 @@
 		discard: function (owner) {
 			if (owner[this.expando]) {
 				delete this.cache[owner[this.expando]];
-			}
+		}
 		}
 	};
 	var data_priv = new Data();
@@ -3842,7 +3842,7 @@
 					data = data_user.get(elem, camelKey);
 					if (data !== undefined) {
 						return data;
-					}
+				}
 
 					// Attempt to "discover" the data in
 					// HTML5 custom data-* attrs
@@ -3932,7 +3932,7 @@
 				// Clear up the last queue stop function
 				delete hooks.stop;
 				fn.call(elem, next, hooks);
-			}
+		}
 
 			if (!startLength && hooks) {
 				hooks.empty.fire();
@@ -4179,7 +4179,7 @@
 					if (!handleObj.handler.guid) {
 						handleObj.handler.guid = handler.guid;
 				}
-				}
+			}
 
 				// Add to the element's handler list, delegates in front
 				if (selector) {
@@ -4337,7 +4337,7 @@
 				// Only add window if we got to document (e.g., not plain obj or detached DOM)
 				if (tmp === (elem.ownerDocument || document)) {
 					eventPath.push(tmp.defaultView || tmp.parentWindow || window);
-				}
+			}
 			}
 
 			// Fire handlers on the event path
@@ -4860,7 +4860,7 @@
 				};
 				// Use same guid so caller can remove using origFn
 				fn.guid = origFn.guid || ( origFn.guid = jQuery.guid++ );
-			}
+		}
 			return this.each(function () {
 				jQuery.event.add(this, types, fn, data, selector);
 			});
@@ -4886,7 +4886,7 @@
 					this.off(type, selector, types[type]);
 			}
 				return this;
-		}
+			}
 			if (selector === false || typeof selector === "function") {
 				// ( types [, fn] )
 				fn = selector;
@@ -4909,7 +4909,7 @@
 			var elem = this[0];
 			if (elem) {
 				return jQuery.event.trigger(type, data, elem, true);
-			}
+		}
 		}
 	});
 
@@ -5794,7 +5794,7 @@
 				// border-box includes padding, so remove it if we want content
 				if (extra === "content") {
 					val -= jQuery.css(elem, "padding" + cssExpand[i], true, styles);
-				}
+			}
 
 				// At this point, extra isn't border nor margin, so remove border
 				if (extra !== "margin") {
@@ -5807,7 +5807,7 @@
 				// At this point, extra isn't content nor padding, so add border
 				if (extra !== "padding") {
 					val += jQuery.css(elem, "border" + cssExpand[i] + "Width", true, styles);
-				}
+			}
 			}
 	}
 
@@ -5877,7 +5877,7 @@
 				// being hidden by cascaded rules or not
 				if (!values[index] && display === "none") {
 					elem.style.display = "";
-				}
+			}
 
 				// Set elements which have been overridden with display: none
 				// in a stylesheet to whatever the default browser style is
@@ -5891,8 +5891,8 @@
 				if (display !== "none" || !hidden) {
 					data_priv.set(elem, "olddisplay", hidden ? display : jQuery.css(elem, "display"));
 			}
-		}
-		}
+			}
+	}
 
 		// Set the display of most of the elements in a second loop
 		// to avoid the constant reflow
@@ -5996,7 +5996,7 @@
 				// If a hook was provided, use that value, otherwise just set the specified value
 				if (!hooks || !("set" in hooks) || (value = hooks.set(elem, value, extra)) !== undefined) {
 					style[name] = value;
-				}
+			}
 
 			} else {
 				// If a hook was provided get the non-computed value from there
@@ -6027,7 +6027,7 @@
 			// Otherwise, if a way to get the computed value exists, use that
 			if (val === undefined) {
 				val = curCSS(elem, name, styles);
-			}
+		}
 
 			// Convert "normal" to computed value
 			if (val === "normal" && name in cssNormalTransform) {
@@ -6201,7 +6201,7 @@
 				hooks.set(this);
 			} else {
 				Tween.propHooks._default.set(this);
-			}
+		}
 			return this;
 		}
 	};
@@ -6343,7 +6343,7 @@
 		for (; i < 4; i += 2 - includeWidth) {
 			which = cssExpand[i];
 			attrs["margin" + which] = attrs["padding" + which] = type;
-		}
+	}
 
 		if (includeWidth) {
 			attrs.opacity = attrs.width = type;
@@ -6489,7 +6489,7 @@
 					if (hidden) {
 						tween.end = tween.start;
 						tween.start = prop === "width" || prop === "height" ? 1 : 0;
-					}
+				}
 				}
 		}
 
@@ -6776,7 +6776,7 @@
 				// will dequeue but only if they were gotoEnd.
 				if (dequeue || !gotoEnd) {
 					jQuery.dequeue(this, type);
-				}
+			}
 			});
 		},
 		finish: function (type) {
@@ -7067,7 +7067,7 @@
 					name.toLowerCase() :
 					null;
 				attrHandle[name] = handle;
-			}
+		}
 			return ret;
 	};
 	});
@@ -7139,7 +7139,7 @@
 				var parent = elem.parentNode;
 				if (parent && parent.parentNode) {
 					parent.parentNode.selectedIndex;
-				}
+			}
 				return null;
 			}
 		};
@@ -7461,7 +7461,7 @@
 		if (!support.checkOn) {
 			jQuery.valHooks[this].get = function (elem) {
 				return elem.getAttribute("value") === null ? "on" : elem.value;
-			};
+		};
 		}
 	});
 
@@ -7646,7 +7646,7 @@
 	}
 		if (deep) {
 			jQuery.extend(true, target, deep);
-		}
+	}
 
 		return target;
 	}
@@ -8168,7 +8168,7 @@
 					} else {
 						throw e;
 				}
-				}
+			}
 			}
 
 			// Callback for when everything is done
@@ -8302,7 +8302,7 @@
 				type = type || callback;
 				callback = data;
 				data = undefined;
-			}
+		}
 
 		return jQuery.ajax({
 			url: url,
@@ -8913,7 +8913,7 @@
 			// Set position first, in-case top/left are set even on static elem
 			if (position === "static") {
 				elem.style.position = "relative";
-			}
+		}
 
 			curOffset = curElem.offset();
 			curCSSTop = jQuery.css(elem, "top");
@@ -8931,11 +8931,11 @@
 			} else {
 				curTop = parseFloat(curCSSTop) || 0;
 				curLeft = parseFloat(curCSSLeft) || 0;
-		}
+			}
 
 			if (jQuery.isFunction(options)) {
 				options = options.call(elem, i, curOffset);
-			}
+		}
 
 			if (options.top != null) {
 				props.top = ( options.top - curOffset.top ) + curTop;

@@ -1,9 +1,9 @@
 @extends('back.app')
 
-@section('title', 'Foo » Bar » Edit')
+@section('title', 'System » Users » Edit')
 
 @section('page-actions')
-    <a href="{{ URL::previous() }}" class="btn btn-default"><i class="fa fa-arro-left"></i> Back</a>
+    <a href="{{ URL::previous() }}" class="btn btn-default"><i class="fa fa-arrow-left"></i> Back</a>
 @stop
 
 @section('content')
@@ -12,20 +12,26 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Edit "{{ $record->title }}"</h3>
+                        <h3 class="panel-title">Edit "{{ $record->name }}" user</h3>
                     </div>
                     <div class="panel-body">
                         {!! Form::model($record, ['route' => ['back.foo.bar.update', $record->id], 'method' => 'put']) !!}
                         <div class="row">
-                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                {!! Form::openGroup('title', 'Title') !!}
-                                {!! Form::text('title', null, ['placeholder' => 'Set Title']) !!}
+                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                {!! Form::openGroup('name', 'Name') !!}
+                                {!! Form::text('name', null, ['placeholder' => 'Set user name']) !!}
                                 {!! Form::closeGroup() !!}
                             </div>
 
-                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-                                {!! Form::openGroup('status', 'Status') !!}
-                                {!! Form::select('status', [0 => 'Inactive', 1 => 'Active']) !!}
+                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                {!! Form::openGroup('password', 'Password') !!}
+                                {!! Form::email('email', null, ['placeholder' => 'Set user email']) !!}
+                                {!! Form::closeGroup() !!}
+                            </div>
+
+                            <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                                {!! Form::openGroup('password', 'Password') !!}
+                                {!! Form::password('password', ['placeholder' => 'Set user password']) !!}
                                 {!! Form::closeGroup() !!}
                             </div>
                         </div>
