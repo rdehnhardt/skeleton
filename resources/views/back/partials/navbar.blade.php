@@ -40,6 +40,8 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false"><img src="{{ Auth::user()->gravatar }}" alt="avatar" class="img-circle"> {{ Auth::user()->name }} <span class="caret"></span></a>
                     <ul class="dropdown-menu">
+                        <li><a href="{{ route('back.profile.index') }}">{{ trans('dictionary.profile') }}</a></li>
+                        <li class="divider"></li>
                         <li><a href="/auth/logout">Logout</a></li>
                     </ul>
                 </li>
