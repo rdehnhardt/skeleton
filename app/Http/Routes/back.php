@@ -1,23 +1,14 @@
 <?php
 
-/**
- * Dashboard
- */
 Route::get('/', ['as' => 'dashboard', 'uses' => 'Dashboard\DefaultController@index']);
+Route::resource('profile', 'Dashboard\ProfileController', ['only' => ['index', 'update']]);
 
-/**
- * Just example
- */
 Route::get('/panel-with-tabs', ['as' => 'dashboard.panel', 'uses' => 'Dashboard\DefaultController@panel']);
 
-/**
- * Foo
- */
 Route::group(['prefix' => 'foo', 'namespace' => 'Foo'], function () {
-
-    /**
-     * Bar
-     */
     Route::resource('bar', 'BarController');
+});
 
+Route::group(['prefix' => 'system', 'namespace' => 'System'], function () {
+    Route::resource('users', 'UsersController');
 });

@@ -1,9 +1,20 @@
-$(document).ready(function () {
+document.querySelector('form[data-confirm]').addEventListener('submit', function (e) {
+    var form = $(this);
+    e.preventDefault();
 
-    $(this).on('submit', '.delete-record', function (e) {
-        if (!confirm('This operation will remove this record.\n\nContinue?')) {
-            e.preventDefault();
+    swal({
+        title: "Are you sure?",
+        text: form.data('confirm'),
+        type: "warning",
+        showCancelButton: true,
+        confirmButtonColor: '#DD6B55',
+        confirmButtonText: 'Yes, I am sure!',
+        cancelButtonText: "No, cancel it!",
+        closeOnConfirm: false,
+        closeOnCancel: true
+    }, function (isConfirm) {
+        if (isConfirm) {
+            form.submit();
         }
     });
-
 });

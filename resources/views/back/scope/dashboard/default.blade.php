@@ -1,6 +1,6 @@
 @extends('back.app')
 
-@section('title', 'Dashboard')
+@section('title', trans('base.dashboard'))
 
 @section('content')
 

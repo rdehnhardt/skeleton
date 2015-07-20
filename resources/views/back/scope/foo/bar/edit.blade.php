@@ -3,7 +3,7 @@
 @section('title', 'Foo » Bar » Edit')
 
 @section('page-actions')
-    <a href="{{ URL::previous() }}" class="btn btn-default">Back</a>
+    <a href="{{ URL::previous() }}" class="btn btn-default"><i class="fa fa-arro-left"></i> Back</a>
 @stop
 
 @section('content')
@@ -33,7 +33,7 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 {!! Form::openFormActions() !!}
-                                {!! Form::submit('Save', ['class' => 'btn btn-primary form-action']) !!}
+                                {!! Form::button('<i class="fa fa-save"></i> Save', ['class' => 'btn btn-primary form-action', 'type' => 'submit']) !!}
                                 {!! Form::closeFormActions() !!}
                             </div>
                         </div>

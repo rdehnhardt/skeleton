@@ -1,9 +1,16 @@
 {
   "css/front.css": "css/front-67886b97.css",
+<<<<<<< HEAD
   "css/back.css": "css/back-58b15c1b.css",
   "css/auth.css": "css/auth-3c75ff78.css",
   "js/back/vendor.js": "js/back/vendor-244dbcbb.js",
   "js/back/app.js": "js/back/app-66c6f562.js",
+=======
+  "css/back.css": "css/back-a5b7f1d4.css",
+  "css/auth.css": "css/auth-5867dc97.css",
+  "js/back/vendor.js": "js/back/vendor-35e669e3.js",
+  "js/back/app.js": "js/back/app-239f2aa3.js",
+>>>>>>> upstream/master
   "js/auth/vendor.js": "js/auth/vendor-244dbcbb.js",
   "js/auth/app.js": "js/auth/app-a4fac8a4.js",
   "js/front/vendor.js": "js/front/vendor-244dbcbb.js",

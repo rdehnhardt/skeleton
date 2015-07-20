@@ -70,3 +70,6 @@ gulp --production
 
 ## Panel with tabs
 ![alt text](https://raw.githubusercontent.com/rdehnhardt/skeleton/master/public/img/screen/skeleton-panel-with-tabs.jpg "Validation")
+
+## sweetAlerts
+![alt text](https://raw.githubusercontent.com/rdehnhardt/skeleton/master/public/img/screen/skeleton-with-alerts.jpg "Alerts")
