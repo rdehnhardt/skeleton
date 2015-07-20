@@ -229,9 +229,9 @@
 						// Don't bring in undefined values
 					} else if (copy !== undefined) {
 						target[name] = copy;
-					}
 				}
 			}
+		}
 		}
 
 		// Return the modified object
@@ -325,7 +325,7 @@
 					// Otherwise, avoid the DOM node creation, insertion
 					// and removal by using an indirect global eval
 					indirect(code);
-				}
+			}
 			}
 		},
 
@@ -354,7 +354,7 @@
 
 						if (value === false) {
 							break;
-						}
+					}
 					}
 				} else {
 					for (i in obj) {
@@ -362,8 +362,8 @@
 
 						if (value === false) {
 							break;
-						}
 					}
+				}
 				}
 
 				// A special, fast, case for the most common use of each
@@ -374,7 +374,7 @@
 
 						if (value === false) {
 							break;
-						}
+					}
 					}
 				} else {
 					for (i in obj) {
@@ -382,9 +382,9 @@
 
 						if (value === false) {
 							break;
-						}
 					}
 				}
+			}
 			}
 
 			return obj;
@@ -409,7 +409,7 @@
 					);
 				} else {
 					push.call(ret, arr);
-				}
+			}
 			}
 
 			return ret;
@@ -446,7 +446,7 @@
 				callbackInverse = !callback(elems[i], i);
 				if (callbackInverse !== callbackExpect) {
 					matches.push(elems[i]);
-				}
+			}
 			}
 
 			return matches;
@@ -467,7 +467,7 @@
 
 					if (value != null) {
 						ret.push(value);
-					}
+				}
 				}
 
 				// Go through every key on the object,
@@ -477,8 +477,8 @@
 
 					if (value != null) {
 						ret.push(value);
-					}
 				}
+			}
 			}
 
 			// Flatten any nested arrays
@@ -544,7 +544,7 @@
 
 		if (obj.nodeType === 1 && length) {
 			return true;
-		}
+	}
 
 		return type === "array" || length === 0 ||
 			typeof length === "number" && length > 0 && ( length - 1 ) in obj;
@@ -783,19 +783,19 @@
 									// by name instead of ID
 									if (elem.id === m) {
 										results.push(elem);
-										return results;
-									}
+							return results;
+						}
 								} else {
 									return results;
-								}
+					}
 							} else {
 								// Context is not a document
 								if (context.ownerDocument && (elem = context.ownerDocument.getElementById(m)) &&
 									contains(context, elem) && elem.id === m) {
 									results.push(elem);
 									return results;
-								}
-							}
+					}
+				}
 
 							// Speed-up: Sizzle("TAG")
 						} else if (match[2]) {
@@ -806,7 +806,7 @@
 						} else if ((m = match[3]) && support.getElementsByClassName) {
 							push.apply(results, context.getElementsByClassName(m));
 							return results;
-						}
+			}
 					}
 
 					// QSA path
@@ -826,7 +826,7 @@
 								nid = old.replace(rescape, "\\$&");
 							} else {
 								context.setAttribute("id", nid);
-							}
+				}
 							nid = "[id='" + nid + "'] ";
 
 							i = groups.length;
@@ -835,21 +835,21 @@
 							}
 							newContext = rsibling.test(selector) && testContext(context.parentNode) || context;
 							newSelector = groups.join(",");
-						}
+			}
 
 						if (newSelector) {
-							try {
-								push.apply(results,
-									newContext.querySelectorAll(newSelector)
-								);
-								return results;
-							} catch (qsaError) {
-							} finally {
-								if (!old) {
-									context.removeAttribute("id");
-								}
-							}
-						}
+				try {
+					push.apply(results,
+						newContext.querySelectorAll(newSelector)
+					);
+					return results;
+				} catch (qsaError) {
+				} finally {
+					if (!old) {
+						context.removeAttribute("id");
+					}
+				}
+			}
 					}
 				}
 
@@ -944,7 +944,7 @@
 					while ((cur = cur.nextSibling)) {
 						if (cur === b) {
 							return -1;
-						}
+			}
 					}
 				}
 
@@ -989,7 +989,7 @@
 						while (i--) {
 							if (seed[(j = matchIndexes[i])]) {
 								seed[j] = !(matches[j] = seed[j]);
-							}
+				}
 						}
 					});
 				});
@@ -1728,7 +1728,7 @@
 											if (node.nodeType === 1 && ++diff && node === elem) {
 												outerCache[type] = [dirruns, nodeIndex, diff];
 												break;
-											}
+								}
 										}
 
 										// Use previously-cached element index if available
@@ -1745,19 +1745,19 @@
 												// Cache the index of each encountered element
 												if (useCache) {
 													(node[expando] || (node[expando] = {}))[type] = [dirruns, diff];
-												}
+									}
 
 												if (node === elem) {
 													break;
 												}
 											}
 										}
-									}
+						}
 
 									// Incorporate the offset, then check against cycle size
 									diff -= last;
 									return diff === first || ( diff % first === 0 && diff / first >= 0 );
-								}
+					}
 							};
 					},
 
@@ -1819,7 +1819,7 @@
 								while (i--) {
 									if ((elem = unmatched[i])) {
 										seed[i] = !(matches[i] = elem);
-									}
+						}
 								}
 							}) :
 							function (elem, context, xml) {
@@ -1987,7 +1987,7 @@
 						var i = argument < 0 ? argument + length : argument;
 						for (; --i >= 0;) {
 							matchIndexes.push(i);
-						}
+			}
 						return matchIndexes;
 					}),
 
@@ -1995,7 +1995,7 @@
 						var i = argument < 0 ? argument + length : argument;
 						for (; ++i < length;) {
 							matchIndexes.push(i);
-						}
+			}
 						return matchIndexes;
 					})
 				}
@@ -2106,8 +2106,8 @@
 						while ((elem = elem[dir])) {
 							if (elem.nodeType === 1 || checkNonElements) {
 								return matcher(elem, context, xml);
-							}
-						}
+				}
+			}
 					} :
 
 					// Check against all ancestor/preceding elements
@@ -2121,7 +2121,7 @@
 								if (elem.nodeType === 1 || checkNonElements) {
 									if (matcher(elem, context, xml)) {
 										return true;
-									}
+						}
 								}
 							}
 						} else {
@@ -2133,18 +2133,18 @@
 
 										// Assign to newCache so results back-propagate to previous elements
 										return (newCache[2] = oldCache[2]);
-									} else {
+						} else {
 										// Reuse newcache so results back-propagate to previous elements
 										outerCache[dir] = newCache;
 
 										// A match means we're done; a fail means we have to keep checking
 										if ((newCache[2] = matcher(elem, context, xml))) {
 											return true;
-										}
-									}
-								}
 							}
 						}
+								}
+							}
+			}
 					};
 			}
 
@@ -2156,7 +2156,7 @@
 							if (!matchers[i](elem, context, xml)) {
 								return false;
 							}
-						}
+			}
 						return true;
 					} :
 					matchers[0];
@@ -2184,8 +2184,8 @@
 							newUnmatched.push(elem);
 							if (mapped) {
 								map.push(i);
-							}
-						}
+				}
+			}
 					}
 				}
 
@@ -2254,7 +2254,7 @@
 										// Restore matcherIn since elem is not yet a final match
 										temp.push((matcherIn[i] = elem));
 									}
-								}
+					}
 								postFinder(null, (matcherOut = []), temp, xml);
 							}
 
@@ -2265,7 +2265,7 @@
 									(temp = postFinder ? indexOf(seed, elem) : preMap[i]) > -1) {
 
 									seed[temp] = !(results[temp] = elem);
-								}
+					}
 							}
 						}
 
@@ -2322,7 +2322,7 @@
 							for (; j < len; j++) {
 								if (Expr.relative[tokens[j].type]) {
 									break;
-								}
+					}
 							}
 							return setMatcher(
 								i > 1 && elementMatcher(matchers),
@@ -2335,7 +2335,7 @@
 								j < len && matcherFromTokens((tokens = tokens.slice(j))),
 								j < len && toSelector(tokens)
 							);
-						}
+			}
 						matchers.push(matcher);
 					}
 				}
@@ -2374,12 +2374,12 @@
 									if (matcher(elem, context, xml)) {
 										results.push(elem);
 										break;
-									}
-								}
+						}
+					}
 								if (outermost) {
 									dirruns = dirrunsUnique;
 								}
-							}
+				}
 
 							// Track unmatched elements for set filters
 							if (bySet) {
@@ -2393,7 +2393,7 @@
 									unmatched.push(elem);
 								}
 							}
-						}
+			}
 
 						// Apply set filters to unmatched elements
 						matchedCount += i;
@@ -2409,8 +2409,8 @@
 									while (i--) {
 										if (!(unmatched[i] || setMatched[i])) {
 											setMatched[i] = pop.call(results);
-										}
-									}
+							}
+						}
 								}
 
 								// Discard index placeholder values to get only actual matches
@@ -2460,7 +2460,7 @@
 							setMatchers.push(cached);
 						} else {
 							elementMatchers.push(cached);
-						}
+			}
 					}
 
 					// Cache the compiled function
@@ -2531,10 +2531,10 @@
 								if (!selector) {
 									push.apply(results, seed);
 									return results;
-								}
+					}
 
 								break;
-							}
+				}
 						}
 					}
 				}
@@ -2655,10 +2655,10 @@
 		if (typeof qualifier === "string") {
 			if (risSimple.test(qualifier)) {
 				return jQuery.filter(qualifier, elements, not);
-			}
+		}
 
 			qualifier = jQuery.filter(qualifier, elements);
-		}
+	}
 
 		return jQuery.grep(elements, function (elem) {
 			return ( indexOf.call(qualifier, elem) >= 0 ) !== not;
@@ -2691,7 +2691,7 @@
 					for (i = 0; i < len; i++) {
 						if (jQuery.contains(self[i], this)) {
 							return true;
-						}
+					}
 					}
 				}));
 			}
@@ -2780,8 +2780,8 @@
 									// ...and otherwise set as attributes
 								} else {
 									this.attr(match, context[match]);
-								}
 							}
+						}
 						}
 
 						return this;
@@ -2796,12 +2796,12 @@
 							// Inject the element directly into the jQuery object
 							this.length = 1;
 							this[0] = elem;
-						}
+					}
 
 						this.context = document;
 						this.selector = selector;
 						return this;
-					}
+				}
 
 					// HANDLE: $(expr, $(...))
 				} else if (!context || context.jquery) {
@@ -2811,7 +2811,7 @@
 					// (which is just equivalent to: $(context).find(expr)
 				} else {
 					return this.constructor(context).find(selector);
-				}
+			}
 
 				// HANDLE: $(DOMElement)
 			} else if (selector.nodeType) {
@@ -2861,9 +2861,9 @@
 				if (elem.nodeType === 1) {
 					if (truncate && jQuery(elem).is(until)) {
 						break;
-					}
-					matched.push(elem);
 				}
+					matched.push(elem);
+			}
 			}
 			return matched;
 		},
@@ -2874,8 +2874,8 @@
 			for (; n; n = n.nextSibling) {
 				if (n.nodeType === 1 && n !== elem) {
 					matched.push(n);
-				}
 			}
+		}
 
 			return matched;
 		}
@@ -2891,7 +2891,7 @@
 				for (; i < l; i++) {
 					if (jQuery.contains(this, targets[i])) {
 						return true;
-					}
+				}
 				}
 			});
 		},
@@ -2917,8 +2917,8 @@
 
 						matched.push(cur);
 						break;
-					}
 				}
+			}
 			}
 
 			return this.pushStack(matched.length > 1 ? jQuery.unique(matched) : matched);
@@ -3003,14 +3003,14 @@
 		},
 		contents: function (elem) {
 			return elem.contentDocument || jQuery.merge([], elem.childNodes);
-		}
+	}
 	}, function (name, fn) {
 		jQuery.fn[name] = function (until, selector) {
 			var matched = jQuery.map(this, fn, until);
 
 			if (name.slice(-5) !== "Until") {
 				selector = until;
-			}
+		}
 
 			if (selector && typeof selector === "string") {
 				matched = jQuery.filter(selector, matched);
@@ -3020,12 +3020,12 @@
 				// Remove duplicates
 				if (!guaranteedUnique[name]) {
 					jQuery.unique(matched);
-				}
+			}
 
 				// Reverse order for parents* and prev-derivatives
 				if (rparentsprev.test(name)) {
 					matched.reverse();
-				}
+			}
 			}
 
 			return this.pushStack(matched);
@@ -3105,19 +3105,19 @@
 					if (list[firingIndex].apply(data[0], data[1]) === false && options.stopOnFalse) {
 						memory = false; // To prevent further calls using add
 						break;
-					}
+				}
 				}
 				firing = false;
 				if (list) {
 					if (stack) {
 						if (stack.length) {
 							fire(stack.shift());
-						}
+					}
 					} else if (memory) {
 						list = [];
 					} else {
 						self.disable();
-					}
+				}
 				}
 			},
 		// Actual Callbacks object
@@ -3133,12 +3133,12 @@
 								if (type === "function") {
 									if (!options.unique || !self.has(arg)) {
 										list.push(arg);
-									}
+								}
 								} else if (arg && arg.length && type !== "string") {
 									// Inspect recursively
 									add(arg);
-								}
-							});
+							}
+						});
 						})(arguments);
 						// Do we need to add the callbacks to the
 						// current firing batch?
@@ -3149,7 +3149,7 @@
 						} else if (memory) {
 							firingStart = start;
 							fire(memory);
-						}
+					}
 					}
 					return this;
 				},
@@ -3169,7 +3169,7 @@
 										firingIndex--;
 									}
 								}
-							}
+						}
 						});
 					}
 					return this;
@@ -3215,8 +3215,8 @@
 							stack.push(args);
 						} else {
 							fire(args);
-						}
 					}
+				}
 					return this;
 				},
 				// Call all the callbacks with the given arguments
@@ -3268,11 +3268,11 @@
 									} else {
 										newDefer[tuple[0] + "With"](this === promise ? newDefer.promise() : this, fn ? [returned] : arguments);
 									}
-								});
+							});
 							});
 							fns = null;
 						}).promise();
-					},
+				},
 					// Get a promise for this deferred
 					// If obj is provided, the promise aspect is added to the object
 					promise: function (obj) {
@@ -3362,14 +3362,14 @@
 							.progress(updateFunc(i, progressContexts, progressValues));
 					} else {
 						--remaining;
-					}
 				}
+			}
 			}
 
 			// If we're not waiting on anything, resolve the master
 			if (!remaining) {
 				deferred.resolveWith(resolveContexts, resolveValues);
-			}
+		}
 
 			return deferred.promise();
 		}
@@ -3426,8 +3426,8 @@
 			if (jQuery.fn.triggerHandler) {
 				jQuery(document).triggerHandler("ready");
 				jQuery(document).off("ready");
-			}
 		}
+	}
 	});
 
 	/**
@@ -3458,7 +3458,7 @@
 
 				// A fallback to window.onload, that will always work
 				window.addEventListener("load", completed, false);
-			}
+		}
 		}
 		return readyList.promise(obj);
 	};
@@ -3501,14 +3501,14 @@
 					fn = function (elem, key, value) {
 						return bulk.call(jQuery(elem), value);
 					};
-				}
+			}
 			}
 
 			if (fn) {
 				for (; i < len; i++) {
 					fn(elems[i], key, raw ? value : value.call(elems[i], i, fn(elems[i], key)));
-				}
 			}
+		}
 		}
 
 		return chainable ?
@@ -3579,7 +3579,7 @@
 				} catch (e) {
 					descriptor[this.expando] = unlock;
 					jQuery.extend(owner, descriptor);
-				}
+			}
 			}
 
 			// Ensure the cache object
@@ -3607,11 +3607,11 @@
 				if (jQuery.isEmptyObject(cache)) {
 					jQuery.extend(this.cache[unlock], data);
 					// Otherwise, copy the properties one-by-one to the cache object
-				} else {
+			} else {
 					for (prop in data) {
 						cache[prop] = data[prop];
-					}
 				}
+			}
 			}
 			return cache;
 		},
@@ -3677,25 +3677,25 @@
 					// both plain key and camelCase key. #12786
 					// This will only penalize the array argument path.
 					name = key.concat(key.map(jQuery.camelCase));
-				} else {
+			} else {
 					camel = jQuery.camelCase(key);
 					// Try the string as a key before any manipulation
 					if (key in cache) {
 						name = [key, camel];
-					} else {
+				} else {
 						// If a key with the spaces exists, use it.
 						// Otherwise, create an array by matching non-whitespace
 						name = camel;
 						name = name in cache ?
 							[name] : ( name.match(rnotwhite) || [] );
-					}
+				}
 				}
 
 				i = name.length;
 				while (i--) {
 					delete cache[name[i]];
-				}
 			}
+		}
 		},
 		hasData: function (owner) {
 			return !jQuery.isEmptyObject(
@@ -3752,8 +3752,8 @@
 				data_user.set(elem, key, data);
 			} else {
 				data = undefined;
-			}
 		}
+	}
 		return data;
 	}
 
@@ -3803,12 +3803,12 @@
 								if (name.indexOf("data-") === 0) {
 									name = jQuery.camelCase(name.slice(5));
 									dataAttr(elem, name, data[name]);
-								}
 							}
 						}
-						data_priv.set(elem, "hasDataAttrs", true);
 					}
+						data_priv.set(elem, "hasDataAttrs", true);
 				}
+			}
 
 				return data;
 			}
@@ -3849,7 +3849,7 @@
 					data = dataAttr(elem, camelKey, undefined);
 					if (data !== undefined) {
 						return data;
-					}
+				}
 
 					// We tried really hard, but the data doesn't exist.
 					return;
@@ -3872,7 +3872,7 @@
 					if (key.indexOf("-") !== -1 && data !== undefined) {
 						data_user.set(this, key, value);
 					}
-				});
+			});
 			}, null, value, arguments.length > 1, null, true);
 		},
 
@@ -3898,8 +3898,8 @@
 						queue = data_priv.access(elem, type, jQuery.makeArray(data));
 					} else {
 						queue.push(data);
-					}
 				}
+			}
 				return queue || [];
 			}
 		},
@@ -3927,7 +3927,7 @@
 				// automatically dequeued
 				if (type === "fx") {
 					queue.unshift("inprogress");
-				}
+			}
 
 				// Clear up the last queue stop function
 				delete hooks.stop;
@@ -3936,7 +3936,7 @@
 
 			if (!startLength && hooks) {
 				hooks.empty.fire();
-			}
+		}
 		},
 
 		// Not public - generate a queueHooks object, or return the current one
@@ -3975,7 +3975,7 @@
 					if (type === "fx" && queue[0] !== "inprogress") {
 						jQuery.dequeue(this, type);
 					}
-				});
+			});
 		},
 		dequeue: function (type) {
 			return this.each(function () {
@@ -4010,8 +4010,8 @@
 				if (tmp && tmp.empty) {
 					count++;
 					tmp.empty.add(resolve);
-				}
 			}
+		}
 			resolve();
 			return defer.promise(obj);
 		}
@@ -4169,8 +4169,8 @@
 					if (!special.setup || special.setup.call(elem, data, namespaces, eventHandle) === false) {
 						if (elem.addEventListener) {
 							elem.addEventListener(type, eventHandle, false);
-						}
 					}
+				}
 				}
 
 				if (special.add) {
@@ -4178,7 +4178,7 @@
 
 					if (!handleObj.handler.guid) {
 						handleObj.handler.guid = handler.guid;
-					}
+				}
 				}
 
 				// Add to the element's handler list, delegates in front
@@ -4186,7 +4186,7 @@
 					handlers.splice(handlers.delegateCount++, 0, handleObj);
 				} else {
 					handlers.push(handleObj);
-				}
+			}
 
 				// Keep track of which events have ever been used, for event optimization
 				jQuery.event.global[type] = true;
@@ -4218,7 +4218,7 @@
 				if (!type) {
 					for (type in events) {
 						jQuery.event.remove(elem, type + types[t], handler, selector, true);
-					}
+				}
 					continue;
 				}
 
@@ -4240,12 +4240,12 @@
 
 						if (handleObj.selector) {
 							handlers.delegateCount--;
-						}
+					}
 						if (special.remove) {
 							special.remove.call(elem, handleObj);
-						}
 					}
 				}
+			}
 
 				// Remove generic event handler if we removed something and no more handlers exist
 				// (avoids potential for endless recursion during removal of special event handlers)
@@ -4255,7 +4255,7 @@
 					}
 
 					delete events[type];
-				}
+			}
 			}
 
 			// Remove the expando if it's no longer used
@@ -4328,7 +4328,7 @@
 				bubbleType = special.delegateType || type;
 				if (!rfocusMorph.test(bubbleType + type)) {
 					cur = cur.parentNode;
-				}
+			}
 				for (; cur; cur = cur.parentNode) {
 					eventPath.push(cur);
 					tmp = cur;
@@ -4360,8 +4360,8 @@
 					event.result = handle.apply(cur, data);
 					if (event.result === false) {
 						event.preventDefault();
-					}
 				}
+			}
 			}
 			event.type = type;
 
@@ -4389,9 +4389,9 @@
 
 						if (tmp) {
 							elem[ontype] = tmp;
-						}
 					}
 				}
+			}
 			}
 
 			return event.result;
@@ -4442,10 +4442,10 @@
 							if ((event.result = ret) === false) {
 								event.preventDefault();
 								event.stopPropagation();
-							}
 						}
 					}
 				}
+			}
 			}
 
 			// Call the postDispatch hook for the mapped type
@@ -4482,16 +4482,16 @@
 								matches[sel] = handleObj.needsContext ?
 								jQuery(sel, this).index(cur) >= 0 :
 									jQuery.find(sel, this, null, [cur]).length;
-							}
+						}
 							if (matches[sel]) {
 								matches.push(handleObj);
-							}
 						}
+					}
 						if (matches.length) {
 							handlerQueue.push({elem: cur, handlers: matches});
 						}
-					}
 				}
+			}
 			}
 
 			// Add the remaining (directly-bound) handlers
@@ -4514,7 +4514,7 @@
 				// Add which for key events
 				if (event.which == null) {
 					event.which = original.charCode != null ? original.charCode : original.keyCode;
-				}
+			}
 
 				return event;
 			}
@@ -4534,13 +4534,13 @@
 
 					event.pageX = original.clientX + ( doc && doc.scrollLeft || body && body.scrollLeft || 0 ) - ( doc && doc.clientLeft || body && body.clientLeft || 0 );
 					event.pageY = original.clientY + ( doc && doc.scrollTop || body && body.scrollTop || 0 ) - ( doc && doc.clientTop || body && body.clientTop || 0 );
-				}
+			}
 
 				// Add which for click: 1 === left; 2 === middle; 3 === right
 				// Note: button is not normalized, so don't use it
 				if (!event.which && button !== undefined) {
 					event.which = ( button & 1 ? 1 : ( button & 2 ? 3 : ( button & 4 ? 2 : 0 ) ) );
-				}
+			}
 
 				return event;
 			}
@@ -4600,7 +4600,7 @@
 						this.focus();
 						return false;
 					}
-				},
+			},
 				delegateType: "focusin"
 			},
 			blur: {
@@ -4609,7 +4609,7 @@
 						this.blur();
 						return false;
 					}
-				},
+			},
 				delegateType: "focusout"
 			},
 			click: {
@@ -4618,14 +4618,14 @@
 					if (this.type === "checkbox" && this.click && jQuery.nodeName(this, "input")) {
 						this.click();
 						return false;
-					}
-				},
+				}
+			},
 
 				// For cross-browser consistency, don't fire native .click() on links
 				_default: function (event) {
 					return jQuery.nodeName(event.target, "a");
-				}
-			},
+			}
+		},
 
 			beforeunload: {
 				postDispatch: function (event) {
@@ -4634,9 +4634,9 @@
 					// Firefox doesn't alert if the returnValue field is not set.
 					if (event.result !== undefined && event.originalEvent) {
 						event.originalEvent.returnValue = event.result;
-					}
 				}
 			}
+		}
 		},
 
 		simulate: function (type, elem, event, bubble) {
@@ -4656,10 +4656,10 @@
 				jQuery.event.trigger(e, null, elem);
 			} else {
 				jQuery.event.dispatch.call(elem, e);
-			}
+		}
 			if (e.isDefaultPrevented()) {
 				event.preventDefault();
-			}
+		}
 		}
 	};
 
@@ -4738,7 +4738,7 @@
 
 			if (e && e.stopImmediatePropagation) {
 				e.stopImmediatePropagation();
-			}
+		}
 
 			this.stopPropagation();
 		}
@@ -4768,7 +4768,7 @@
 					event.type = handleObj.origType;
 					ret = handleObj.handler.apply(this, arguments);
 					event.type = fix;
-				}
+			}
 				return ret;
 			}
 		};
@@ -4791,7 +4791,7 @@
 
 					if (!attaches) {
 						doc.addEventListener(orig, handler, true);
-					}
+				}
 					data_priv.access(doc, fix, ( attaches || 0 ) + 1);
 				},
 				teardown: function () {
@@ -4802,10 +4802,10 @@
 						doc.removeEventListener(orig, handler, true);
 						data_priv.remove(doc, fix);
 
-					} else {
+				} else {
 						data_priv.access(doc, fix, attaches);
-					}
 				}
+			}
 			};
 		});
 	}
@@ -4822,10 +4822,10 @@
 					// ( types-Object, data )
 					data = data || selector;
 					selector = undefined;
-				}
+			}
 				for (type in types) {
 					this.on(type, selector, data, types[type], one);
-				}
+			}
 				return this;
 			}
 
@@ -4842,8 +4842,8 @@
 					// ( types, data, fn )
 					fn = data;
 					data = selector;
-					selector = undefined;
-				}
+				selector = undefined;
+			}
 			}
 			if (fn === false) {
 				fn = returnFalse;
@@ -4884,9 +4884,9 @@
 				// ( types-object [, selector] )
 				for (type in types) {
 					this.off(type, selector, types[type]);
-				}
-				return this;
 			}
+				return this;
+		}
 			if (selector === false || typeof selector === "function") {
 				// ( types [, fn] )
 				fn = selector;
@@ -4969,7 +4969,7 @@
 			elem.type = match[1];
 		} else {
 			elem.removeAttribute("type");
-		}
+	}
 
 		return elem;
 	}
@@ -4983,7 +4983,7 @@
 			data_priv.set(
 				elems[i], "globalEval", !refElements || data_priv.get(refElements[i], "globalEval")
 			);
-		}
+	}
 	}
 
 	function cloneCopyEvent(src, dest) {
@@ -4991,7 +4991,7 @@
 
 		if (dest.nodeType !== 1) {
 			return;
-		}
+	}
 
 		// 1. Copy private data: events, handlers, etc.
 		if (data_priv.hasData(src)) {
@@ -5006,9 +5006,9 @@
 				for (type in events) {
 					for (i = 0, l = events[type].length; i < l; i++) {
 						jQuery.event.add(dest, type, events[type][i]);
-					}
 				}
 			}
+		}
 		}
 
 		// 2. Copy user data
@@ -5017,7 +5017,7 @@
 			udataCur = jQuery.extend({}, udataOld);
 
 			data_user.set(dest, udataCur);
-		}
+	}
 	}
 
 	function getAll(context, tag) {
@@ -5041,7 +5041,7 @@
 			// Fails to return the selected option to the default selected state when cloning options
 		} else if (nodeName === "input" || nodeName === "textarea") {
 			dest.defaultValue = src.defaultValue;
-		}
+	}
 	}
 
 	jQuery.extend({
@@ -5059,7 +5059,7 @@
 
 				for (i = 0, l = srcElements.length; i < l; i++) {
 					fixInput(srcElements[i], destElements[i]);
-				}
+			}
 			}
 
 			// Copy the events from the original to the clone
@@ -5070,10 +5070,10 @@
 
 					for (i = 0, l = srcElements.length; i < l; i++) {
 						cloneCopyEvent(srcElements[i], destElements[i]);
-					}
+				}
 				} else {
 					cloneCopyEvent(elem, clone);
-				}
+			}
 			}
 
 			// Preserve script evaluation history
@@ -5132,8 +5132,8 @@
 
 						// Ensure the created nodes are orphaned (#12392)
 						tmp.textContent = "";
-					}
 				}
+			}
 			}
 
 			// Remove wrapper from fragment
@@ -5164,9 +5164,9 @@
 					while ((elem = tmp[j++])) {
 						if (rscriptType.test(elem.type || "")) {
 							scripts.push(elem);
-						}
 					}
 				}
+			}
 			}
 
 			return fragment;
@@ -5190,18 +5190,18 @@
 									// This is a shortcut to avoid jQuery.event.remove's overhead
 								} else {
 									jQuery.removeEvent(elem, type, data.handle);
-								}
 							}
 						}
+					}
 						if (data_priv.cache[key]) {
 							// Discard any remaining `private` data
 							delete data_priv.cache[key];
 						}
-					}
 				}
+			}
 				// Discard any remaining `user` data
 				delete data_user.cache[elem[data_user.expando]];
-			}
+		}
 		}
 	});
 
@@ -5265,9 +5265,9 @@
 				if (elem.parentNode) {
 					if (keepData && jQuery.contains(elem.ownerDocument, elem)) {
 						setGlobalEval(getAll(elem, "script"));
-					}
-					elem.parentNode.removeChild(elem);
 				}
+					elem.parentNode.removeChild(elem);
+			}
 			}
 
 			return this;
@@ -5285,7 +5285,7 @@
 
 					// Remove any remaining nodes
 					elem.textContent = "";
-				}
+			}
 			}
 
 			return this;
@@ -5323,8 +5323,8 @@
 							if (elem.nodeType === 1) {
 								jQuery.cleanData(getAll(elem, false));
 								elem.innerHTML = value;
-							}
 						}
+					}
 
 						elem = 0;
 
@@ -5381,7 +5381,7 @@
 					var self = set.eq(index);
 					if (isFunction) {
 						args[0] = value.call(this, index, self.html());
-					}
+				}
 					self.domManip(args, callback);
 				});
 			}
@@ -5412,7 +5412,7 @@
 								// jQuery.merge because push.apply(_, arraylike) throws
 								jQuery.merge(scripts, getAll(node, "script"));
 							}
-						}
+					}
 
 						callback.call(this[i], node, i);
 					}
@@ -5432,15 +5432,15 @@
 									// Optional AJAX dependency, but won't run scripts if not present
 									if (jQuery._evalUrl) {
 										jQuery._evalUrl(node.src);
-									}
+								}
 								} else {
 									jQuery.globalEval(node.textContent.replace(rcleanScript, ""));
-								}
 							}
 						}
 					}
 				}
 			}
+		}
 
 			return this;
 		}
@@ -5527,11 +5527,11 @@
 
 				display = actualDisplay(nodeName, doc);
 				iframe.detach();
-			}
+		}
 
 			// Store the correct default display
 			elemdisplay[nodeName] = display;
-		}
+	}
 
 		return display;
 	}
@@ -5589,7 +5589,7 @@
 				style.width = width;
 				style.minWidth = minWidth;
 				style.maxWidth = maxWidth;
-			}
+		}
 		}
 
 		return ret !== undefined ?
@@ -5609,7 +5609,7 @@
 					// to missing dependency), remove it.
 					delete this.get;
 					return;
-				}
+			}
 
 				// Hook needed; redefine it so that the support test is not executed again.
 				return (this.get = hookFn).apply(this, arguments);
@@ -5671,7 +5671,7 @@
 				},
 				boxSizingReliable: function () {
 					if (boxSizingReliableVal == null) {
-						computePixelPositionAndBoxSizingReliable();
+					computePixelPositionAndBoxSizingReliable();
 					}
 					return boxSizingReliableVal;
 				},
@@ -5761,8 +5761,8 @@
 			name = cssPrefixes[i] + capName;
 			if (name in style) {
 				return name;
-			}
 		}
+	}
 
 		return origName;
 	}
@@ -5799,7 +5799,7 @@
 				// At this point, extra isn't border nor margin, so remove border
 				if (extra !== "margin") {
 					val -= jQuery.css(elem, "border" + cssExpand[i] + "Width", true, styles);
-				}
+			}
 			} else {
 				// At this point, extra isn't content, so add padding
 				val += jQuery.css(elem, "padding" + cssExpand[i], true, styles);
@@ -5809,7 +5809,7 @@
 					val += jQuery.css(elem, "border" + cssExpand[i] + "Width", true, styles);
 				}
 			}
-		}
+	}
 
 		return val;
 	}
@@ -5835,7 +5835,7 @@
 			// Computed unit is not pixels. Stop here and return.
 			if (rnumnonpx.test(val)) {
 				return val;
-			}
+		}
 
 			// Check for style in case a browser which returns unreliable values
 			// for getComputedStyle silently falls back to the reliable elem.style
@@ -5844,7 +5844,7 @@
 
 			// Normalize "", auto, and prepare for extra
 			val = parseFloat(val) || 0;
-		}
+	}
 
 		// Use the active box-sizing model to add/subtract irrelevant styles
 		return ( val +
@@ -5884,14 +5884,14 @@
 				// for such an element
 				if (elem.style.display === "" && isHidden(elem)) {
 					values[index] = data_priv.access(elem, "olddisplay", defaultDisplay(elem.nodeName));
-				}
+			}
 			} else {
 				hidden = isHidden(elem);
 
 				if (display !== "none" || !hidden) {
 					data_priv.set(elem, "olddisplay", hidden ? display : jQuery.css(elem, "display"));
-				}
 			}
+		}
 		}
 
 		// Set the display of most of the elements in a second loop
@@ -5904,7 +5904,7 @@
 			if (!show || elem.style.display === "none" || elem.style.display === "") {
 				elem.style.display = show ? values[index] || "" : "none";
 			}
-		}
+	}
 
 		return elements;
 	}
@@ -5921,8 +5921,8 @@
 						// We should always get a number back from opacity
 						var ret = curCSS(elem, "opacity");
 						return ret === "" ? "1" : ret;
-					}
 				}
+			}
 			}
 		},
 
@@ -6002,7 +6002,7 @@
 				// If a hook was provided get the non-computed value from there
 				if (hooks && "get" in hooks && (ret = hooks.get(elem, false, extra)) !== undefined) {
 					return ret;
-				}
+			}
 
 				// Otherwise just get the value from the style object
 				return style[name];
@@ -6032,7 +6032,7 @@
 			// Convert "normal" to computed value
 			if (val === "normal" && name in cssNormalTransform) {
 				val = cssNormalTransform[name];
-			}
+		}
 
 			// Make numeric if forced or a qualifier was provided and val looks numeric
 			if (extra === "" || extra) {
@@ -6055,7 +6055,7 @@
 							return getWidthOrHeight(elem, name, extra);
 						}) :
 						getWidthOrHeight(elem, name, extra);
-				}
+			}
 			},
 
 			set: function (elem, value, extra) {
@@ -6079,7 +6079,7 @@
 			if (computed) {
 				return jQuery.swap(elem, {"display": "inline-block"},
 					curCSS, [elem, "marginRight"]);
-			}
+		}
 		}
 	);
 
@@ -6100,10 +6100,10 @@
 				for (; i < 4; i++) {
 					expanded[prefix + cssExpand[i] + suffix] =
 						parts[i] || parts[i - 2] || parts[0];
-				}
+			}
 
 				return expanded;
-			}
+		}
 		};
 
 		if (!rmargin.test(prefix)) {
@@ -6124,10 +6124,10 @@
 
 					for (; i < len; i++) {
 						map[name[i]] = jQuery.css(elem, name[i], false, styles);
-					}
+				}
 
 					return map;
-				}
+			}
 
 				return value !== undefined ?
 					jQuery.style(elem, name, value) :
@@ -6143,7 +6143,7 @@
 		toggle: function (state) {
 			if (typeof state === "boolean") {
 				return state ? this.show() : this.hide();
-			}
+		}
 
 			return this.each(function () {
 				if (isHidden(this)) {
@@ -6152,7 +6152,7 @@
 					jQuery(this).hide();
 				}
 			});
-		}
+	}
 	});
 
 
@@ -6195,7 +6195,7 @@
 
 			if (this.options.step) {
 				this.options.step.call(this.elem, this.now, this);
-			}
+		}
 
 			if (hooks && hooks.set) {
 				hooks.set(this);
@@ -6216,7 +6216,7 @@
 				if (tween.elem[tween.prop] != null &&
 					(!tween.elem.style || tween.elem.style[tween.prop] == null)) {
 					return tween.elem[tween.prop];
-				}
+			}
 
 				// Passing an empty string as a 3rd parameter to .css will automatically
 				// attempt a parseFloat and fallback to a string if the parse fails.
@@ -6237,7 +6237,7 @@
 				} else {
 					tween.elem[tween.prop] = tween.now;
 				}
-			}
+		}
 		}
 	};
 
@@ -6247,7 +6247,7 @@
 		set: function (tween) {
 			if (tween.elem.nodeType && tween.elem.parentNode) {
 				tween.elem[tween.prop] = tween.now;
-			}
+		}
 		}
 	};
 
@@ -6347,7 +6347,7 @@
 
 		if (includeWidth) {
 			attrs.opacity = attrs.width = type;
-		}
+	}
 
 		return attrs;
 	}
@@ -6362,8 +6362,8 @@
 
 				// We're done with this property
 				return tween;
-			}
 		}
+	}
 	}
 
 	function defaultPrefilter(elem, props, opts) {
@@ -6396,7 +6396,7 @@
 					if (!jQuery.queue(elem, "fx").length) {
 						hooks.empty.fire();
 					}
-				});
+			});
 			});
 		}
 
@@ -6418,7 +6418,7 @@
 
 			if (checkDisplay === "inline" && jQuery.css(elem, "float") === "none") {
 				style.display = "inline-block";
-			}
+		}
 		}
 
 		if (opts.overflow) {
@@ -6443,21 +6443,21 @@
 						hidden = true;
 					} else {
 						continue;
-					}
 				}
+			}
 				orig[prop] = dataShow && dataShow[prop] || jQuery.style(elem, prop);
 
 				// Any non-fx value stops us from restoring the original display value
 			} else {
 				display = undefined;
-			}
+		}
 		}
 
 		if (!jQuery.isEmptyObject(orig)) {
 			if (dataShow) {
 				if ("hidden" in dataShow) {
 					hidden = dataShow.hidden;
-				}
+			}
 			} else {
 				dataShow = data_priv.access(elem, "fxshow", {});
 			}
@@ -6471,7 +6471,7 @@
 			} else {
 				anim.done(function () {
 					jQuery(elem).hide();
-				});
+			});
 			}
 			anim.done(function () {
 				var prop;
@@ -6479,7 +6479,7 @@
 				data_priv.remove(elem, "fxshow");
 				for (prop in orig) {
 					jQuery.style(elem, prop, orig[prop]);
-				}
+			}
 			});
 			for (prop in orig) {
 				tween = createTween(hidden ? dataShow[prop] : 0, prop, anim);
@@ -6491,12 +6491,12 @@
 						tween.start = prop === "width" || prop === "height" ? 1 : 0;
 					}
 				}
-			}
+		}
 
 			// If this is a noop like .hide().hide(), restore an overwritten display value
 		} else if ((display === "none" ? defaultDisplay(elem.nodeName) : display) === "inline") {
 			style.display = display;
-		}
+	}
 	}
 
 	function propFilter(props, specialEasing) {
@@ -6528,12 +6528,12 @@
 					if (!( index in props )) {
 						props[index] = value[index];
 						specialEasing[index] = easing;
-					}
 				}
+			}
 			} else {
 				specialEasing[name] = easing;
-			}
 		}
+	}
 	}
 
 	function Animation(elem, properties, options) {
@@ -6585,15 +6585,15 @@
 						animation.opts.specialEasing[prop] || animation.opts.easing);
 					animation.tweens.push(tween);
 					return tween;
-				},
+			},
 				stop: function (gotoEnd) {
 					var index = 0,
 					// If we are going to the end, we want to run all the tweens
 					// otherwise we skip this part
 						length = gotoEnd ? animation.tweens.length : 0;
 					if (stopped) {
-						return this;
-					}
+					return this;
+				}
 					stopped = true;
 					for (; index < length; index++) {
 						animation.tweens[index].run(1);
@@ -6606,7 +6606,7 @@
 						deferred.rejectWith(elem, [animation, gotoEnd]);
 					}
 					return this;
-				}
+			}
 			}),
 			props = animation.props;
 
@@ -6616,14 +6616,14 @@
 			result = animationPrefilters[index].call(animation, elem, props, animation.opts);
 			if (result) {
 				return result;
-			}
+		}
 		}
 
 		jQuery.map(props, createTween, animation);
 
 		if (jQuery.isFunction(animation.opts.start)) {
 			animation.opts.start.call(elem, animation);
-		}
+	}
 
 		jQuery.fx.timer(
 			jQuery.extend(tick, {
@@ -6648,7 +6648,7 @@
 				props = ["*"];
 			} else {
 				props = props.split(" ");
-			}
+		}
 
 			var prop,
 				index = 0,
@@ -6666,7 +6666,7 @@
 				animationPrefilters.unshift(callback);
 			} else {
 				animationPrefilters.push(callback);
-			}
+		}
 		}
 	});
 
@@ -6697,7 +6697,7 @@
 			if (opt.queue) {
 				jQuery.dequeue(this, opt.queue);
 			}
-		};
+	};
 
 		return opt;
 	};
@@ -6722,7 +6722,7 @@
 					if (empty || data_priv.get(this, "finish")) {
 						anim.stop(true);
 					}
-				};
+			};
 			doAnimation.finish = doAnimation;
 
 			return empty || optall.queue === false ?
@@ -6759,8 +6759,8 @@
 					for (index in data) {
 						if (data[index] && data[index].stop && rrun.test(index)) {
 							stopQueue(data[index]);
-						}
 					}
+				}
 				}
 
 				for (index = timers.length; index--;) {
@@ -6768,8 +6768,8 @@
 						timers[index].anim.stop(gotoEnd);
 						dequeue = false;
 						timers.splice(index, 1);
-					}
 				}
+			}
 
 				// Start the next in the queue if the last step wasn't forced.
 				// Timers currently will call their complete callbacks, which
@@ -6806,14 +6806,14 @@
 					if (timers[index].elem === this && timers[index].queue === type) {
 						timers[index].anim.stop(true);
 						timers.splice(index, 1);
-					}
+				}
 				}
 
 				// Look for any animations in the old queue and finish them
 				for (index = 0; index < length; index++) {
 					if (queue[index] && queue[index].finish) {
 						queue[index].finish.call(this);
-					}
+				}
 				}
 
 				// Turn off finishing flag
@@ -6858,7 +6858,7 @@
 			// Checks the timer has not already been removed
 			if (!timer() && timers[i] === timer) {
 				timers.splice(i--, 1);
-			}
+		}
 		}
 
 		if (!timers.length) {
@@ -6985,12 +6985,12 @@
 					jQuery.removeAttr(elem, name);
 
 				} else if (hooks && "set" in hooks && (ret = hooks.set(elem, value, name)) !== undefined) {
-					return ret;
+				return ret;
 
-				} else {
+			} else {
 					elem.setAttribute(name, value + "");
 					return value;
-				}
+			}
 
 			} else if (hooks && "get" in hooks && (ret = hooks.get(elem, name)) !== null) {
 				return ret;
@@ -7018,10 +7018,10 @@
 					if (jQuery.expr.match.bool.test(name)) {
 						// Set corresponding property to false
 						elem[propName] = false;
-					}
+				}
 
 					elem.removeAttribute(name);
-				}
+			}
 			}
 		},
 
@@ -7034,11 +7034,11 @@
 						elem.setAttribute("type", value);
 						if (val) {
 							elem.value = val;
-						}
-						return value;
 					}
+						return value;
 				}
 			}
+		}
 		}
 	});
 
@@ -7050,7 +7050,7 @@
 				jQuery.removeAttr(elem, name);
 			} else {
 				elem.setAttribute(name, name);
-			}
+		}
 			return name;
 		}
 	};
@@ -7069,7 +7069,7 @@
 				attrHandle[name] = handle;
 			}
 			return ret;
-		};
+	};
 	});
 
 
@@ -7119,7 +7119,7 @@
 				return hooks && "get" in hooks && (ret = hooks.get(elem, name)) !== null ?
 					ret :
 					elem[name];
-			}
+		}
 		},
 
 		propHooks: {
@@ -7128,9 +7128,9 @@
 					return elem.hasAttribute("tabindex") || rfocusable.test(elem.nodeName) || elem.href ?
 						elem.tabIndex :
 						-1;
-				}
 			}
-		}
+			}
+	}
 	});
 
 	if (!support.optSelected) {
@@ -7192,16 +7192,16 @@
 						while ((clazz = classes[j++])) {
 							if (cur.indexOf(" " + clazz + " ") < 0) {
 								cur += clazz + " ";
-							}
 						}
+					}
 
 						// only assign if different to avoid unneeded rendering.
 						finalValue = jQuery.trim(cur);
 						if (elem.className !== finalValue) {
 							elem.className = finalValue;
 						}
-					}
 				}
+			}
 			}
 
 			return this;
@@ -7235,16 +7235,16 @@
 							// Remove *all* instances
 							while (cur.indexOf(" " + clazz + " ") >= 0) {
 								cur = cur.replace(" " + clazz + " ", " ");
-							}
+						}
 						}
 
 						// Only assign if different to avoid unneeded rendering.
 						finalValue = value ? jQuery.trim(cur) : "";
 						if (elem.className !== finalValue) {
 							elem.className = finalValue;
-						}
 					}
 				}
+			}
 			}
 
 			return this;
@@ -7277,22 +7277,22 @@
 							self.removeClass(className);
 						} else {
 							self.addClass(className);
-						}
 					}
+				}
 
 					// Toggle whole class name
 				} else if (type === strundefined || type === "boolean") {
 					if (this.className) {
 						// store className if set
 						data_priv.set(this, "__className__", this.className);
-					}
+				}
 
 					// If the element has a class name or if we're passed `false`,
 					// then remove the whole classname (if there was one, the above saved it).
 					// Otherwise bring back whatever was previously saved (if anything),
 					// falling back to the empty string if nothing was stored.
 					this.className = this.className || value === false ? "" : data_priv.get(this, "__className__") || "";
-				}
+			}
 			});
 		},
 
@@ -7304,7 +7304,7 @@
 				if (this[i].nodeType === 1 && (" " + this[i].className + " ").replace(rclass, " ").indexOf(className) >= 0) {
 					return true;
 				}
-			}
+		}
 
 			return false;
 		}
@@ -7324,7 +7324,7 @@
 
 					if (hooks && "get" in hooks && (ret = hooks.get(elem, "value")) !== undefined) {
 						return ret;
-					}
+				}
 
 					ret = elem.value;
 
@@ -7333,7 +7333,7 @@
 						ret.replace(rreturn, "") :
 						// Handle cases where value is null/undef or number
 						ret == null ? "" : ret;
-				}
+			}
 
 				return;
 			}
@@ -7416,11 +7416,11 @@
 							// We don't need an array for one selects
 							if (one) {
 								return value;
-							}
+						}
 
 							// Multi-Selects return an array
 							values.push(value);
-						}
+					}
 					}
 
 					return values;
@@ -7436,16 +7436,16 @@
 						option = options[i];
 						if ((option.selected = jQuery.inArray(option.value, values) >= 0)) {
 							optionSet = true;
-						}
+					}
 					}
 
 					// Force browsers to behave consistently when non-matching value is set
 					if (!optionSet) {
 						elem.selectedIndex = -1;
-					}
-					return values;
 				}
+					return values;
 			}
+		}
 		}
 	});
 
@@ -7455,8 +7455,8 @@
 			set: function (elem, value) {
 				if (jQuery.isArray(value)) {
 					return ( elem.checked = jQuery.inArray(jQuery(elem).val(), value) >= 0 );
-				}
 			}
+		}
 		};
 		if (!support.checkOn) {
 			jQuery.valHooks[this].get = function (elem) {
@@ -7601,8 +7601,8 @@
 						// Otherwise append
 					} else {
 						(structure[dataType] = structure[dataType] || []).push(func);
-					}
 				}
+			}
 			}
 		};
 	}
@@ -7627,7 +7627,7 @@
 				}
 			});
 			return selected;
-		}
+	}
 
 		return inspect(options.dataTypes[0]) || !inspected["*"] && inspect("*");
 	}
@@ -7642,8 +7642,8 @@
 		for (key in src) {
 			if (src[key] !== undefined) {
 				( flatOptions[key] ? target : ( deep || (deep = {}) ) )[key] = src[key];
-			}
 		}
+	}
 		if (deep) {
 			jQuery.extend(true, target, deep);
 		}
@@ -7666,7 +7666,7 @@
 			dataTypes.shift();
 			if (ct === undefined) {
 				ct = s.mimeType || jqXHR.getResponseHeader("Content-Type");
-			}
+		}
 		}
 
 		// Check if we're dealing with a known content-type
@@ -7675,8 +7675,8 @@
 				if (contents[type] && contents[type].test(ct)) {
 					dataTypes.unshift(type);
 					break;
-				}
 			}
+		}
 		}
 
 		// Check to see if we have a response for the expected dataType
@@ -7688,11 +7688,11 @@
 				if (!dataTypes[0] || s.converters[type + " " + dataTypes[0]]) {
 					finalDataType = type;
 					break;
-				}
+			}
 				if (!firstDataType) {
 					firstDataType = type;
 				}
-			}
+		}
 			// Or just use first one
 			finalDataType = finalDataType || firstDataType;
 		}
@@ -7703,9 +7703,9 @@
 		if (finalDataType) {
 			if (finalDataType !== dataTypes[0]) {
 				dataTypes.unshift(finalDataType);
-			}
-			return responses[finalDataType];
 		}
+			return responses[finalDataType];
+	}
 	}
 
 	/* Chain conversions given the request and the original response
@@ -7721,7 +7721,7 @@
 		if (dataTypes[1]) {
 			for (conv in s.converters) {
 				converters[conv.toLowerCase()] = s.converters[conv];
-			}
+		}
 		}
 
 		current = dataTypes.shift();
@@ -7774,11 +7774,11 @@
 									} else if (converters[conv2] !== true) {
 										current = tmp[0];
 										dataTypes.unshift(tmp[1]);
-									}
-									break;
 								}
+									break;
 							}
 						}
+					}
 					}
 
 					// Apply converter (if not an equivalence)
@@ -7791,13 +7791,16 @@
 							try {
 								response = conv(response);
 							} catch (e) {
-								return {state: "parsererror", error: conv ? e : "No conversion from " + prev + " to " + current};
-							}
+								return {
+									state: "parsererror",
+									error: conv ? e : "No conversion from " + prev + " to " + current
+								};
 						}
 					}
 				}
 			}
 		}
+	}
 
 		return {state: "success", data: response};
 	}
@@ -7866,7 +7869,7 @@
 
 				// Parse text as xml
 				"text xml": jQuery.parseXML
-			},
+		},
 
 			// For options that shouldn't be deep extended:
 			// you can add your own custom options here if
@@ -7952,8 +7955,8 @@
 								responseHeaders = {};
 								while ((match = rheaders.exec(responseHeadersString))) {
 									responseHeaders[match[1].toLowerCase()] = match[2];
-								}
 							}
+						}
 							match = responseHeaders[key.toLowerCase()];
 						}
 						return match == null ? null : match;
@@ -7990,11 +7993,11 @@
 								for (code in map) {
 									// Lazy-add the new callback in a way that preserves old ones
 									statusCode[code] = [statusCode[code], map[code]];
-								}
+							}
 							} else {
 								// Execute the appropriate callbacks
 								jqXHR.always(map[jqXHR.status]);
-							}
+						}
 						}
 						return this;
 					},
@@ -8004,7 +8007,7 @@
 						var finalText = statusText || strAbort;
 						if (transport) {
 							transport.abort(finalText);
-						}
+					}
 						done(0, finalText);
 						return this;
 					}
@@ -8089,17 +8092,17 @@
 
 						// Otherwise add one to the end
 					cacheURL + ( rquery.test(cacheURL) ? "&" : "?" ) + "_=" + nonce++;
-				}
+			}
 			}
 
 			// Set the If-Modified-Since and/or If-None-Match header, if in ifModified mode.
 			if (s.ifModified) {
 				if (jQuery.lastModified[cacheURL]) {
 					jqXHR.setRequestHeader("If-Modified-Since", jQuery.lastModified[cacheURL]);
-				}
+			}
 				if (jQuery.etag[cacheURL]) {
 					jqXHR.setRequestHeader("If-None-Match", jQuery.etag[cacheURL]);
-				}
+			}
 			}
 
 			// Set the correct header, if data is being sent
@@ -8146,7 +8149,7 @@
 				// Send global event
 				if (fireGlobals) {
 					globalEventContext.trigger("ajaxSend", [jqXHR, s]);
-				}
+			}
 				// Timeout
 				if (s.async && s.timeout > 0) {
 					timeoutTimer = setTimeout(function () {
@@ -8164,7 +8167,7 @@
 						// Simply rethrow otherwise
 					} else {
 						throw e;
-					}
+				}
 				}
 			}
 
@@ -8215,12 +8218,12 @@
 						modified = jqXHR.getResponseHeader("Last-Modified");
 						if (modified) {
 							jQuery.lastModified[cacheURL] = modified;
-						}
+					}
 						modified = jqXHR.getResponseHeader("etag");
 						if (modified) {
 							jQuery.etag[cacheURL] = modified;
-						}
 					}
+				}
 
 					// if no content
 					if (status === 204 || s.type === "HEAD") {
@@ -8231,12 +8234,12 @@
 						statusText = "notmodified";
 
 						// If we have data, let's convert it
-					} else {
+				} else {
 						statusText = response.state;
 						success = response.data;
 						error = response.error;
 						isSuccess = !error;
-					}
+				}
 				} else {
 					// Extract error from statusText and normalize for non-aborts
 					error = statusText;
@@ -8245,7 +8248,7 @@
 						if (status < 0) {
 							status = 0;
 						}
-					}
+				}
 				}
 
 				// Set data for the fake xhr object
@@ -8257,7 +8260,7 @@
 					deferred.resolveWith(callbackContext, [success, statusText, jqXHR]);
 				} else {
 					deferred.rejectWith(callbackContext, [jqXHR, statusText, error]);
-				}
+			}
 
 				// Status-dependent callbacks
 				jqXHR.statusCode(statusCode);
@@ -8277,7 +8280,7 @@
 					if (!( --jQuery.active )) {
 						jQuery.event.trigger("ajaxStop");
 					}
-				}
+			}
 			}
 
 			return jqXHR;
@@ -8301,14 +8304,14 @@
 				data = undefined;
 			}
 
-			return jQuery.ajax({
-				url: url,
-				type: method,
-				dataType: type,
-				data: data,
-				success: callback
-			});
-		};
+		return jQuery.ajax({
+			url: url,
+			type: method,
+			dataType: type,
+			data: data,
+			success: callback
+		});
+	};
 	});
 
 
@@ -8341,7 +8344,7 @@
 
 				if (this[0].parentNode) {
 					wrap.insertBefore(this[0]);
-				}
+			}
 
 				wrap.map(function () {
 					var elem = this;
@@ -8361,7 +8364,7 @@
 			if (jQuery.isFunction(html)) {
 				return this.each(function (i) {
 					jQuery(this).wrapInner(html.call(this, i));
-				});
+			});
 			}
 
 			return this.each(function () {
@@ -8424,19 +8427,19 @@
 				} else {
 					// Item is non-scalar (array or object), encode its numeric index.
 					buildParams(prefix + "[" + ( typeof v === "object" ? i : "" ) + "]", v, traditional, add);
-				}
+			}
 			});
 
 		} else if (!traditional && jQuery.type(obj) === "object") {
 			// Serialize object item.
 			for (name in obj) {
 				buildParams(prefix + "[" + name + "]", obj[name], traditional, add);
-			}
+		}
 
 		} else {
 			// Serialize scalar item.
 			add(prefix, obj);
-		}
+	}
 	}
 
 // Serialize an array of form elements or a set of
@@ -8467,7 +8470,7 @@
 			// did it), otherwise encode params recursively.
 			for (prefix in a) {
 				buildParams(prefix, a[prefix], traditional, add);
-			}
+		}
 		}
 
 		// Return the resulting serialization
@@ -8556,7 +8559,7 @@
 					if (options.xhrFields) {
 						for (i in options.xhrFields) {
 							xhr[i] = options.xhrFields[i];
-						}
+					}
 					}
 
 					// Override mime type if needed
@@ -8605,9 +8608,9 @@
 										} : undefined,
 										xhr.getAllResponseHeaders()
 									);
-								}
 							}
-						};
+							}
+					};
 					};
 
 					// Listen to events
@@ -8624,14 +8627,14 @@
 						// #14683: Only rethrow if this hasn't been notified as an error yet
 						if (callback) {
 							throw e;
-						}
+					}
 					}
 				},
 
 				abort: function () {
 					if (callback) {
 						callback();
-					}
+				}
 				}
 			};
 		}
@@ -8650,7 +8653,7 @@
 			"text script": function (text) {
 				jQuery.globalEval(text);
 				return text;
-			}
+		}
 		}
 	});
 
@@ -8682,15 +8685,15 @@
 							callback = null;
 							if (evt) {
 								complete(evt.type === "error" ? 404 : 200, evt.type);
-							}
 						}
+					}
 					);
 					document.head.appendChild(script[0]);
 				},
 				abort: function () {
 					if (callback) {
 						callback();
-					}
+				}
 				}
 			};
 		}
@@ -8738,7 +8741,7 @@
 			s.converters["script json"] = function () {
 				if (!responseContainer) {
 					jQuery.error(callbackName + " was not called");
-				}
+			}
 				return responseContainer[0];
 			};
 
@@ -8777,6 +8780,8 @@
 			return "script";
 		}
 	});
+
+
 
 
 // data: string of html
@@ -8878,7 +8883,7 @@
 	jQuery.each(["ajaxStart", "ajaxStop", "ajaxComplete", "ajaxError", "ajaxSuccess", "ajaxSend"], function (i, type) {
 		jQuery.fn[type] = function (fn) {
 			return this.on(type, fn);
-		};
+	};
 	});
 
 
@@ -8926,7 +8931,7 @@
 			} else {
 				curTop = parseFloat(curCSSTop) || 0;
 				curLeft = parseFloat(curCSSLeft) || 0;
-			}
+		}
 
 			if (jQuery.isFunction(options)) {
 				options = options.call(elem, i, curOffset);
@@ -9013,7 +9018,7 @@
 				// Add offsetParent borders
 				parentOffset.top += jQuery.css(offsetParent[0], "borderTopWidth", true);
 				parentOffset.left += jQuery.css(offsetParent[0], "borderLeftWidth", true);
-			}
+		}
 
 			// Subtract parent offsets and element margins
 			return {
@@ -9075,7 +9080,7 @@
 					return rnumnonpx.test(computed) ?
 					jQuery(elem).position()[prop] + "px" :
 						computed;
-				}
+			}
 			}
 		);
 	});
@@ -9120,7 +9125,7 @@
 						jQuery.style(elem, type, value, extra);
 				}, type, chainable ? margin : undefined, chainable, null);
 			};
-		});
+	});
 	});
 
 
@@ -10986,7 +10991,10 @@ if (typeof jQuery === 'undefined') {
 		return placement == 'bottom' ? {top: pos.top + pos.height, left: pos.left + pos.width / 2 - actualWidth / 2} :
 			placement == 'top' ? {top: pos.top - actualHeight, left: pos.left + pos.width / 2 - actualWidth / 2} :
 				placement == 'left' ? {top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left - actualWidth} :
-					/* placement == 'right' */ {top: pos.top + pos.height / 2 - actualHeight / 2, left: pos.left + pos.width}
+					/* placement == 'right' */ {
+					top: pos.top + pos.height / 2 - actualHeight / 2,
+					left: pos.left + pos.width
+				}
 
 	}
 

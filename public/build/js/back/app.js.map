@@ -1,15 +1,17 @@
 {
-  "version": 3,
-  "sources": [
-    "blur-link.js",
-    "delete-record.js"
-  ],
-  "names": [],
-  "mappings": "AAAA;AACA;AACA;AACA;AACA;AACA;AACA;ACNA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA",
-  "file": "app.js",
-  "sourcesContent": [
-    "$(document).ready(function () {\n\n    $(this).on('click', 'a', function (e) {\n        $(this).blur();\n    });\n\n});",
-    "$(document).ready(function () {\n\n    $(this).on('submit', '.delete-record', function (e) {\n        swal({\n            title: \"Are you sure?\",\n            text: \"You will not be able to recover this record!\",\n            type: \"warning\",\n            showCancelButton: true,\n            confirmButtonColor: \"#DD6B55\",\n            confirmButtonText: \"Yes, delete it!\",\n            closeOnConfirm: false\n        }, function () {\n            swal(\"Deleted!\", \"Your record has been deleted.\", \"success\");\n        });\n    });\n\n});"
-  ],
-  "sourceRoot": "/source/"
+	"version": 3,
+	"sources": [
+		"alert.js",
+		"blur-link.js",
+		"delete-record.js"
+	],
+	"names": [],
+	"mappings": "AAAA;AACA;AACA;AACA;AACA;AACA;AACA;ACNA;AACA;AACA;AACA;AACA;AACA;AACA;ACNA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA;AACA",
+	"file": "app.js",
+	"sourcesContent": [
+		"function alert(message, title) {\n    if (typeof title == 'undefined') {\n        swal(message);\n    } else {\n        swal(message, title);\n    }\n}",
+		"$(document).ready(function () {\n\n    $(this).on('click', 'a', function (e) {\n        $(this).blur();\n    });\n\n});",
+		"document.querySelector('form[data-confirm]').addEventListener('submit', function (e) {\n    var form = $(this);\n    e.preventDefault();\n\n    swal({\n        title: \"Are you sure?\",\n        text: form.data('confirm'),\n        type: \"warning\",\n        showCancelButton: true,\n        confirmButtonColor: '#DD6B55',\n        confirmButtonText: 'Yes, I am sure!',\n        cancelButtonText: \"No, cancel it!\",\n        closeOnConfirm: false,\n        closeOnCancel: true\n    }, function (isConfirm) {\n        if (isConfirm) {\n            form.submit();\n        }\n    });\n});"
+	],
+	"sourceRoot": "/source/"
 }

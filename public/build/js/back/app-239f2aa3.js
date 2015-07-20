@@ -1,3 +1,17 @@
+function alert(message, title) {
+    if (typeof title == 'undefined') {
+        swal(message);
+    } else {
+        swal(message, title);
+    }
+}
+$(document).ready(function () {
+
+    $(this).on('click', 'a', function (e) {
+        $(this).blur();
+    });
+
+});
 document.querySelector('form[data-confirm]').addEventListener('submit', function (e) {
     var form = $(this);
     e.preventDefault();
@@ -18,3 +32,4 @@ document.querySelector('form[data-confirm]').addEventListener('submit', function
         }
     });
 });
+//# sourceMappingURL=app.js.map

@@ -1,13 +1,13 @@
 {
-  "version": 3,
-  "sources": [
-    "app.js"
-  ],
-  "names": [],
-  "mappings": "AAAA;AACA",
-  "file": "app.js",
-  "sourcesContent": [
-    "console.log('FRONT');\n"
-  ],
-  "sourceRoot": "/source/"
+	"version": 3,
+	"sources": [
+		"app.js"
+	],
+	"names": [],
+	"mappings": "AAAA;AACA",
+	"file": "app.js",
+	"sourcesContent": [
+		"console.log('FRONT');\n"
+	],
+	"sourceRoot": "/source/"
 }
