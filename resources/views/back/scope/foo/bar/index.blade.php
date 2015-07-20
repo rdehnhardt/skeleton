@@ -62,7 +62,7 @@
                                                     {!! Form::button('editar', ['type' => 'submit', 'class' => 'btn btn-default btn-xs']) !!}
                                                     {!! Form::close() !!}
 
-                                                    {!! Form::open(['method' => 'delete', 'class' => 'delete-record', 'data-confirm' => 'You will not be able to recover this record!', 'route' => ['back.foo.bar.destroy', $record->id]]) !!}
+                                                    {!! Form::open(['method' => 'delete', 'data-confirm' => 'You will not be able to recover this record!', 'route' => ['back.foo.bar.destroy', $record->id]]) !!}
                                                     {!! Form::button('remover', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs']) !!}
                                                     {!! Form::close() !!}
                                                 </td>

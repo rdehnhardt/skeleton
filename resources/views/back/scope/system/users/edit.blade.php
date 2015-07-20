@@ -15,7 +15,7 @@
                         <h3 class="panel-title">Edit "{{ $record->name }}" user</h3>
                     </div>
                     <div class="panel-body">
-                        {!! Form::model($record, ['route' => ['back.foo.bar.update', $record->id], 'method' => 'put']) !!}
+                        {!! Form::model($record, ['route' => ['back.system.users.update', $record->id], 'method' => 'put']) !!}
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                                 {!! Form::openGroup('name', 'Name') !!}
@@ -39,7 +39,7 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 {!! Form::openFormActions() !!}
-                                {!! Form::button('<i class="fa fa-save"></i> Save', ['class' => 'btn btn-primary form-action']) !!}
+                                {!! Form::button('<i class="fa fa-save"></i> Save', ['class' => 'btn btn-primary form-action', 'type' => 'submit']) !!}
                                 {!! Form::closeFormActions() !!}
                             </div>
                         </div>

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\Back\System;
 
 use App\Http\Controllers\Back\BackController;
-use App\Http\Requests\Back\Foo\UserRequest;
+use App\Http\Requests\Back\System\UserRequest;
 use App\Models\User;
 use Redirect;
 use Request;
