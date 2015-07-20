@@ -1,7 +1,7 @@
 function alert(message, title) {
     if (typeof title == 'undefined') {
-        swal(message);
+        swal('System Information', message);
     } else {
-        swal(message, title);
+        swal(title, message);
     }
 }
