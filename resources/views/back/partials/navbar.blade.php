@@ -14,7 +14,7 @@
 
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="{{ route('dashboard') }}">Dashboard</a></li>
+                <li class="active"><a href="{{ route('dashboard') }}">{{ trans('base.dashboard') }}</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Foo <span class="caret"></span></a>
@@ -27,10 +27,10 @@
 
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                       aria-expanded="false">System <span class="caret"></span></a>
+                       aria-expanded="false">{{ trans('base.system') }} <span class="caret"></span></a>
 
                     <ul class="dropdown-menu">
-                        <li><a href="{{ route('back.system.users.index') }}">Users</a></li>
+                        <li><a href="{{ route('back.system.users.index') }}">{{ trans('base.users') }}</a></li>
                     </ul>
                 </li>
             </ul>

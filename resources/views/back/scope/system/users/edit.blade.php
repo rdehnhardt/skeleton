@@ -1,9 +1,9 @@
 @extends('back.app')
 
-@section('title', 'System » Users » Edit')
+@section('title', trans('base.system') . ' » ' . trans('base.users') . ' » ' . trans('actions.edit'))
 
 @section('page-actions')
-    <a href="{{ URL::previous() }}" class="btn btn-default"><i class="fa fa-arrow-left"></i> Back</a>
+    <a href="{{ URL::previous() }}" class="btn btn-default"><i class="fa fa-arrow-left"></i> {{ trans('actions.back') }}</a>
 @stop
 
 @section('content')
@@ -12,26 +12,26 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Edit "{{ $record->name }}" user</h3>
+                        <h3 class="panel-title">{{ trans('actions.edit') }}: "{{ $record->name }}"</h3>
                     </div>
                     <div class="panel-body">
                         {!! Form::model($record, ['route' => ['back.system.users.update', $record->id], 'method' => 'put']) !!}
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                                {!! Form::openGroup('name', 'Name') !!}
-                                {!! Form::text('name', null, ['placeholder' => 'Set user name']) !!}
+                                {!! Form::openGroup('name', trans('dictionary.name')) !!}
+                                {!! Form::text('name') !!}
                                 {!! Form::closeGroup() !!}
                             </div>
 
                             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                                {!! Form::openGroup('password', 'Password') !!}
-                                {!! Form::email('email', null, ['placeholder' => 'Set user email']) !!}
+                                {!! Form::openGroup('email', trans('dictionary.email')) !!}
+                                {!! Form::email('email') !!}
                                 {!! Form::closeGroup() !!}
                             </div>
 
                             <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                                {!! Form::openGroup('password', 'Password') !!}
-                                {!! Form::password('password', ['placeholder' => 'Set user password']) !!}
+                                {!! Form::openGroup('password', trans('dictionary.password')) !!}
+                                {!! Form::password('password') !!}
                                 {!! Form::closeGroup() !!}
                             </div>
                         </div>
@@ -39,7 +39,7 @@
                         <div class="row">
                             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                                 {!! Form::openFormActions() !!}
-                                {!! Form::button('<i class="fa fa-save"></i> Save', ['class' => 'btn btn-primary form-action', 'type' => 'submit']) !!}
+                                {!! Form::button('<i class="fa fa-save"></i> '.trans('actions.save'), ['class' => 'btn btn-primary form-action', 'type' => 'submit']) !!}
                                 {!! Form::closeFormActions() !!}
                             </div>
                         </div>

@@ -18,20 +18,19 @@
 </head>
 
 <body>
-@include('back.partials.navbar')
+    @include('back.partials.navbar')
+    @include('back.partials.header')
 
-@include('back.partials.header')
+    <main>
+        @include('back.partials.messages')
+        @include('back.partials.errors')
 
-<main>
-    @include('back.partials.messages')
-    @include('back.partials.errors')
+        @yield('content')
+    </main>
 
-    @yield('content')
-</main>
+    @include('back.partials.footer')
 
-@include('back.partials.footer')
-
-<script src="{{ elixir('js/back/vendor.js') }}"></script>
-<script src="{{ elixir('js/back/app.js') }}"></script>
+    <script src="{{ elixir('js/back/vendor.js') }}"></script>
+    <script src="{{ elixir('js/back/app.js') }}"></script>
 </body>
 </html>

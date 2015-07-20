@@ -59,11 +59,11 @@
                                                 </td>
                                                 <td class="table-actions">
                                                     {!! Form::open(['method' => 'get', 'route' => ['back.foo.bar.edit', $record->id]]) !!}
-                                                    {!! Form::button('editar', ['type' => 'submit', 'class' => 'btn btn-default btn-xs']) !!}
+                                                    {!! Form::button(trans('actions.edit'), ['type' => 'submit', 'class' => 'btn btn-default btn-xs']) !!}
                                                     {!! Form::close() !!}
 
                                                     {!! Form::open(['method' => 'delete', 'data-confirm' => 'You will not be able to recover this record!', 'route' => ['back.foo.bar.destroy', $record->id]]) !!}
-                                                    {!! Form::button('remover', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs']) !!}
+                                                    {!! Form::button(trans('actions.remove'), ['type' => 'submit', 'class' => 'btn btn-danger btn-xs']) !!}
                                                     {!! Form::close() !!}
                                                 </td>
                                             </tr>
