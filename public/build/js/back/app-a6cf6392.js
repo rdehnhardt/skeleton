@@ -1,3 +1,15 @@
+function alert(message, title) {
+    if (typeof title == 'undefined') {
+        swal('System Information', message);
+    } else {
+        swal(title, message);
+    }
+}
+$(document).ready(function () {
+    $(this).on('click', 'a', function (e) {
+        $(this).blur();
+    });
+});
 var formConfirm = document.querySelectorAll('form[data-confirm]')
 
 for (var i = 0; i < formConfirm.length; i++) {
@@ -23,3 +35,5 @@ for (var i = 0; i < formConfirm.length; i++) {
         });
     });
 }
+
+//# sourceMappingURL=app.js.map
