@@ -9,12 +9,12 @@
                 <span class="icon-bar"></span>
             </button>
 
-            <a class="navbar-brand" href="#">{{ config('app.name') }}</a>
+            <a class="navbar-brand" href="{{ route('dashboard') }}">{{ config('app.name') }}</a>
         </div>
 
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="{{ route('dashboard') }}">{{ trans('base.dashboard') }}</a></li>
+                <li><a href="{{ route('dashboard') }}">{{ trans('base.dashboard') }}</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
                        aria-expanded="false">Foo <span class="caret"></span></a>
