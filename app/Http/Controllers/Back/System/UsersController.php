@@ -47,9 +47,9 @@ class UsersController extends BackController
     public function store(UserRequest $request)
     {
         $User = new User();
-        $User->slug = str_slug($request->get('title'));
-        $User->title = $request->get('title');
-        $User->status = $request->get('status');
+        $User->name = $request->get('name');
+        $User->email = $request->get('email');
+        $User->password = bcrypt($request->get('password'));
 
         if ($User->save()) {
             return Redirect::route('back.system.users.index')->with('message', 'Successfully created record!')->with('message-class', 'success');
@@ -94,9 +94,9 @@ class UsersController extends BackController
     public function update(UserRequest $request, $id)
     {
         $User = User::find($id);
-        $User->slug = str_slug($request->get('title'));
-        $User->title = $request->get('title');
-        $User->status = $request->get('status');
+        $User->name = $request->get('name');
+        $User->email = $request->get('email');
+        $User->password = bcrypt($request->get('password'));
 
         if ($User->save()) {
             return Redirect::route('back.system.users.index')->with('message', 'Successfully updated record!')->with('message-class', 'success');
