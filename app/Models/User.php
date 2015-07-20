@@ -40,6 +40,6 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     public function getGravatarAttribute()
     {
         $hash = md5(strtolower(trim($this->attributes['email'])));
-        return "http://www.gravatar.com/avatar/$hash?s=20";
+        return "http://www.gravatar.com/avatar/$hash?s=60";
     }
 }
