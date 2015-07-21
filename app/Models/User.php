@@ -35,11 +35,13 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
     protected $hidden = ['password', 'remember_token'];
 
     /**
+     * @param int $size
      * @return string
      */
-    public function getGravatarAttribute()
+    public function gravatar($size = 20)
     {
         $hash = md5(strtolower(trim($this->attributes['email'])));
-        return "http://www.gravatar.com/avatar/$hash?s=60";
+
+        return "http://www.gravatar.com/avatar/$hash?s={$size}";
     }
 }

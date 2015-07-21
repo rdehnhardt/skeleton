@@ -62,7 +62,7 @@
                         <h3 class="panel-title">Gravatar</h3>
                     </div>
                     <div class="panel-body text-center">
-                        <img src="https://secure.gravatar.com/avatar/gravatarid?s=128&amp;r=any&amp;time=43179786" width="100%" class="img-responsive">
+                        <img src="{{ Auth::user()->gravatar(250) }}" width="100%" class="img-responsive">
                         <br /><br />
 
                         <a target="_blank" href="http://en.gravatar.com/emails" class="btn btn-block btn-default" title="gravatar.com">
