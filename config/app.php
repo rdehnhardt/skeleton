@@ -160,6 +160,7 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         Rdehnhardt\Html\HtmlServiceProvider::class,
+        Baconfy\Analytics\Providers\AnalyticsServiceProvider::class,
 
     ],
 
