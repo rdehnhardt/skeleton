@@ -104,4 +104,4 @@ var analytcs = {
     }
 }
 
-analytcs.init(_px);
+analytcs.init(_bc);
