@@ -8,3 +8,6 @@ composer.lock
 
 public/css
 public/js
+
+laravel-analytcs
+bower_components

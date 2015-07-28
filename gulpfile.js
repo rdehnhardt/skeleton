@@ -8,11 +8,15 @@ elixir(function (mix) {
     mix.sass('back.scss', "public/css/back.css");
 
     mix.scripts([
-        "jquery/dist/jquery.js",
-        "jquery.easing/jquery.easing.js",
-        "bootstrap-sass/assets/javascripts/bootstrap.js",
-        "sweetalert/dist/sweetalert.min.js"
-    ], 'public/js/back/vendor.js', 'node_modules');
+        "node_modules/jquery/dist/jquery.js",
+        "node_modules/jquery.easing/jquery.easing.js",
+        "node_modules/bootstrap-sass/assets/javascripts/bootstrap.js",
+        "node_modules/sweetalert/dist/sweetalert.min.js",
+        "bower_components/data-ajax-content/jquery.ajax-content.js",
+        "bower_components/jquery-form/jquery.form.js",
+        "bower_components/highcharts/highcharts.js",
+        "bower_components/highcharts/highcharts-more.js"
+    ], 'public/js/back/vendor.js', './');
 
     mix.scripts([
         "back/**/*.js"

@@ -1,6 +1,7 @@
 <?php
 
 Route::get('/', ['as' => 'dashboard', 'uses' => 'Dashboard\DefaultController@index']);
+Route::get('/visits/{start}/{end}', ['as' => 'dashboard.visits', 'uses' => 'Dashboard\DefaultController@visits']);
 Route::resource('profile', 'Dashboard\ProfileController', ['only' => ['index', 'update']]);
 
 Route::get('/panel-with-tabs', ['as' => 'dashboard.panel', 'uses' => 'Dashboard\DefaultController@panel']);
