@@ -14,8 +14,7 @@ elixir(function (mix) {
         "node_modules/sweetalert/dist/sweetalert.min.js",
         "bower_components/data-ajax-content/jquery.ajax-content.js",
         "bower_components/jquery-form/jquery.form.js",
-        "bower_components/highcharts/highcharts.js",
-        "bower_components/highcharts/highcharts-more.js"
+        "bower_components/Chart.js/Chart.js"
     ], 'public/js/back/vendor.js', './');
 
     mix.scripts([
