@@ -18,7 +18,8 @@
                                 <input type="button" name="btt-reload" id="btt-reload" value="Ok" />
                         	</div>
                         </div>
-                        <canvas id="visits" height="400"></canvas>
+
+                        <div id="visits" data-height="400"></div>
                     </div>
                 </div>
             </div>
