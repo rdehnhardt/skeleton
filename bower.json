@@ -4,6 +4,7 @@
     "bootstrap-sass-datepicker": "~1.3.7",
     "jquery-form": "~3.46.0",
     "highcharts": "~4.1.7",
-    "Chart.js": "~1.0.2"
+    "Chart.js": "~1.0.2",
+    "bootstrap-daterangepicker": "~2.0.5"
   }
 }
