@@ -11,6 +11,13 @@
                         <h3 class="panel-title">Visitas</h3>
                     </div>
                     <div class="panel-body">
+                        <div class="row">
+                        	<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        		<input type="text" name="start-date" id="start-date" value="{{ date('Y-m-d') }}">
+                                <input type="text" name="end-date" id="end-date" value="{{ date('Y-m-d') }}">
+                                <input type="button" name="btt-reload" id="btt-reload" value="Ok" />
+                        	</div>
+                        </div>
                         <canvas id="visits" height="400"></canvas>
                     </div>
                 </div>

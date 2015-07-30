@@ -30,10 +30,10 @@ class VisitsCommand extends Command
     public function handle()
     {
         DB::table('analytcs_visits')->delete();
+        $Date = Carbon::createFromFormat('Y-m-d H:i:s', date('Y-05-01 00:00:00'));
         $user = "3_6_115_27082_31_546_11_14";
 
-        for ($i = 1; $i <= 1000; $i++) {
-            $Date = Carbon::createFromFormat('Y-m-d H:i:s', date('Y-m-d 00:00:00'));
+        for ($i = 1; $i <= 50000; $i++) {
             $Tmp = $Date->addHour(rand(0, 23));
 
             DB::table('analytcs_visits')->insert([

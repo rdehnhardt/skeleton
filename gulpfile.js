@@ -12,6 +12,8 @@ elixir(function (mix) {
         "node_modules/jquery.easing/jquery.easing.js",
         "node_modules/bootstrap-sass/assets/javascripts/bootstrap.js",
         "node_modules/sweetalert/dist/sweetalert.min.js",
+        "bower_components/bootstrap-sass-datepicker/js/bootstrap-sass-datepicker.js",
+        "bower_components/bootstrap-sass-datepicker/js/locales/bootstrap-datepicker.pt-BR.js",
         "bower_components/data-ajax-content/jquery.ajax-content.js",
         "bower_components/jquery-form/jquery.form.js",
         "bower_components/Chart.js/Chart.js"
