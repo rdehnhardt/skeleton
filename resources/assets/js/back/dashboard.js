@@ -20,7 +20,9 @@ $(function () {
             success: function (data) {
                 build_canvas('#visits');
 
-                new Chart(document.getElementById('chart').getContext('2d')).Line(data);
+                new Chart(document.getElementById('chart').getContext('2d')).Line(data, {
+                    bezierCurve: false
+                });
             }
         });
     }

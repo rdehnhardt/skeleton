@@ -30,17 +30,17 @@ class DefaultController extends BackController
             'datasets' => [
                 [
                     "label" => "Total de Visitas",
-                    'fillColor' => "rgba(91, 144, 191, 0.5)",
+                    'fillColor' => "rgba(91, 144, 191, 0.3)",
                     'strokeColor' => "#5B90BF",
-                    'pointColor' => "#fff",
+                    'pointColor' => "#5B90BF",
                     'pointStrokeColor' => "#9DB86D",
                     'data' => $getVisitByPeriod->getTotal()
                 ],
                 [
                     "label" => "Visitantes Únicos",
-                    'fillColor' => "rgba(0,0,0,0.4)",
+                    'fillColor' => "rgba(0,0,0,0.3)",
                     'strokeColor' => "#000",
-                    'pointColor' => "#fff",
+                    'pointColor' => "#000",
                     'pointStrokeColor' => "#000",
                     'data' => $getVisitByPeriod->getUniques()
                 ]
