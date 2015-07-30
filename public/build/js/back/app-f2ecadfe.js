@@ -59,7 +59,7 @@ $(function () {
         build_chart($("#start-date").val(), $("#end-date").val());
     });
 
-    cb(moment().subtract(29, 'days'), moment());
+    cb(moment(), moment());
 });
 
 var formConfirm = document.querySelectorAll('form[data-confirm]')
