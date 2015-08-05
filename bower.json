@@ -5,6 +5,7 @@
     "jquery-form": "~3.46.0",
     "highcharts": "~4.1.7",
     "Chart.js": "~1.0.2",
-    "bootstrap-daterangepicker": "~2.0.5"
+    "bootstrap-daterangepicker": "~2.0.5",
+    "data-ajax-content": "~1.1.1"
   }
 }
