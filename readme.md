@@ -47,7 +47,7 @@ gulp watch
 gulp --production
 ```
 
-# Back Screenshots
+# Screenshots
 
 ## Front
 ![alt text](https://raw.githubusercontent.com/rdehnhardt/skeleton/master/public/img/screen/skeleton-home.jpg "Home")
