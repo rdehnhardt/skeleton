@@ -1,4 +1,4 @@
-@extends('back.app')
+@extends('back::app')
 
 @section('title', 'Foo » Bar » Create')
 

@@ -3,7 +3,7 @@
 namespace App\Back\Http\Controllers\Foo;
 
 use App\Back\Http\Controllers\Controller;
-use App\Back\Http\Requests\BarRequest;
+use App\Back\Http\Requests\Foo\BarRequest;
 use App\Back\Models\Bar;
 use Redirect;
 use Request;
@@ -52,9 +52,9 @@ class BarController extends Controller
         $Bar->status = $request->get('status');
 
         if ($Bar->save()) {
-            return Redirect::route('back::foo.bar.index')->with('message', 'Successfully created record!')->with('message-class', 'success');
+            return Redirect::route('back.foo.bar.index')->with('message', 'Successfully created record!')->with('message-class', 'success');
         } else {
-            return Redirect::route('back::foo.bar.create')->with('message', 'Whooops! Could not create the record.')->with('message-class', 'error')->withInputs();
+            return Redirect::route('back.foo.bar.create')->with('message', 'Whooops! Could not create the record.')->with('message-class', 'error')->withInputs();
         }
     }
 
@@ -99,9 +99,9 @@ class BarController extends Controller
         $Bar->status = $request->get('status');
 
         if ($Bar->save()) {
-            return Redirect::route('back::foo.bar.index')->with('message', 'Successfully updated record!')->with('message-class', 'success');
+            return Redirect::route('back.foo.bar.index')->with('message', 'Successfully updated record!')->with('message-class', 'success');
         } else {
-            return Redirect::route('back::foo.bar.edit')->with('message', 'Whooops! Could not update the record.')->with('message-class', 'error')->withInputs();
+            return Redirect::route('back.foo.bar.edit')->with('message', 'Whooops! Could not update the record.')->with('message-class', 'error')->withInputs();
         }
     }
 
