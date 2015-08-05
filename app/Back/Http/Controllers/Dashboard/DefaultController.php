@@ -11,12 +11,12 @@ class DefaultController extends Controller
 
     public function index()
     {
-        return view('back.scope.dashboard.default');
+        return view('back::scope.dashboard.default');
     }
 
     public function panel()
     {
-        return view('back.scope.dashboard.panel-with-tab');
+        return view('back::scope.dashboard.panel-with-tab');
     }
 
     public function visits($startDate, $endDate, GetVisitByPeriod $getVisitByPeriod)

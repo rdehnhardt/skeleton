@@ -27,7 +27,7 @@ class ProfileController extends Controller
     {
         $record = $this->auth->user();
 
-        return view('back.scope.profile.index', compact('record'));
+        return view('back::scope.profile.index', compact('record'));
     }
 
     public function update(ProfileRequest $request, $id)

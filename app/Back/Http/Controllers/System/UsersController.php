@@ -25,7 +25,7 @@ class UsersController extends Controller
         }
 
 
-        return view('back.scope.system.users.index', compact('records'));
+        return view('back::scope.system.users.index', compact('records'));
     }
 
     /**
@@ -35,7 +35,7 @@ class UsersController extends Controller
      */
     public function create()
     {
-        return view('back.scope.system.users.create');
+        return view('back::scope.system.users.create');
     }
 
     /**
@@ -52,9 +52,9 @@ class UsersController extends Controller
         $User->password = bcrypt($request->get('password'));
 
         if ($User->save()) {
-            return Redirect::route('back.system.users.index')->with('message', 'Successfully created record!')->with('message-class', 'success');
+            return Redirect::route('back::system.users.index')->with('message', 'Successfully created record!')->with('message-class', 'success');
         } else {
-            return Redirect::route('back.system.users.create')->with('message', 'Whooops! Could not create the record.')->with('message-class', 'error')->withInputs();
+            return Redirect::route('back::system.users.create')->with('message', 'Whooops! Could not create the record.')->with('message-class', 'error')->withInputs();
         }
     }
 
@@ -68,7 +68,7 @@ class UsersController extends Controller
     {
         $record = User::find($id);
 
-        return view('back.scope.system.users.show', compact('record'));
+        return view('back::scope.system.users.show', compact('record'));
     }
 
     /**
@@ -81,7 +81,7 @@ class UsersController extends Controller
     {
         $record = User::find($id);
 
-        return view('back.scope.system.users.edit', compact('record'));
+        return view('back::scope.system.users.edit', compact('record'));
     }
 
     /**
@@ -99,9 +99,9 @@ class UsersController extends Controller
         $User->password = bcrypt($request->get('password'));
 
         if ($User->save()) {
-            return Redirect::route('back.system.users.index')->with('message', 'Successfully updated record!')->with('message-class', 'success');
+            return Redirect::route('back::system.users.index')->with('message', 'Successfully updated record!')->with('message-class', 'success');
         } else {
-            return Redirect::route('back.system.users.edit')->with('message', 'Whooops! Could not update the record.')->with('message-class', 'error')->withInputs();
+            return Redirect::route('back::system.users.edit')->with('message', 'Whooops! Could not update the record.')->with('message-class', 'error')->withInputs();
         }
     }
 

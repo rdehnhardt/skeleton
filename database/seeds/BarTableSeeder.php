@@ -1,6 +1,6 @@
 <?php
 
-use App\Models\Bar;
+use App\Back\Models\Bar;
 use Illuminate\Database\Seeder;
 
 class BarTableSeeder extends Seeder
@@ -11,7 +11,7 @@ class BarTableSeeder extends Seeder
         DB::table('bars')->delete();
 
         for ($i = 0; $i < 100; $i++) {
-            $bar = factory(App\Models\Bar::class)->make();
+            $bar = factory(App\Back\Models\Bar::class)->make();
 
             Bar::create($bar->toArray());
         }
