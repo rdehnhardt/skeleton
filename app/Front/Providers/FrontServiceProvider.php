@@ -13,7 +13,7 @@ class FrontServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->loadViewsFrom(base_path('resources/views/front'), 'front');
     }
 
     /**

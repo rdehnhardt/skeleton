@@ -13,7 +13,7 @@ class BackServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        $this->loadViewsFrom(base_path('resources/views/back'), 'back');
     }
 
     /**
