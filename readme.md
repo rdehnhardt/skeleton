@@ -49,6 +49,9 @@ gulp --production
 
 # Back Screenshots
 
+## Front
+![alt text](https://raw.githubusercontent.com/rdehnhardt/skeleton/master/public/img/screen/skeleton-home.jpg "Home")
+
 ## Login
 ![alt text](https://raw.githubusercontent.com/rdehnhardt/skeleton/master/public/img/screen/skeleton-auth.jpg "Login")
 
