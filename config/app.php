@@ -154,11 +154,34 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
         /*
-         * Application Service Providers...
+         * Core Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        App\Core\Providers\AppServiceProvider::class,
+        App\Core\Providers\EventServiceProvider::class,
+        App\Core\Providers\RouteServiceProvider::class,
+
+        /*
+         * Auth Service Providers...
+         */
+        App\Auth\Providers\AuthServiceProvider::class,
+        App\Auth\Providers\RouteServiceProvider::class,
+
+        /*
+         * Back Service Providers...
+         */
+        App\Back\Providers\BackServiceProvider::class,
+        App\Back\Providers\RouteServiceProvider::class,
+
+
+        /*
+         * Front Service Providers...
+         */
+        App\Front\Providers\FrontServiceProvider::class,
+        App\Front\Providers\RouteServiceProvider::class,
+
+        /**
+         * Packages
+         */
         Rdehnhardt\Html\HtmlServiceProvider::class,
         Baconfy\Analytics\Providers\AnalyticsServiceProvider::class,
 
@@ -209,8 +232,8 @@ return [
         'URL'       => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View'      => Illuminate\Support\Facades\View::class,
-        'Form' => Collective\Html\FormFacade::class,
-        'Html' => Collective\Html\HtmlFacade::class,
+        'Form'      => Collective\Html\FormFacade::class,
+        'Html'      => Collective\Html\HtmlFacade::class,
 
     ],
 
