@@ -13,7 +13,8 @@ class BackServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(base_path('resources/views/back'), 'back');
+        $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'back');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'back');
     }
 
     /**

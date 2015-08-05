@@ -1,4 +1,4 @@
-@extends('auth.app')
+@extends('auth::app')
 
 @section('content')
     <form class="form-horizontal" role="form" method="POST" action="{{ url('/password/reset') }}">

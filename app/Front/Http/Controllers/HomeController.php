@@ -12,7 +12,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('front.scope.home');
+        return view('front::scope.home');
     }
 
 }

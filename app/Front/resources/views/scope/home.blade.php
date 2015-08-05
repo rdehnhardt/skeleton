@@ -1,4 +1,4 @@
-@extends('front.app')
+@extends('front::app')
 
 @section('content')
     <div class="title">Skeleton</div>

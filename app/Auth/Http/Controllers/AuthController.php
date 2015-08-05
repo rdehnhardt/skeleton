@@ -24,6 +24,20 @@ class AuthController extends Controller
     }
 
     /**
+     * Show the application login form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getLogin()
+    {
+        if (view()->exists('auth::authenticate')) {
+            return view('auth::authenticate');
+        }
+
+        return view('auth::login');
+    }
+
+    /**
      * Show the application registration form.
      *
      * @return \Illuminate\Http\Response

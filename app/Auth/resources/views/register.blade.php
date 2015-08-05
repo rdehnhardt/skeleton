@@ -1,4 +1,4 @@
-@extends('auth.app')
+@extends('auth::app')
 
 @section('content')
     <h3 class="text-center">Register</h3>

@@ -13,7 +13,8 @@ class AuthServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadViewsFrom(base_path('resources/views/auth'), 'auth');
+        $this->loadTranslationsFrom(__DIR__ . '/../resources/lang', 'auth');
+        $this->loadViewsFrom(__DIR__ . '/../resources/views', 'auth');
     }
 
     /**
