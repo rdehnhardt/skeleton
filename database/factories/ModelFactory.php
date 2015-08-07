@@ -9,12 +9,3 @@ $factory->define(App\Auth\Models\User::class, function (Faker\Generator $faker) 
     ];
 });
 
-$factory->define(App\Back\Models\Bar::class, function (Faker\Generator $faker) {
-    $title = $faker->company;
-
-    return [
-        'slug' => str_slug($title),
-        'title' => $title,
-        'status' => $faker->boolean(),
-    ];
-});
