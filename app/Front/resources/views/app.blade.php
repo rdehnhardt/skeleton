@@ -4,6 +4,19 @@
     <title>rdehnhardt :: skeleton</title>
     <link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
 
+    <script>
+        var _bc = _bc || [];
+
+        (function () {
+            var bc = document.createElement('script');
+            bc.src = '/analytics.js';
+            bc.type = 'text/javascript';
+            bc.async = true;
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(bc, s);
+        })();
+    </script>
+
     <style>
         body {
             margin: 0;
