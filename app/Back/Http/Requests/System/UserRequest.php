@@ -4,6 +4,9 @@ namespace App\Back\Http\Requests\System;
 
 use App\Core\Http\Requests\Request;
 
+/**
+ * @property mixed users
+ */
 class UserRequest extends Request
 {
 
@@ -14,10 +17,22 @@ class UserRequest extends Request
      */
     public function rules()
     {
-        return [
-            'name' => 'required',
-            'email' => 'required|email',
-        ];
+        switch ($this->method()) {
+            case 'POST': {
+                return [
+                    'email' => "required|email|unique:users,email",
+                    'name' => "required",
+                ];
+            }
+
+            case 'PUT':
+            case 'PATCH': {
+                return [
+                    'email' => "required|email|unique:users,email,{$this->users}",
+                    'name' => "required",
+                ];
+            }
+        }
     }
 
     /**
