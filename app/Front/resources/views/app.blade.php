@@ -49,6 +49,7 @@
 
             .title {
                 font-size: 96px;
+                letter-spacing: -4px;
                 font-weight: bold;
                 margin-bottom: 10px;
             }
