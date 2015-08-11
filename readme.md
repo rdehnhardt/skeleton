@@ -4,6 +4,8 @@
 This is a app skeleton with website analytics.
 To use this project, make a fork
 
+[Demo](http://skeleton.rdehnhardt.com/)
+
 ## Admin user and password
 
 ```
