@@ -1,73 +1,82 @@
-<html lang="pt-BR">
-<head>
-    <meta charset="utf-8">
-    <title>rdehnhardt :: skeleton</title>
-    <link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="../../favicon.ico">
+        <title>baconfy :: skeleton</title>
 
-    <script>
-        var _bc = _bc || [];
+        <link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
 
-        (function () {
-            var bc = document.createElement('script');
-            bc.src = '/analytics.js';
-            bc.type = 'text/javascript';
-            bc.async = true;
-            var s = document.getElementsByTagName('script')[0];
-            s.parentNode.insertBefore(bc, s);
-        })();
-    </script>
+        <script>
+            var _bc = _bc || [];
 
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            color: #B0BEC5;
-            display: table;
-            font-weight: 100;
-            font-family: 'Lato';
-        }
+            (function () {
+                var bc = document.createElement('script');
+                bc.src = '/analytics.js';
+                bc.type = 'text/javascript';
+                bc.async = true;
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(bc, s);
+            })();
+        </script>
 
-        .container {
-            text-align: center;
-            display: table-cell;
-            vertical-align: middle;
-        }
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                width: 100%;
+                height: 100%;
+                color: #B0BEC5;
+                display: table;
+                font-weight: 100;
+                font-family: 'Lato';
+            }
 
-        .content {
-            text-align: center;
-            display: inline-block;
-        }
+            .container {
+                text-align: center;
+                display: table-cell;
+                vertical-align: middle;
+            }
 
-        .title {
-            font-size: 96px;
-            font-weight: bold;
-            margin-bottom: 10px;
-        }
+            .content {
+                text-align: center;
+                display: inline-block;
+            }
 
-        .quote {
-            font-size: 24px;
-            color: #6bb0d3;
-        }
+            .title {
+                font-size: 96px;
+                font-weight: bold;
+                margin-bottom: 10px;
+            }
 
-        a {
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 24px;
-            color: #6bb0d3;
-        }
+            .quote {
+                font-size: 24px;
+                color: #6bb0d3;
+            }
 
-        a:hover {
-            font-weight: bold;
-        }
-    </style>
-</head>
-<body>
-<div class="container">
-    <div class="content">
-        @yield('content')
-    </div>
-</div>
-</body>
+            a {
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 24px;
+                color: #6bb0d3;
+            }
+
+            a:hover {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="container">
+            <div class="content">
+                @yield('content')
+            </div>
+        </div>
+    </body>
 </html>
+
