@@ -1,10 +1,11 @@
 <?php
 
-use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Database\Migrations\Migration;
 
 class CreateAnalytcsVisitsTable extends Migration
 {
+
     /**
      * Run the migrations.
      *
@@ -17,7 +18,7 @@ class CreateAnalytcsVisitsTable extends Migration
             $table->string('uuid');
             $table->string('ip');
             $table->string('location');
-            $table->string('referer');
+            $table->string('referrer');
             $table->timestamps();
         });
     }
@@ -31,4 +32,5 @@ class CreateAnalytcsVisitsTable extends Migration
     {
         Schema::drop('analytcs_visits');
     }
+
 }
