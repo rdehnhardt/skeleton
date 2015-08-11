@@ -28,6 +28,7 @@
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
+                <li><a href="/">{{ trans('actions.go-to') }}</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><img src="{{ Auth::user()->gravatar(40) }}" alt="avatar" class="img-circle profile-image"> {{ Auth::user()->name }} <span class="caret"></span></a>
                     <ul class="dropdown-menu">
@@ -35,9 +36,6 @@
                         <li class="divider"></li>
                         <li><a href="/auth/logout">Logout</a></li>
                     </ul>
-                </li>
-                <li>
-                    <a href="/">Site</a>
                 </li>
             </ul>
         </div>

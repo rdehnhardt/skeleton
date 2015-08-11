@@ -1,10 +1,11 @@
 <?php
 
 return [
-    'remove' => 'Removee',
-    'create' => 'Criar',
+    'remove' => 'Remover',
+    'create' => 'Adicionar',
     'search' => 'Pesquisar',
     'edit' => 'Editar',
     'save' => 'Salvar',
     'back' => 'Voltar',
+    'go-to' => 'Ir para',
 ];

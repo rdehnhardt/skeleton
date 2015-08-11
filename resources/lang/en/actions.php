@@ -7,4 +7,5 @@ return [
     'edit' => 'Edit',
     'save' => 'Save',
     'back' => 'Back',
+    'go-to' => 'Go to',
 ];
