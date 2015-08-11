@@ -27,9 +27,13 @@ $(function () {
         });
     }
 
-    cb = function(start, end) {
+    cb = function (start, end) {
         $('#reportrange span').html(start.format('DD/MM/YYYY') + ' - ' + end.format('DD/MM/YYYY'));
-        build_chart(start.format('YYYY-MM-DD'), end.format('YYYY-MM-DD'));
+
+        $('#chart')
+        {
+            build_chart(start.format('YYYY-MM-DD'), end.format('YYYY-MM-DD'));
+        }
     }
 
     $('#reportrange').daterangepicker({
@@ -44,7 +48,10 @@ $(function () {
     }, cb);
 
     $(document).on('click', '#btt-reload', function (e) {
-        build_chart($("#start-date").val(), $("#end-date").val());
+        $('#chart')
+        {
+            build_chart($("#start-date").val(), $("#end-date").val());
+        }
     });
 
     cb(moment(), moment());

@@ -11,6 +11,6 @@
   "dependencies": {
     "bootstrap-sass": "^3.0.0",
     "bower": "^1.4.1",
-    "laravel-elixir": "^2.0.0"
+    "laravel-elixir": "^3.0.0"
   }
 }

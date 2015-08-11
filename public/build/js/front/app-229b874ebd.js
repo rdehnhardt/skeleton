@@ -1,3 +1,2 @@
-console.log('FRONT');
-
+console.log("FRONT");
 //# sourceMappingURL=app.js.map

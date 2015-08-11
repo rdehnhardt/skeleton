@@ -1,2 +1,2 @@
-console.log('login');
+console.log("login");
 //# sourceMappingURL=app.js.map
