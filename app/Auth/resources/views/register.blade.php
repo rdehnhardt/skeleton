@@ -7,7 +7,7 @@
 
     <div class="no-label">
         {!! Form::openGroup('name', 'Name') !!}
-        {!! Form::email('name', null, ['placeholder' => 'Your Name']) !!}
+        {!! Form::text('name', null, ['placeholder' => 'Your Name']) !!}
         {!! Form::closeGroup() !!}
     </div>
 
