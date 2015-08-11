@@ -17,6 +17,7 @@ class CreateAnalytcsVisitsTable extends Migration
             $table->string('uuid');
             $table->string('ip');
             $table->string('location');
+            $table->string('referer');
             $table->timestamps();
         });
     }
