@@ -94,7 +94,7 @@ class UsersController extends Controller
     public function update(UserRequest $request, $id)
     {
         if (env('APP_ENV') == 'homolog') {
-            return Redirect::route('back.system.users.edit')->with('message', 'Whooops! Update not allowed.')->with('message-class', 'warning')->withInputs();
+            return Redirect::route('back.system.users.edit')->with('message', 'Whooops! Update not allowed.')->with('message-class', 'warning');
         }
 
         $User = User::find($id);
