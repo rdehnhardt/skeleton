@@ -32,6 +32,10 @@ class ProfileController extends Controller
 
     public function update(ProfileRequest $request, $id)
     {
+        if (env('APP_ENV') == 'homolog') {
+            return Redirect::route('back.system.users.edit')->with('message', 'Whooops! Update not allowed.')->with('message-class', 'warning')->withInputs();
+        }
+
         $User = User::find($id);
 
         if ($request->get('name')) {
