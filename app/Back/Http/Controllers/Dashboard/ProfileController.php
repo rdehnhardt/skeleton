@@ -32,10 +32,6 @@ class ProfileController extends Controller
 
     public function update(ProfileRequest $request, $id)
     {
-        if (env('APP_ENV') == 'homolog') {
-            return Redirect::route('back.system.users.edit')->with('message', 'Whooops! Update not allowed.')->with('message-class', 'warning');
-        }
-
         $User = User::find($id);
 
         if ($request->get('name')) {
@@ -46,7 +42,7 @@ class ProfileController extends Controller
             $User->email = $request->get('email');
         }
 
-        if ($request->get('password')) {
+        if ($request->get('password') && env('APP_ENV') != 'homolog') {
             $User->password = bcrypt($request->get('password'));
         }
 

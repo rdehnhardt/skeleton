@@ -93,14 +93,13 @@ class UsersController extends Controller
      */
     public function update(UserRequest $request, $id)
     {
-        if (env('APP_ENV') == 'homolog') {
-            return Redirect::route('back.system.users.edit')->with('message', 'Whooops! Update not allowed.')->with('message-class', 'warning');
-        }
-
         $User = User::find($id);
         $User->name = $request->get('name');
         $User->email = $request->get('email');
-        $User->password = bcrypt($request->get('password'));
+
+        if ($request->get('password') && env('APP_ENV') != 'homolog') {
+            $User->password = bcrypt($request->get('password'));
+        }
 
         if ($User->save()) {
             return Redirect::route('back.system.users.index')->with('message', 'Successfully updated record!')->with('message-class', 'success');
