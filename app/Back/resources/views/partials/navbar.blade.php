@@ -34,7 +34,7 @@
                     <ul class="dropdown-menu">
                         <li><a href="{{ route('back.profile.index') }}">{{ trans('dictionary.profile') }}</a></li>
                         <li class="divider"></li>
-                        <li><a href="/auth/logout">Logout</a></li>
+                        <li><a href="/auth/logout">{{ trans('dictionary.logout') }}</a></li>
                     </ul>
                 </li>
             </ul>

@@ -66,7 +66,7 @@
                         <br /><br />
 
                         <a target="_blank" href="http://en.gravatar.com/emails" class="btn btn-block btn-default" title="gravatar.com">
-                            Change your Gravatar
+                            {{ trans('dictionary.change-your-gravatar') }}
                         </a>
                     </div>
                 </div>

@@ -6,7 +6,7 @@
         <input type="hidden" name="token" value="{{ $token }}">
 
         <div class="form-group">
-            <label class="col-md-4 control-label">E-Mail Address</label>
+            <label class="col-md-4 control-label">{{ trans('dictionary.email-address') }}</label>
 
             <div class="col-md-6">
                 <input type="email" class="form-control" name="email" value="{{ old('email') }}">
@@ -14,7 +14,7 @@
         </div>
 
         <div class="form-group">
-            <label class="col-md-4 control-label">Password</label>
+            <label class="col-md-4 control-label">{{ trans('dictionary.password') }}</label>
 
             <div class="col-md-6">
                 <input type="password" class="form-control" name="password">
@@ -22,7 +22,7 @@
         </div>
 
         <div class="form-group">
-            <label class="col-md-4 control-label">Confirm Password</label>
+            <label class="col-md-4 control-label">{{ trans('dictionary.confirm-password') }}</label>
 
             <div class="col-md-6">
                 <input type="password" class="form-control" name="password_confirmation">
@@ -32,7 +32,7 @@
         <div class="form-group">
             <div class="col-md-6 col-md-offset-4">
                 <button type="submit" class="btn btn-primary">
-                    Reset Password
+                    {{ trans('dictionary.password-confirm') }}
                 </button>
             </div>
         </div>

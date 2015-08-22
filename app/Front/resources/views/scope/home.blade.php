@@ -1,6 +1,6 @@
 @extends('front::app')
 
 @section('content')
-    <div class="title">Skeleton</div>
-    <a href="/auth/login">Restricted Area</a>
+    <div class="title">{{ config('app.name') }}</div>
+    <a href="/auth/login">{{ trans('dictionary.restricted-area') }}</a>
 @stop

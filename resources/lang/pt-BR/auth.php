@@ -13,6 +13,5 @@ return [
     */
     
     'failed' => 'Estas credenciais não correspondem com nossos registros.',
-    'throttle' => 'Você realizou muitas tentativas de login. Favor tentar novamente em :seconds segundos.',
-    
+    'throttle' => 'Você realizou muitas tentativas de login. Favor tentar novamente em :seconds segundos.',   
 ];
