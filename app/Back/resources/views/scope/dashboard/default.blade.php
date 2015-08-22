@@ -8,7 +8,7 @@
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <div class="panel panel-default">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Visitas</h3>
+                        <h3 class="panel-title">{{ trans('dictionary.visits') }}</h3>
                     </div>
                     <div class="panel-body">
                         <input type="hidden" name="start-date" id="start-date" value="{{ date('Y-m-d') }}">
