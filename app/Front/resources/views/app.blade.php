@@ -7,7 +7,7 @@
         <meta name="description" content="">
         <meta name="author" content="">
         <link rel="icon" href="../../favicon.ico">
-        <title>{{ config('app.name') }} :: {{ config('app.description') }}</title>
+        <title>{{ config('app.name') }} :: @yield('page-title')</title>
 
         <link href='//fonts.googleapis.com/css?family=Lato:100' rel='stylesheet' type='text/css'>
 
