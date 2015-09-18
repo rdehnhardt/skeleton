@@ -4,7 +4,7 @@ namespace App\Back\Http\Controllers\Dashboard;
 
 use App\Back\Http\Controllers\Controller;
 use App\Back\Http\Requests\Profile\ProfileRequest;
-use App\Back\Models\User;
+use App\Auth\Models\User;
 use Illuminate\Contracts\Auth\Guard;
 use Redirect;
 
