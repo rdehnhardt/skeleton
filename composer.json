@@ -11,7 +11,8 @@
 		"php": ">=5.5.9",
 		"laravel/framework": "5.1.*",
 		"rdehnhardt/html": "^1.0",
-		"baconfy/laravel-analytics": "^1.0"
+		"baconfy/laravel-analytics": "^1.0",
+		"artesaos/seotools": "~0.7.3"
 	},
 	"require-dev": {
 		"fzaninotto/faker": "~1.4",
