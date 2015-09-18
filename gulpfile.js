@@ -10,10 +10,10 @@ elixir(function (mix) {
     mix.sass('back.scss', "public/css/back.css");
 
     mix.scripts([
-        "node_modules/jquery/dist/jquery.js",
-        "node_modules/jquery.easing/jquery.easing.js",
-        "node_modules/bootstrap-sass/assets/javascripts/bootstrap.js",
-        "node_modules/sweetalert/dist/sweetalert.min.js",
+        "bower_components/jquery/dist/jquery.js",
+        "bower_components/jquery.easing/js/jquery.easing.js",
+        "bower_components/bootstrap-sass/assets/javascripts/bootstrap.js",
+        "bower_components/sweetalert/dist/sweetalert.min.js",
         "bower_components/moment/moment.js",
         "bower_components/bootstrap-daterangepicker/daterangepicker.js",
         "bower_components/data-ajax-content/jquery.ajax-content.js",
@@ -32,9 +32,9 @@ elixir(function (mix) {
 
     mix.scripts([
         "jquery/dist/jquery.js",
-        "jquery.easing/jquery.easing.js",
+        "jquery.easing/js/jquery.easing.js",
         "bootstrap-sass/assets/javascripts/bootstrap.js"
-    ], 'public/js/front/vendor.js', 'node_modules');
+    ], 'public/js/front/vendor.js', 'bower_components');
 
     mix.scripts([
         "front/**/*.js"
@@ -47,9 +47,9 @@ elixir(function (mix) {
 
     mix.scripts([
         "jquery/dist/jquery.js",
-        "jquery.easing/jquery.easing.js",
+        "jquery.easing/js/jquery.easing.js",
         "bootstrap-sass/assets/javascripts/bootstrap.js"
-    ], 'public/js/auth/vendor.js', 'node_modules');
+    ], 'public/js/auth/vendor.js', 'bower_components');
 
     mix.scripts([
         "auth/**/*.js"
@@ -73,5 +73,5 @@ elixir(function (mix) {
         "js/front/app.js"
     ]);
 
-    mix.copy('node_modules/font-awesome/fonts', 'public/build/fonts');
+    mix.copy('bower_components/font-awesome/fonts', 'public/build/fonts');
 });

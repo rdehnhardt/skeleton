@@ -9,16 +9,35 @@ use Carbon\Carbon;
 class DefaultController extends Controller
 {
 
+    /**
+     * @return \Illuminate\View\View
+     */
     public function index()
     {
+        $this->seo()->setTitle(trans('base.dashboard'));
+
         return view('back::scope.dashboard.default');
     }
 
+    /**
+     * @return \Illuminate\View\View
+     */
     public function panel()
     {
+        $this->seo()
+            ->setTitle(trans('base.dashboard'))
+            ->setDescription('With tab');
+
         return view('back::scope.dashboard.panel-with-tab');
     }
 
+    /**
+     * @param                  $startDate
+     * @param                  $endDate
+     * @param GetVisitByPeriod $getVisitByPeriod
+     *
+     * @return array
+     */
     public function visits($startDate, $endDate, GetVisitByPeriod $getVisitByPeriod)
     {
         $startDate = Carbon::createFromFormat('Y-m-d H:i:s', "{$startDate} 00:00:00");

@@ -159,7 +159,7 @@ return [
         App\Core\Providers\AppServiceProvider::class,
         App\Core\Providers\EventServiceProvider::class,
         App\Core\Providers\RouteServiceProvider::class,
-
+        App\Core\Providers\AuthServiceProvider::class,
         /*
          * Auth Service Providers...
          */
@@ -184,6 +184,7 @@ return [
          */
         Rdehnhardt\Html\HtmlServiceProvider::class,
         Baconfy\Analytics\Providers\AnalyticsServiceProvider::class,
+        Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class
 
     ],
 
