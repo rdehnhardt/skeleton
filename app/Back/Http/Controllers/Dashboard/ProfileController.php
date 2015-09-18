@@ -23,13 +23,24 @@ class ProfileController extends Controller
         $this->auth = $auth;
     }
 
+    /**
+     * @return \Illuminate\View\View
+     */
     public function index()
     {
+        $this->seo()->setTitle(trans('dictionary.profile'));
+
         $record = $this->auth->user();
 
         return view('back::scope.profile.index', compact('record'));
     }
 
+    /**
+     * @param ProfileRequest $request
+     * @param int            $id
+     *
+     * @return mixed
+     */
     public function update(ProfileRequest $request, $id)
     {
         $User = User::find($id);
@@ -49,8 +60,8 @@ class ProfileController extends Controller
         if ($User->save()) {
             return Redirect::back()->with('message', 'Data has changed!')->with('message-class', 'success');
         } else {
-            return Redirect::back()->with('message', 'Whooops! Could not change data.')->with('message-class', 'error')->withInputs();
+            return Redirect::back()->with('message', 'Whooops! Could not change data.')->with('message-class',
+                'error')->withInputs();
         }
     }
-
 }

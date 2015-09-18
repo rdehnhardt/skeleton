@@ -1,7 +1,5 @@
 @extends('back::app')
 
-@section('title', trans('dictionary.profile'))
-
 @section('content')
     <div class="container">
         <div class="row">

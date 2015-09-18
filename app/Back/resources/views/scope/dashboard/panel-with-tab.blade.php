@@ -1,7 +1,5 @@
 @extends('back::app')
 
-@section('title', trans('base.dashboard'))
-
 @section('content')
     <div class="container">
         <div class="row">
