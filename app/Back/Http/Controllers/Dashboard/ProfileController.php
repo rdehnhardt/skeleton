@@ -4,7 +4,7 @@ namespace App\Back\Http\Controllers\Dashboard;
 
 use App\Back\Http\Controllers\Controller;
 use App\Back\Http\Requests\Profile\ProfileRequest;
-use App\Back\Models\User;
+use App\Auth\Models\User;
 use Illuminate\Contracts\Auth\Guard;
 use Redirect;
 
@@ -58,10 +58,11 @@ class ProfileController extends Controller
         }
 
         if ($User->save()) {
-            return Redirect::back()->with('message', 'Data has changed!')->with('message-class', 'success');
+            $this->flash()->success('Data has changed!');
         } else {
-            return Redirect::back()->with('message', 'Whooops! Could not change data.')->with('message-class',
-                'error')->withInputs();
+            $this->flash()->error('Whooops! Could not change data.');
         }
+
+        return Redirect::back();
     }
 }
