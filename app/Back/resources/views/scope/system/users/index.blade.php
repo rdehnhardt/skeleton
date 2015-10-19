@@ -1,6 +1,6 @@
 @extends('back::app')
 
-@section('title', trans('base.system') . ' » ' . trans('base.users'))
+@section('page-title', trans('base.system') . ' » ' . trans('base.users'))
 
 @section('page-actions')
     <a href="{{ route('back.system.users.create') }}" class="btn btn-primary"><i class="fa fa-plus"></i> {{ trans('actions.create') }}</a>

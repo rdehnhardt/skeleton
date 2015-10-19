@@ -1,5 +1,7 @@
 @extends('back::app')
 
+@section('page-title', trans('base.profile'))
+
 @section('content')
     <div class="container">
         <div class="row">

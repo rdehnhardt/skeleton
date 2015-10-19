@@ -1,6 +1,6 @@
 @extends('back::app')
 
-@section('title', trans('base.system') . ' » ' . trans('base.users') . ' » ' . trans('actions.create'))
+@section('page-title', trans('base.system') . ' » ' . trans('base.users') . ' » ' . trans('actions.create'))
 
 @section('page-actions')
     <a href="{{ URL::previous() }}" class="btn btn-default"><i class="fa fa-arrow-left"></i> {{ trans('actions.back') }}</a>
