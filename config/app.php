@@ -185,8 +185,8 @@ return [
          */
         Rdehnhardt\Html\HtmlServiceProvider::class,
         Baconfy\Analytics\Providers\AnalyticsServiceProvider::class,
-        Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
-        Laracasts\Flash\FlashServiceProvider::class
+        // Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
+        // Laracasts\Flash\FlashServiceProvider::class
 
     ],
 
