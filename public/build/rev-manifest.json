@@ -1,0 +1,11 @@
+{
+  "css/auth.css": "css/auth-4dde445c72.css",
+  "css/back.css": "css/back-2b875a7ac5.css",
+  "css/front.css": "css/front-03954a161e.css",
+  "js/auth/app.js": "js/auth/app-588e02be4d.js",
+  "js/auth/vendor.js": "js/auth/vendor-67355f6b49.js",
+  "js/back/app.js": "js/back/app-3e32770723.js",
+  "js/back/vendor.js": "js/back/vendor-4e30f58a19.js",
+  "js/front/app.js": "js/front/app-229b874ebd.js",
+  "js/front/vendor.js": "js/front/vendor-67355f6b49.js"
+}
