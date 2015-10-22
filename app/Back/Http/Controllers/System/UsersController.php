@@ -93,19 +93,7 @@ class UsersController extends Controller
      */
     public function update(UserRequest $request, $id)
     {
-        $User = User::find($id);
-        $User->name = $request->get('name');
-        $User->email = $request->get('email');
-
-        if ($request->get('password') && env('APP_ENV') != 'homolog') {
-            $User->password = bcrypt($request->get('password'));
-        }
-
-        if ($User->save()) {
-            return Redirect::route('back.system.users.index')->with('message', 'Successfully updated record!')->with('message-class', 'success');
-        } else {
-            return Redirect::route('back.system.users.edit')->with('message', 'Whooops! Could not update the record.')->with('message-class', 'error')->withInputs();
-        }
+        return Redirect::route('back.system.users.index')->with('message', 'Not Implemented!')->with('message-class', 'info');
     }
 
     /**
@@ -116,13 +104,7 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        $User = User::find($id);
-
-        if ($User->delete()) {
-            return Redirect::back()->with('message', 'Successfully deleted record!')->with('message-class', 'success');
-        } else {
-            return Redirect::back()->with('message', 'Whooops! Could not delete the record.')->with('message-class', 'error')->withInputs();
-        }
+        return Redirect::route('back.system.users.index')->with('message', 'Not Implemented!')->with('message-class', 'info');
     }
 
 }
