@@ -33,7 +33,7 @@
                 margin: 0;
                 padding: 0;
                 width: 100%;
-                color: #B0BEC5;
+                color: #839097;
                 display: table;
                 font-weight: 100;
                 font-family: 'Lato';
@@ -51,10 +51,10 @@
             }
 
             .title {
-                font-size: 96px;
                 letter-spacing: -4px;
-                font-weight: bold;
                 margin-bottom: 10px;
+                font-size: 96px;
+                font-weight: bold;
             }
 
             .quote {
