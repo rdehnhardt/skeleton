@@ -2,8 +2,6 @@ var elixir = require('laravel-elixir');
 
 elixir(function (mix) {
 
-    mix.copy('bower_components/bootstrap-daterangepicker/daterangepicker.css', 'bower_components/bootstrap-daterangepicker/daterangepicker.scss');
-
     /**
      * Back
      */

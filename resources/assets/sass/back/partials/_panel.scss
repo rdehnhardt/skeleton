@@ -1,6 +1,8 @@
 .panel {
   .panel-heading {
     .panel-title {
+      font-family: $font-titles;
+
       &.pull-left {
         padding-top: 8.5px;
       }

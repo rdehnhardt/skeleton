@@ -16,22 +16,16 @@
 
                 <div class="panel-body">
                     <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+                        <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 pull-right">
                             <form method="get" class="form-search">
-                                <div class="input-group">
-                                    <input type="text" name="filter" value="{{ old('filter') }}" class="form-control input-sm" placeholder="{{ trans('actions.search') }}"/>
-
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-default btn-sm">{{ trans('dictionary.ok') }}</button>
-                                    </div>
-                                </div>
+                                <input type="text" name="filter" value="{{ old('filter') }}" class="form-control input-sm" placeholder="{{ trans('actions.search') }}"/>
                             </form>
                         </div>
                     </div>
 
                     @if ($records->count())
                         <div class="table-responsive">
-                            <table class="table table-bordered table-hover">
+                            <table class="table table-hover">
                                 <thead>
                                 <tr>
                                     <th width="5%">#</th>
@@ -59,16 +53,16 @@
                                 @endforeach
                                 </tbody>
                             </table>
+
+                            <nav class="text-right">
+                                {!! $records->render() !!}
+                            </nav>
                         </div>
                     @else
                         <p>No records found.</p>
                     @endif
                 </div>
             </div>
-
-            <nav class="text-right">
-                {!! $records->render() !!}
-            </nav>
         </div>
     </div>
 @stop

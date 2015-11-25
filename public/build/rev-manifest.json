@@ -1,11 +1,11 @@
 {
-  "css/auth.css": "css/auth-4dde445c72.css",
-  "css/back.css": "css/back-6141776270.css",
-  "css/front.css": "css/front-03954a161e.css",
-  "js/auth/app.js": "js/auth/app-588e02be4d.js",
-  "js/auth/vendor.js": "js/auth/vendor-67355f6b49.js",
-  "js/back/app.js": "js/back/app-3e32770723.js",
-  "js/back/vendor.js": "js/back/vendor-4e30f58a19.js",
-  "js/front/app.js": "js/front/app-229b874ebd.js",
-  "js/front/vendor.js": "js/front/vendor-67355f6b49.js"
+  "css/auth.css": "css/auth-dd54937c3b.css",
+  "css/back.css": "css/back-3185c3832d.css",
+  "css/front.css": "css/front-ff3b848777.css",
+  "js/auth/app.js": "js/auth/app-854fb4ae5c.js",
+  "js/auth/vendor.js": "js/auth/vendor-30785e5ad4.js",
+  "js/back/app.js": "js/back/app-0923808d31.js",
+  "js/back/vendor.js": "js/back/vendor-558a310160.js",
+  "js/front/app.js": "js/front/app-169888192f.js",
+  "js/front/vendor.js": "js/front/vendor-30785e5ad4.js"
 }
