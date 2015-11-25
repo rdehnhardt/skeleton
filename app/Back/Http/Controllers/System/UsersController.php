@@ -2,9 +2,10 @@
 
 namespace App\Back\Http\Controllers\System;
 
+use App\Auth\Models\User;
 use App\Back\Http\Controllers\Controller;
 use App\Back\Http\Requests\System\UserRequest;
-use App\Auth\Models\User;
+use DB;
 use Redirect;
 use Request;
 
@@ -18,8 +19,12 @@ class UsersController extends Controller
      */
     public function index()
     {
-        if (Request::get('filter')) {
-            $records = User::where('title', 'LIKE', '%' . Request::get('filter') . '%')->paginate(10);
+        if (Request::get('q')) {
+            $records = User::select('id', 'name', 'email', DB::raw("MATCH(name, email) AGAINST (? IN BOOLEAN MODE) AS score"))
+                ->whereRaw("MATCH(name, email) AGAINST (? IN BOOLEAN MODE)")
+                ->setBindings([Request::get('q'), Request::get('q')])
+                ->orderBy('score', 'desc')
+                ->paginate(10);
         } else {
             $records = User::paginate(10);
         }

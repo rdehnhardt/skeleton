@@ -18,7 +18,7 @@
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-2 col-lg-2 pull-right">
                             <form method="get" class="form-search">
-                                <input type="text" name="filter" value="{{ old('filter') }}" class="form-control input-sm" placeholder="{{ trans('actions.search') }}"/>
+                                <input type="text" name="q" value="{{ request('q') }}" class="form-control" placeholder="{{ trans('actions.search') }}"/>
                             </form>
                         </div>
                     </div>

@@ -1,6 +1,8 @@
-@import "bower_components/bootswatch/flatly/variables";
-@import "bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "back/partials/variables";
+
+@import "bower_components/bootstrap-sass-official/assets/stylesheets/bootstrap";
 @import "bower_components/bootstrap-daterangepicker/daterangepicker.css";
 @import "bower_components/font-awesome/scss/font-awesome";
 @import "bower_components/sweetalert/dev/sweetalert";
+
 @import "back/app";

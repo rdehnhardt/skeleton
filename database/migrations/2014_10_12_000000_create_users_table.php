@@ -21,6 +21,8 @@ class CreateUsersTable extends Migration
             $table->timestamps();
             $table->softDeletes();
         });
+
+        DB::statement('ALTER TABLE users ADD FULLTEXT search(name, email)');
     }
 
     /**
@@ -30,6 +32,10 @@ class CreateUsersTable extends Migration
      */
     public function down()
     {
+        Schema::table('users', function ($table) {
+            $table->dropIndex('search');
+        });
+
         Schema::drop('users');
     }
 }
