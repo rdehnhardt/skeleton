@@ -5,4 +5,5 @@ return [
     'system' => 'Sistema',
     'users' => 'Usuários',
     'create' => 'Novo',
+    'profile' => 'Meus dados',
 ];

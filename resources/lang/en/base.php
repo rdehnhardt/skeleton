@@ -6,4 +6,5 @@ return [
     'users' => 'Users',
     'create' => 'Create',
     'edit' => 'Edit',
+    'profile' => 'Profile',
 ];

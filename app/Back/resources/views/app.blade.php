@@ -19,10 +19,16 @@
     @include('back::partials.header')
 
     <main>
-        @include('back::partials.messages')
-        @include('back::partials.errors')
+        <div class="container-fluid">
+        	<div class="row">
+        		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    @include('back::partials.messages')
+                    @include('back::partials.errors')
 
-        @yield('content')
+                    @yield('content')
+        		</div>
+        	</div>
+        </div>
     </main>
 
     @include('back::partials.footer')
