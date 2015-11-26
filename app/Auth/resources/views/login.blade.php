@@ -34,6 +34,11 @@
         <a href="/password/email" class="btn btn-sm btn-block btn-default">
             <i class="fa fa-refresh"></i> {{ trans('dictionary.forgot-password') }}
         </a>
+
+        <a href="/auth/register" class="btn btn-sm btn-block btn-default">
+            <i class="fa fa-refresh"></i> {{ trans('dictionary.register') }}
+        </a>
     </div>
+
     {!! Form::close() !!}
 @stop

@@ -15,7 +15,21 @@ main {
     }
   }
 
+  .login-actions {
+    margin-top: 10px;
+  }
+
   .form-actions {
-    margin-bottom: 20px;
+    border-top: 1px dotted $input-border;
+    padding-top: 10px;
+  }
+
+  .form-control {
+    border: 3px solid $input-border;
+    box-shadow: none;
+
+    &:focus {
+      @include box-shadow(none);
+    }
   }
 }
