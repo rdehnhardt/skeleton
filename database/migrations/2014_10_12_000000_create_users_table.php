@@ -20,6 +20,8 @@ class CreateUsersTable extends Migration
             $table->rememberToken();
             $table->timestamps();
             $table->softDeletes();
+
+            $table->engine = 'MyISAM';
         });
 
         DB::statement('ALTER TABLE users ADD FULLTEXT search(name, email)');
