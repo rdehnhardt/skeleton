@@ -98,7 +98,20 @@ class UsersController extends Controller
      */
     public function update(UserRequest $request, $id)
     {
-        return Redirect::route('back.system.users.index')->with('message', 'Not Implemented!')->with('message-class', 'info');
+        $User = User::find($id);
+        $User->name = $request->get('name');
+        $User->email = $request->get('email');
+        $User->password = bcrypt($request->get('password'));
+
+        if (env('ALTER_USER', true)) {
+            if ($User->save()) {
+                return Redirect::route('back.system.users.index')->with('message', 'Successfully created record!')->with('message-class', 'success');
+            } else {
+                return Redirect::route('back.system.users.create')->with('message', 'Whooops! Could not create the record.')->with('message-class', 'error')->withInputs();
+            }
+        } else {
+            return Redirect::route('back.system.users.index')->with('message', 'Not Allowed!')->with('message-class', 'danger');
+        }
     }
 
     /**
@@ -109,7 +122,17 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        return Redirect::route('back.system.users.index')->with('message', 'Not Implemented!')->with('message-class', 'info');
+        $User = User::find($id);
+
+        if (env('ALTER_USER', true)) {
+            if ($User->delete()) {
+                return Redirect::route('back.system.users.index')->with('message', 'Successfully deleted record!')->with('message-class', 'success');
+            } else {
+                return Redirect::route('back.system.users.create')->with('message', 'Whooops! Could not delete the record.')->with('message-class', 'error');
+            }
+        } else {
+            return Redirect::route('back.system.users.index')->with('message', 'Not Allowed!')->with('message-class', 'danger');
+        }
     }
 
 }
