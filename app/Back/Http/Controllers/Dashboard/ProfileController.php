@@ -57,10 +57,14 @@ class ProfileController extends Controller
             $User->password = bcrypt($request->get('password'));
         }
 
-        if ($User->save()) {
-            $this->flash()->success('Data has changed!');
+        if (env('ALTER_USER', true)) {
+            if ($User->save()) {
+                $this->flash()->success('Data has changed!');
+            } else {
+                $this->flash()->error('Whooops! Could not change data.');
+            }
         } else {
-            $this->flash()->error('Whooops! Could not change data.');
+            $this->flash()->error('Whooops! Not Allowed.');
         }
 
         return Redirect::back();
