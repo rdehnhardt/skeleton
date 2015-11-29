@@ -7,6 +7,7 @@ use App\Back\Http\Requests\Profile\ProfileRequest;
 use App\Auth\Models\User;
 use Illuminate\Contracts\Auth\Guard;
 use Redirect;
+use Gate;
 
 class ProfileController extends Controller
 {
@@ -57,14 +58,14 @@ class ProfileController extends Controller
             $User->password = bcrypt($request->get('password'));
         }
 
-        if (env('ALTER_USER', true)) {
+        if (Gate::denies('update', $User)) {
+            $this->flash()->error('Whooops! Not Allowed.');
+        } else {
             if ($User->save()) {
                 $this->flash()->success('Data has changed!');
             } else {
                 $this->flash()->error('Whooops! Could not change data.');
             }
-        } else {
-            $this->flash()->error('Whooops! Not Allowed.');
         }
 
         return Redirect::back();

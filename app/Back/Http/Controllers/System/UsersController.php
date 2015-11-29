@@ -8,6 +8,7 @@ use App\Back\Http\Requests\System\UserRequest;
 use DB;
 use Redirect;
 use Request;
+use Gate;
 
 class UsersController extends Controller
 {
@@ -103,14 +104,14 @@ class UsersController extends Controller
         $User->email = $request->get('email');
         $User->password = bcrypt($request->get('password'));
 
-        if (env('ALTER_USER', true)) {
+        if (Gate::denies('update', $User)) {
+            return Redirect::route('back.system.users.index')->with('message', 'Not Allowed!')->with('message-class', 'danger');
+        } else {
             if ($User->save()) {
                 return Redirect::route('back.system.users.index')->with('message', 'Successfully created record!')->with('message-class', 'success');
             } else {
                 return Redirect::route('back.system.users.create')->with('message', 'Whooops! Could not create the record.')->with('message-class', 'error')->withInputs();
             }
-        } else {
-            return Redirect::route('back.system.users.index')->with('message', 'Not Allowed!')->with('message-class', 'danger');
         }
     }
 
@@ -124,14 +125,14 @@ class UsersController extends Controller
     {
         $User = User::find($id);
 
-        if (env('ALTER_USER', true)) {
+        if (Gate::denies('delete', $User)) {
+            return Redirect::route('back.system.users.index')->with('message', 'Not Allowed!')->with('message-class', 'danger');
+        } else {
             if ($User->delete()) {
                 return Redirect::route('back.system.users.index')->with('message', 'Successfully deleted record!')->with('message-class', 'success');
             } else {
                 return Redirect::route('back.system.users.create')->with('message', 'Whooops! Could not delete the record.')->with('message-class', 'error');
             }
-        } else {
-            return Redirect::route('back.system.users.index')->with('message', 'Not Allowed!')->with('message-class', 'danger');
         }
     }
 
