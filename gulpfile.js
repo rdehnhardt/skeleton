@@ -10,7 +10,7 @@ elixir(function (mix) {
     mix.scripts([
         "bower_components/jquery/dist/jquery.js",
         "bower_components/jquery.easing/js/jquery.easing.js",
-        "bower_components/bootstrap-sass/assets/javascripts/bootstrap.js",
+        "bower_components/bootstrap-sass-official/assets/javascripts/bootstrap.js",
         "bower_components/sweetalert/dist/sweetalert.min.js",
         "bower_components/moment/moment.js",
         "bower_components/bootstrap-daterangepicker/daterangepicker.js",

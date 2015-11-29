@@ -10,6 +10,7 @@ $(function () {
         var canvas = $('<canvas id="chart" />');
         canvas.height($(container).data('height'));
         canvas.width($(container).width());
+
         $(container).html(canvas);
     }
 
@@ -53,6 +54,8 @@ $(function () {
             build_chart($("#start-date").val(), $("#end-date").val());
         }
     });
+
+    $(document).resize(cb(moment(), moment()));
 
     cb(moment(), moment());
 });
