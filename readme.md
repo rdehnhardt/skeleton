@@ -9,8 +9,7 @@ To use this project, make a fork
 ## Admin user and password
 
 ```
-user: admin@domain.com
-pass: admin
+Please create a new login at the login screen by clicking on the "Register"
 ```
 
 ## How to install
