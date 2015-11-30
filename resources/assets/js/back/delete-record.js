@@ -17,7 +17,6 @@ for (var i = 0; i < formConfirm.length; i++) {
             closeOnCancel: true
         }, function (isConfirm) {
             if (isConfirm) {
-                swal("Good job!", "You confirmed the action!", "success");
                 form.submit();
             }
         });
