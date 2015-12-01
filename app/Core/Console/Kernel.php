@@ -13,6 +13,8 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
+        'App\Front\Console\Commands\Up',
+        'App\Front\Console\Commands\Down',
     ];
 
     /**
