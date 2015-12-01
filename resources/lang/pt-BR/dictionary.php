@@ -20,4 +20,5 @@ return [
     'send-password-reset' => 'Enviar redefinição de senha',
     'change-your-gravatar' => 'Mude o seu Gravatar',
     'register' => 'Criar Conta',
+    'maintenance' => 'Manutenção',
 ];

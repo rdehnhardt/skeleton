@@ -20,4 +20,5 @@ return [
     'send-password-reset' => 'Send Password Reset',
     'change-your-gravatar' => 'Change your Gravatar',
     'register' => 'Register',
+    'maintenance' => 'Maintenance',
 ];
