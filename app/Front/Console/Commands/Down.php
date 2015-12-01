@@ -19,7 +19,7 @@ class Down extends Command
      *
      * @var string
      */
-    protected $description = 'Put the application into maintenance mode.';
+    protected $description = 'Put the front into maintenance mode.';
 
     /**
      * Execute the console command.

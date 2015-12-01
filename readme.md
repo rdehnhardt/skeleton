@@ -52,6 +52,26 @@ gulp watch
 gulp --production
 ```
 
+## Put the front into maintenance mode.
+
+```
+php artisan front:down
+```
+
+## Bring the front out of maintenance mode.
+
+```
+php artisan front:up
+```
+
+## Allowed IPs for maintenance mode
+
+Put in .env
+
+```
+MAINTENANCE_ALLOWED_IPS=999.999.999.999,888.888.888.888
+```
+
 # Screenshots
 
 ## Front
