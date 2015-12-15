@@ -46,7 +46,7 @@ elixir(function (mix) {
     mix.scripts([
         "jquery/dist/jquery.js",
         "jquery.easing/js/jquery.easing.js",
-        "bootstrap-sass/assets/javascripts/bootstrap.js"
+        "bootstrap-sass-official/assets/javascripts/bootstrap.js"
     ], 'public/js/auth/vendor.js', 'bower_components');
 
     mix.scripts([
