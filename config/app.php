@@ -162,6 +162,19 @@ return [
         App\Guest\Providers\EventServiceProvider::class,
         App\Guest\Providers\RouteServiceProvider::class,
 
+        /*
+         * Auth Service Providers...
+         */
+        App\Auth\Providers\AuthServiceProvider::class,
+        App\Auth\Providers\EventServiceProvider::class,
+        App\Auth\Providers\RouteServiceProvider::class,
+
+        /*
+         * Back Service Providers...
+         */
+        App\Back\Providers\BackServiceProvider::class,
+        App\Back\Providers\EventServiceProvider::class,
+        App\Back\Providers\RouteServiceProvider::class,
     ],
 
     /*
