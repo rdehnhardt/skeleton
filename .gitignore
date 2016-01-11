@@ -3,3 +3,6 @@ node_modules
 bower_components
 .env
 .idea
+
+public/js
+public/css
