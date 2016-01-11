@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Core\Providers;
+namespace App\Guest\Providers;
 
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Routing\Router;
@@ -14,7 +14,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'App\Core\Http\Controllers';
+    protected $namespace = 'App\Guest\Http\Controllers';
 
     /**
      * Define your route model bindings, pattern filters, etc.
@@ -36,7 +36,7 @@ class RouteServiceProvider extends ServiceProvider
     public function map(Router $router)
     {
         $router->group(['namespace' => $this->namespace], function ($router) {
-            require app_path('Core/Http/routes.php');
+            require app_path('Guest/Http/routes.php');
         });
     }
 }

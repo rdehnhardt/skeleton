@@ -149,12 +149,18 @@ return [
         Illuminate\View\ViewServiceProvider::class,
 
         /*
-         * Application Service Providers...
+         * Core Service Providers...
          */
         App\Core\Providers\AppServiceProvider::class,
         App\Core\Providers\AuthServiceProvider::class,
         App\Core\Providers\EventServiceProvider::class,
-        App\Core\Providers\RouteServiceProvider::class,
+
+        /*
+         * Guest Service Providers...
+         */
+        App\Guest\Providers\GuestServiceProvider::class,
+        App\Guest\Providers\EventServiceProvider::class,
+        App\Guest\Providers\RouteServiceProvider::class,
 
     ],
 
