@@ -5,5 +5,5 @@ elixir(function (mix) {
 
     mix.version([
         '../../../public/css/back.css'
-    ], '../../public/build');
+    ], '../public/build/');
 });
