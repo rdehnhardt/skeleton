@@ -11,8 +11,9 @@ elixir.config.images = {
 
 // Elixir
 elixir(function (mix) {
-    //mix.sass('back.scss');
-    //mix.version(['css/back.css']);
+    mix.sass('back.scss');
+
+    mix.version(['css/back.css']);
 
     mix.imagemin({
         optimizationLevel: 3,
