@@ -10,9 +10,7 @@
 | and give it the controller to call when that URI is requested.
 |
 */
-Route::get('/', function () {
-    return view('back::layout');
-});
+Route::get('/', 'Dashboard\DefaultController@index');
 
 /*
 |--------------------------------------------------------------------------
