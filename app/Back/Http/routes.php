@@ -11,7 +11,7 @@
 |
 */
 Route::get('/', function () {
-    return view('back::welcome');
+    return view('back::layout');
 });
 
 /*

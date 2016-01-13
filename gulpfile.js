@@ -3,7 +3,7 @@ var chug = require('gulp-chug');
 
 gulp.task('default', function () {
     gulp.src([
-        './app/Back/gulpfile.js',
+        './app/Back/resources/gulpfile.js',
     ]).pipe(chug())
 });
 
