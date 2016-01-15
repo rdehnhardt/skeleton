@@ -6,7 +6,8 @@ $gray-lighter: #eceeef !default;
 $gray-lightest: #f7f7f9 !default;
 $white: #ffffff !default;
 
-$brand-color: #C0231E !default;
+$brand-color: #FBA617 !default;
+$bg-lighten: 40%;
 
 $brand-primary: #0275d8 !default;
 $brand-success: #5cb85c !default;
@@ -48,7 +49,7 @@ $spacers: (
 $border-width: 1px !default;
 
 // Body
-$body-bg: lighten($brand-color, 54%) !default;
+$body-bg: lighten($brand-color, $bg-lighten) !default;
 $body-color: $gray-dark !default;
 
 // Links
