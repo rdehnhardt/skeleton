@@ -1,6 +1,13 @@
+// Fonts
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,300,500,700');
 
+// Variables
 @import "components/variables";
+
+// Bower Components
 @import "../../../../../bower_components/bootstrap/scss/bootstrap";
+@import "../../../../../bower_components/font-awesome/scss/font-awesome";
+
+// Back Componnets
 @import "components/bootstrap";
 @import "components/env";

@@ -4,5 +4,6 @@ bower_components
 .env
 .idea
 
-public/js
-public/css
+public/back
+public/auth
+public/guest

@@ -1,6 +1,7 @@
 {
   "name": "rdehnhardt/skeleton",
   "dependencies": {
-    "bootstrap": "v4.0.0-alpha.2"
+    "bootstrap": "v4.0.0-alpha.2",
+    "font-awesome": "^4.5"
   }
 }
