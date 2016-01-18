@@ -1,3 +1,6 @@
+// Paths
+$images: '/build/images/back/';
+
 // Colors
 $gray-dark: #373a3c !default;
 $gray: #55595c !default;
@@ -85,6 +88,7 @@ $grid-columns: 12 !default;
 $grid-gutter-width: 1.875rem !default; // 30px
 
 // Typography
+$font-family-title: 'Titillium Web', sans-serif !default;
 $font-family-sans-serif: 'Roboto', sans-serif !default;
 $font-family-serif: Georgia, "Times New Roman", Times, serif !default;
 $font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace !default;
