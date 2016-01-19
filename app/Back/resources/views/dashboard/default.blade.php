@@ -1,5 +1,9 @@
 @extends('back::app')
 
+@section('page-title')
+	<h1>Dashboard</h1>
+@stop
+
 @section('content')
     <div class="container-fluid">
     	<div class="row">
