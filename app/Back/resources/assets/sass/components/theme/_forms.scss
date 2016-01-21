@@ -1,3 +1,8 @@
 .form-control {
+    border-width: 2px;
+}
 
+.form-actions {
+    border-top: 1px dotted darken($white, 20%);
+    padding-top: 20px;
 }

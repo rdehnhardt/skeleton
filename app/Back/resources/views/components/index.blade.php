@@ -35,11 +35,16 @@
                                 <i class="fa fa-table"></i> Modals
                             </a>
                         </li>
+                        <li class="list-group-item">
+                            <a href="{{ route('back.components', ['component' => 'cards']) }}">
+                                <i class="fa fa-table"></i> Cards
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
 
-            <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+            <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10">
                 @include($include)
             </div>
         </div>

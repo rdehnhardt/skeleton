@@ -2,12 +2,13 @@
     border-bottom: 1px solid darken($white, 20%);
     font-family: $font-family-title;
     text-transform: uppercase;
+    font-size: 0.8rem;
     font-weight: 700;
     padding: 0;
 
     .navbar-nav {
         background: $white;
-        margin: 0;
+        margin: 0 20px 0 0;
 
         .nav-item {
             margin: 0;
@@ -15,7 +16,7 @@
 
         .nav-link {
             border-bottom: 3px solid $white;
-            padding: 13px 20px 10px 20px;
+            padding: 13px 10px 10px 10px;
             margin: 0;
         }
 
@@ -35,7 +36,7 @@
 .navbar-brand {
     float: left;
     padding-left: .45rem;
-    padding-top: .65rem;
+    padding-top: .40rem;
     padding-bottom: .25rem;
     margin-right: 1rem;
     font-size: $font-size-lg;

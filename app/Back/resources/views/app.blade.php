@@ -57,7 +57,8 @@
 <footer>
     <div class="container-fluid">
         <div class="text-xs-center text-sm-center text-md-right text-lg-right">
-            powered by <a href="https://github.com/rdehnhardt" target="_blank">rdehnhardt</a>
+            <!-- PLEASE, DONT REMOVE -->
+            by <a href="https://github.com/rdehnhardt" target="_blank">rdehnhardt</a>
         </div>
     </div>
 </footer>
