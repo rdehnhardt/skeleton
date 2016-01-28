@@ -4,16 +4,6 @@
     <h1>Components</h1>
 @stop
 
-@section('page-actions')
-    <a href="{{ route('back') }}" class="btn btn-brand">
-        <i class="fa fa-home"></i> Brand
-    </a>
-
-    <a href="{{ route('back') }}" class="btn btn-primary">
-        <i class="fa fa-home"></i> Primary
-    </a>
-@stop
-
 @section('content')
     <div class="container-fluid">
         <div class="row">
@@ -23,6 +13,11 @@
                         <li class="list-group-item">
                             <a href="{{ route('back.components', ['component' => 'tables']) }}">
                                 <i class="fa fa-table"></i> Tables
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="{{ route('back.components', ['component' => 'buttons']) }}">
+                                <i class="fa fa-floppy-o"></i> Buttons
                             </a>
                         </li>
                         <li class="list-group-item">
