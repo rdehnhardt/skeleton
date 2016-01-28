@@ -8,6 +8,19 @@
     border-right: none;
     border-top: none;
     @include border-radius($card-border-radius);
+
+    &:before, &:after
+    {
+        content:"";
+        position:absolute;
+        z-index:-1;
+        box-shadow:0 0 4px rgba(0,0,0,0.2);
+        top:50%;
+        bottom:0;
+        left:10px;
+        right:10px;
+        border-radius:100px / 10px;
+    }
 }
 
 .card-block {

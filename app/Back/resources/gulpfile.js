@@ -17,7 +17,15 @@ elixir.config.images = {
 elixir(function (mix) {
     mix.sass('back.scss');
 
-    mix.version(['css/back.css']);
+    mix.scripts([
+        root + 'bower_components/jquery/dist/jquery.js',
+        root + 'bower_components/bootstrap/dist/js/bootstrap.js'
+    ], elixir.config.publicPath + '/js' + module + '.js');
+
+    mix.version([
+        'css/back.css',
+        'js/back.js'
+    ]);
 
     mix.imagemin({
         optimizationLevel: 3,
