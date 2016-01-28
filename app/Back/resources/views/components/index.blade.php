@@ -12,27 +12,47 @@
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">
                             <a href="{{ route('back.components', ['component' => 'tables']) }}">
-                                <i class="fa fa-table"></i> Tables
+                                Tables
                             </a>
                         </li>
                         <li class="list-group-item">
                             <a href="{{ route('back.components', ['component' => 'buttons']) }}">
-                                <i class="fa fa-floppy-o"></i> Buttons
+                                Buttons
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="{{ route('back.components', ['component' => 'buttons-group']) }}">
+                                Buttons Group
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="{{ route('back.components', ['component' => 'buttons-dropdowns']) }}">
+                                Buttons Dropdowns
                             </a>
                         </li>
                         <li class="list-group-item">
                             <a href="{{ route('back.components', ['component' => 'forms']) }}">
-                                <i class="fa fa-table"></i> Forms
+                                Forms
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="{{ route('back.components', ['component' => 'input-group']) }}">
+                                Input Group
+                            </a>
+                        </li>
+                        <li class="list-group-item">
+                            <a href="{{ route('back.components', ['component' => 'pagination']) }}">
+                                Pagination
                             </a>
                         </li>
                         <li class="list-group-item">
                             <a href="{{ route('back.components', ['component' => 'modals']) }}">
-                                <i class="fa fa-table"></i> Modals
+                                Modals
                             </a>
                         </li>
                         <li class="list-group-item">
                             <a href="{{ route('back.components', ['component' => 'cards']) }}">
-                                <i class="fa fa-table"></i> Cards
+                                Cards
                             </a>
                         </li>
                     </ul>
