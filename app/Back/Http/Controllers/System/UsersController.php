@@ -49,8 +49,18 @@ class UsersController extends BackController
         return view('back::system.users.edit', compact('record'));
     }
 
-    public function update($id)
+    public function update($id, UserRequest $request)
     {
+        $user = User::find($id);
+        $user->name = $request->get('name');
+        $user->email = $request->get('email');
+        $user->password = $request->get('password');
+
+        if ($user->save()) {
+            return Redirect::route('back.system.users.index')->with('message', 'Successfully created record!')->with('message-class', 'success');
+        } else {
+            return Redirect::route('back.system.users.create')->with('message', 'Whooops! Could not create the record.')->with('message-class', 'error')->withInputs();
+        }
     }
 
     public function destroy($id)
