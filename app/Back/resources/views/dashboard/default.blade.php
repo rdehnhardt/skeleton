@@ -5,11 +5,11 @@
 @stop
 
 @section('content')
-    <div class="container-fluid">
-    	<div class="row">
-    		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+	<div class="card">
+		<div class="card-block">
+			<h4 class="card-title">Visits</h4>
 
-    		</div>
-    	</div>
-    </div>
+			<canvas id="visits" width="100%" height="400"></canvas>
+		</div>
+	</div>
 @stop

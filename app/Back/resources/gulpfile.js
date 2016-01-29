@@ -20,7 +20,8 @@ elixir(function (mix) {
     mix.scripts([
         root + 'bower_components/jquery/dist/jquery.js',
         root + 'bower_components/tether/dist/js/tether.js',
-        root + 'bower_components/bootstrap/dist/js/bootstrap.js'
+        root + 'bower_components/bootstrap/dist/js/bootstrap.js',
+        root + 'bower_components/Chart.js/Chart.js'
     ], elixir.config.publicPath + '/js' + module + '.js');
 
     mix.version([

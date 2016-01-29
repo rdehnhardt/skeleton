@@ -28,11 +28,13 @@
 }
 
 .card-title {
+    font-family: $font-family-title;
     margin-bottom: $card-spacer-y;
 }
 
 .card-subtitle {
     margin-top: -($card-spacer-y / 2);
+    font-family: $font-family-title;
     margin-bottom: 0;
 }
 

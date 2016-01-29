@@ -34,11 +34,24 @@
                 font-size: 96px;
             }
         </style>
+
+        <script>
+            var _bc = _bc || [];
+
+            (function () {
+                var bc = document.createElement('script');
+                bc.src = '/analytics.js';
+                bc.type = 'text/javascript';
+                bc.async = true;
+                var s = document.getElementsByTagName('script')[0];
+                s.parentNode.insertBefore(bc, s);
+            })();
+        </script>
     </head>
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Skeleton 5.2</div>
+                <div class="title"></div>
             </div>
         </div>
     </body>
