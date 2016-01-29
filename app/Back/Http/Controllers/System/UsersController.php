@@ -70,11 +70,22 @@ class UsersController extends BackController
         } else {
             $this->addFlash('Whooops! Could not update the record.', 'danger');
 
-            return Redirect::route('back.system.users.create')->withInputs();
+            return Redirect::route('back.system.users.edit', ['id' => $id])->withInputs();
         }
     }
 
     public function destroy($id)
     {
+        $user = User::find($id);
+
+        if ($user->delete()) {
+            $this->addFlash('Successfully delete record!', 'success');
+
+            return Redirect::route('back.system.users.index');
+        } else {
+            $this->addFlash('Whooops! Could not delete the record.', 'danger');
+
+            return Redirect::route('back.system.users.index')->withInputs();
+        }
     }
 }
