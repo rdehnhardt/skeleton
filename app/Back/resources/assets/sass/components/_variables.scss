@@ -148,10 +148,12 @@ $list-inline-padding: 5px !default;
 // Components
 $line-height-lg: (4 / 3) !default;
 $line-height-sm: 1.5 !default;
+$line-height-xs: 1 !default;
 
 $border-radius: 0 !default;
 $border-radius-lg: 0 !default;
 $border-radius-sm: 0 !default;
+$border-radius-xs: 0 !default;
 
 $component-active-color: #fff !default;
 $component-active-bg: $brand-primary !default;
@@ -202,6 +204,9 @@ $btn-danger-border: $btn-danger-bg !default;
 
 $btn-link-disabled-color: $gray-light !default;
 
+$btn-padding-x-xs: .35rem !default;
+$btn-padding-y-xs: .25rem !default;
+
 $btn-padding-x-sm: .75rem !default;
 $btn-padding-y-sm: .25rem !default;
 
@@ -212,6 +217,7 @@ $btn-padding-y-lg: .75rem !default;
 $btn-border-radius: $border-radius !default;
 $btn-border-radius-lg: $border-radius-lg !default;
 $btn-border-radius-sm: $border-radius-sm !default;
+$btn-border-radius-xs: $border-radius-xs !default;
 
 // Forms
 $input-padding-x: .75rem !default;
