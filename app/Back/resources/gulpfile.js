@@ -7,7 +7,7 @@ var module = '/back';
 // Configs
 elixir.config.publicPath = root + 'public';
 elixir.config.assetsPath = 'assets';
-elixir.config.production = false;
+elixir.config.production = true;
 elixir.config.images = {
     outputFolder: elixir.config.publicPath + '/build/images' + module,
     folder: elixir.config.assetsPath + '/images'
