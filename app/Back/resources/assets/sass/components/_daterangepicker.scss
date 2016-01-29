@@ -6,15 +6,12 @@ $color_alto_approx: #ddd;
 $color_mountain_mist_approx: #999;
 $color_gallery_approx: #eee;
 $color_aqua_haze_approx: #ebf4f8;
-$color_steel_blue_approx: #357ebd;
-$color_astral_approx: #3071a9;
+$color_steel_blue_approx: $brand-color;
+$color_astral_approx: darken($brand-color, 10%);
 $color_fuscous_gray_approx: #555;
 $color_wild_sand_approx: #f5f5f5;
-$color_lochmara_approx: #08c;
+$color_lochmara_approx: lighten($brand-color, 10%);
 
-//@extend-elements
-//original selectors
-//.daterangepicker .calendar th, .daterangepicker .calendar td
 %extend_1 {
     white-space: nowrap;
     text-align: center;
@@ -28,7 +25,7 @@ $color_lochmara_approx: #08c;
     width: 20px;
     height: 20px;
     //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-    border-radius: 4px;
+    border-radius: 0;
     white-space: nowrap;
     cursor: pointer;
 }
@@ -75,7 +72,7 @@ $color_lochmara_approx: #08c;
     padding: 4px;
     margin-top: 1px;
     //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-    border-radius: 4px;
+    border-radius: 0;
     width: 278px;
     &.opensleft {
         &:before {
@@ -199,7 +196,7 @@ $color_lochmara_approx: #08c;
         border: 1px solid $color_alto_approx;
         padding: 4px;
         //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-        border-radius: 4px;
+        border-radius: 0;
         background: $white;
     }
     table {
@@ -234,15 +231,15 @@ $color_lochmara_approx: #08c;
         }
         &.start-date {
             //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-            border-radius: 4px 0 0 4px;
+            border-radius: 0;
             &.end-date {
                 //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-                border-radius: 4px;
+                border-radius: 0;
             }
         }
         &.end-date {
             //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-            border-radius: 0 4px 4px 0;
+            border-radius: 0;
         }
         &.active {
             @extend %extend_4;
@@ -301,7 +298,7 @@ $color_lochmara_approx: #08c;
     .input-mini {
         border: 1px solid $color_celeste_approx;
         //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-        border-radius: 4px;
+        border-radius: 0;
         color: $color_fuscous_gray_approx;
         display: block;
         height: 30px;
@@ -352,7 +349,7 @@ $color_lochmara_approx: #08c;
             padding: 3px 12px;
             margin-bottom: 8px;
             //Instead of the line below you could use @include border-radius($radius, $vertical-radius)
-            border-radius: 5px;
+            border-radius: 0;
             cursor: pointer;
             &.active {
                 @extend %extend_6;
