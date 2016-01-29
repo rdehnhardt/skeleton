@@ -29,9 +29,13 @@ class UsersController extends BackController
         $user->password = $request->get('password');
 
         if ($user->save()) {
-            return Redirect::route('back.system.users.index')->with('message', 'Successfully created record!')->with('message-class', 'success');
+            $this->addFlash('Successfully created record!', 'success');
+
+            return Redirect::route('back.system.users.index');
         } else {
-            return Redirect::route('back.system.users.create')->with('message', 'Whooops! Could not create the record.')->with('message-class', 'error')->withInputs();
+            $this->addFlash('Whooops! Could not create the record.', 'danger');
+
+            return Redirect::route('back.system.users.create')->withInputs();
         }
     }
 
@@ -54,12 +58,19 @@ class UsersController extends BackController
         $user = User::find($id);
         $user->name = $request->get('name');
         $user->email = $request->get('email');
-        $user->password = $request->get('password');
+
+        if ($request->get('password')) {
+            $user->password = $request->get('password');
+        }
 
         if ($user->save()) {
-            return Redirect::route('back.system.users.index')->with('message', 'Successfully created record!')->with('message-class', 'success');
+            $this->addFlash('Successfully updated record!', 'success');
+
+            return Redirect::route('back.system.users.index');
         } else {
-            return Redirect::route('back.system.users.create')->with('message', 'Whooops! Could not create the record.')->with('message-class', 'error')->withInputs();
+            $this->addFlash('Whooops! Could not update the record.', 'danger');
+
+            return Redirect::route('back.system.users.create')->withInputs();
         }
     }
 
