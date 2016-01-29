@@ -34,6 +34,8 @@
                     {!! Form::close() !!}
                 </div>
             </div>
+
+            <a class="btn btn-link" href="{{ route('register') }}">Need an account?</a>
         </div>
     </div>
 @endsection
