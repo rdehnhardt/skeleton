@@ -5,11 +5,11 @@
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
             <div class="card">
                 <div class="card-block">
-                    <h4 class="card-title">Login</h4>
+                    <h4 class="card-title">Reset Password</h4>
 
-                    {!! Form::open(['method' => 'post', 'route' => ['login']]) !!}
+                    {!! Form::open(['method' => 'post', 'route' => ['password.reset.post']]) !!}
 
-                    {!! Form::openGroup('email', 'Email') !!}
+                    {!! Form::openGroup('email', 'E-Mail Address') !!}
                     {!! Form::text('email') !!}
                     {!! Form::closeGroup() !!}
 
@@ -17,18 +17,16 @@
                     {!! Form::password('password') !!}
                     {!! Form::closeGroup() !!}
 
-                    <div class="checkbox">
-                        <label>
-                            <input type="checkbox" name="remember"> Remember Me
-                        </label>
-                    </div>
+                    {!! Form::openGroup('password_confirmation', 'Confirm Password') !!}
+                    {!! Form::password('password_confirmation') !!}
+                    {!! Form::closeGroup() !!}
 
                     <div class="form-actions">
                         <button type="submit" class="btn btn-primary">
-                            <i class="fa fa-btn fa-sign-in"></i> Login
+                            <i class="fa fa-btn fa-refresh"></i> Reset Password
                         </button>
 
-                        <a class="btn btn-link" href="{{ url('/password/reset') }}">Forgot Your Password?</a>
+                        <a class="btn btn-link" href="{{ route('login') }}">Login</a>
                     </div>
 
                     {!! Form::close() !!}

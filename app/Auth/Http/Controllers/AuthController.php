@@ -13,7 +13,7 @@ class AuthController extends CoreController
     /**
      * @var string
      */
-    protected $redirectTo = '/';
+    protected $redirectTo = '/back';
 
     /**
      * @var string

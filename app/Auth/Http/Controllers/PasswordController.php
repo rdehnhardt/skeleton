@@ -10,6 +10,16 @@ class PasswordController extends CoreController
     use ResetsPasswords;
 
     /**
+     * @var string
+     */
+    protected $linkRequestView = 'auth::email';
+
+    /**
+     * @var string
+     */
+    protected $resetView = 'auth::reset';
+
+    /**
      * Create a new password controller instance.
      */
     public function __construct()
