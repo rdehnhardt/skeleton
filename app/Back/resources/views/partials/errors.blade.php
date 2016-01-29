@@ -1,4 +1,4 @@
-@if (isset($errors))
+@if (isset($errors) && count($errors))
     <div class="alert alert-danger">
         <p><strong>Whoops!</strong> There were some problems with your input.</p>
 

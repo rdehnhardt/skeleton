@@ -1,5 +1,5 @@
-@if (session('flash-message') && session('flash-alert'))
+@if (Session::has('flash-message') && Session::get('flash-alert'))
     <div class="alert alert-{!! Session::get('flash-alert') !!}">
-        <p>{{ session('flash-message') }}</p>
+        <p>{{ Session::get('flash-message') }}</p>
     </div>
 @endif
