@@ -7,5 +7,7 @@ bower_components
 /public/css
 /public/js
 /public/build
+/public/fonts
+/public/img
 
 composer.lock

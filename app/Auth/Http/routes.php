@@ -1,30 +1,15 @@
 <?php
 
-/*
-|--------------------------------------------------------------------------
-| Routes File
-|--------------------------------------------------------------------------
-|
-| Here is where you will register all of the routes in an application.
-| It's a breeze. Simply tell Laravel the URIs it should respond to
-| and give it the controller to call when that URI is requested.
-|
-*/
-Route::get('/', function () {
-    return view('auth::welcome');
-});
+// Authentication Routes...
+Route::get('login', ['as' => 'login', 'uses' => 'AuthController@showLoginForm']);
+Route::post('login', 'AuthController@login');
+Route::get('logout', 'AuthController@logout');
 
-/*
-|--------------------------------------------------------------------------
-| Application Routes
-|--------------------------------------------------------------------------
-|
-| This route group applies the "web" middleware group to every route
-| it contains. The "web" middleware group is defined in your HTTP
-| kernel and includes session state, CSRF protection, and more.
-|
-*/
+// Registration Routes...
+Route::get('register', 'AuthController@showRegistrationForm');
+Route::post('register', 'AuthController@register');
 
-Route::group(['middleware' => ['web']], function () {
-    //
-});
+// Password Reset Routes...
+Route::get('password/reset/{token?}', 'PasswordController@showResetForm');
+Route::post('password/email', 'PasswordController@sendResetLinkEmail');
+Route::post('password/reset', 'PasswordController@reset');

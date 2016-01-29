@@ -97,10 +97,10 @@ return [
         App\Core\Providers\AuthServiceProvider::class,
         App\Core\Providers\EventServiceProvider::class,
 
-        /* Guest Service Providers */
-        App\Guest\Providers\GuestServiceProvider::class,
-        App\Guest\Providers\EventServiceProvider::class,
-        App\Guest\Providers\RouteServiceProvider::class,
+        /* Front Service Providers */
+        App\Front\Providers\FrontServiceProvider::class,
+        App\Front\Providers\EventServiceProvider::class,
+        App\Front\Providers\RouteServiceProvider::class,
 
         /* Auth Service Providers */
         App\Auth\Providers\AuthServiceProvider::class,

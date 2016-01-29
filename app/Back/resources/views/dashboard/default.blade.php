@@ -24,7 +24,7 @@
 				</div>
 			</div>
 
-			<div id="visits" data-height="400"></div>
+			<div id="visits" data-height="500"></div>
 		</div>
 	</div>
 @stop
