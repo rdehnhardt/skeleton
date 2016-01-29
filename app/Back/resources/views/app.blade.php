@@ -13,7 +13,7 @@
     <link href="{{ elixir('css/back.css') }}" rel="stylesheet">
 </head>
 
-<body>
+<body class="@yield('page-name')">
     <nav class="navbar navbar-light bg-white">
         <a class="navbar-brand" href="#">Skeleton</a>
 

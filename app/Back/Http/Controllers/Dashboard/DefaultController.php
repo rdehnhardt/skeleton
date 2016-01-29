@@ -3,6 +3,8 @@
 namespace App\Back\Http\Controllers\Dashboard;
 
 use App\Back\Http\Controllers\BackController;
+use Baconfy\Analytics\Services\Visits\GetVisitByPeriod;
+use Carbon\Carbon;
 
 class DefaultController extends BackController
 {
@@ -32,10 +34,10 @@ class DefaultController extends BackController
             'datasets' => [
                 [
                     'label' => 'Total de Visitas',
-                    'fillColor' => 'rgba(91, 144, 191, 0.3)',
-                    'strokeColor' => '#5B90BF',
-                    'pointColor' => '#5B90BF',
-                    'pointStrokeColor' => '#9DB86D',
+                    'fillColor' => 'rgba(251, 166, 23, 0.3)',
+                    'strokeColor' => '#FBA617',
+                    'pointColor' => '#FBA617',
+                    'pointStrokeColor' => '#FBA617',
                     'data' => $getVisitByPeriod->getTotal()
                 ],
                 [

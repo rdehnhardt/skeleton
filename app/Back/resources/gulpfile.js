@@ -7,7 +7,7 @@ var module = '/back';
 // Configs
 elixir.config.publicPath = root + 'public';
 elixir.config.assetsPath = 'assets';
-elixir.config.production = true;
+elixir.config.production = false;
 elixir.config.images = {
     outputFolder: elixir.config.publicPath + '/build/images' + module,
     folder: elixir.config.assetsPath + '/images'
@@ -19,8 +19,13 @@ elixir(function (mix) {
 
     mix.scripts([
         root + 'bower_components/jquery/dist/jquery.js',
+        root + 'bower_components/jquery.easing/js/jquery.easing.js',
+        root + 'bower_components/moment/moment.js',
         root + 'bower_components/tether/dist/js/tether.js',
         root + 'bower_components/bootstrap/dist/js/bootstrap.js',
+        root + 'bower_components/sweetalert/dist/sweetalert.min.js',
+        root + 'bower_components/bootstrap-daterangepicker/daterangepicker.js',
+        root + 'bower_components/jquery-form/jquery.form.js',
         root + 'bower_components/Chart.js/Chart.js',
         'assets/js/**/*.js'
     ], elixir.config.publicPath + '/js' + module + '.js');
