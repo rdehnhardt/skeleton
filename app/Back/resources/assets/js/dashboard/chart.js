@@ -17,7 +17,7 @@ $(function () {
 
         build_chart = function (start_date, end_date) {
             $.ajax({
-                url: '/back/visits/' + start_date + '/' + end_date,
+                url: '/back/dashboard/visits/' + start_date + '/' + end_date,
                 dataType: 'json',
                 success: function (data) {
                     build_canvas('#visits');
