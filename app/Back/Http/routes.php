@@ -10,4 +10,5 @@ Route::group(['prefix' => 'dashboard', 'namespace' => 'Dashboard'], function () 
 
 Route::group(['prefix' => 'system', 'namespace' => 'System'], function () {
     Route::resource('users', 'UsersController');
+    Route::resource('actions', 'ActionsController');
 });

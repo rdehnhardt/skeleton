@@ -13,49 +13,50 @@
     <link href="{{ elixir('css/back.css') }}" rel="stylesheet">
 </head>
 
-<body class="@yield('page-name')">
-    @include('back::partials.navbar')
+<body class="@yield('module')">
+    <div class="@yield('page-name')">
+        @include('back::partials.navbar')
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <div class="page-header">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 title">
-                            @yield('page-title')
-                        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="page-header">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 title">
+                                <h1>@yield('page-title')</h1>
+                            </div>
 
-                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 actions">
-                            <div class="text-xs-center text-sm-center text-md-right text-lg-right">
-                                @yield('page-actions')
+                            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 actions">
+                                <div class="text-xs-center text-sm-center text-md-right text-lg-right">
+                                    @yield('page-actions')
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                @include('back::partials.messages')
-                @include('back::partials.errors')
-
-                @yield('content')
-            </div>
-        </div>
-    </div>
-
-    <footer>
         <div class="container-fluid">
-            <div class="text-xs-center text-sm-center text-md-right text-lg-right">
-                <!-- PLEASE, DONT REMOVE -->
-                by <a href="https://github.com/rdehnhardt" target="_blank">rdehnhardt</a>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    @include('back::partials.messages')
+                    @include('back::partials.errors')
+
+                    @yield('content')
+                </div>
             </div>
         </div>
-    </footer>
 
+        <footer>
+            <div class="container-fluid">
+                <div class="text-xs-center text-sm-center text-md-right text-lg-right">
+                    <!-- PLEASE, DONT REMOVE -->
+                    by <a href="https://github.com/rdehnhardt" target="_blank">rdehnhardt</a>
+                </div>
+            </div>
+        </footer>
+    </div>
     <script src="{{ elixir('js/back.js') }}"></script>
 </body>
 </html>
