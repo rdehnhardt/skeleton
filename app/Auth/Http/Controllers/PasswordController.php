@@ -20,6 +20,11 @@ class PasswordController extends CoreController
     protected $resetView = 'auth::reset';
 
     /**
+     * @var string
+     */
+    protected $subject = 'Your Password Reset Link';
+
+    /**
      * Create a new password controller instance.
      */
     public function __construct()
