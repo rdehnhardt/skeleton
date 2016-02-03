@@ -15,6 +15,7 @@ class ActionRequest extends BackRequest
     public function rules()
     {
         return [
+            'controller' => 'required',
             'type' => 'required',
             'name' => 'required',
         ];

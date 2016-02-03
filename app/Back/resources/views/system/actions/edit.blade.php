@@ -13,7 +13,7 @@
         <div class="card-block">
             <h4 class="card-title">Create action</h4>
 
-            {!! Form::open(['method' => 'post', 'route' => ['back.system.actions.store']]) !!}
+            {!! Form::model($record, ['route' => ['back.system.users.update', $record->id], 'method' => 'put']) !!}
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
                     {!! Form::openGroup('type', 'Type') !!}

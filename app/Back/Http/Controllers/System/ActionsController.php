@@ -23,11 +23,13 @@ class ActionsController extends BackController
 
     public function store(ActionRequest $request)
     {
-        $user = new Action();
-        $user->name = $request->get('name');
-        $user->type = $request->get('type');
+        $action = new Action();
+        $action->uri = $request->get('uri');
+        $action->name = $request->get('name');
+        $action->type = $request->get('type');
+        $action->controller = $request->get('controller');
 
-        if ($user->save()) {
+        if ($action->save()) {
             $this->addFlash('Successfully created record!', 'success');
 
             return Redirect::route('back.system.actions.index');
@@ -54,15 +56,13 @@ class ActionsController extends BackController
 
     public function update($id, ActionRequest $request)
     {
-        $user = Action::find($id);
-        $user->name = $request->get('name');
-        $user->email = $request->get('email');
+        $action = Action::find($id);
+        $action->uri = $request->get('uri');
+        $action->name = $request->get('name');
+        $action->type = $request->get('type');
+        $action->controller = $request->get('controller');
 
-        if ($request->get('password')) {
-            $user->password = $request->get('password');
-        }
-
-        if ($user->save()) {
+        if ($action->save()) {
             $this->addFlash('Successfully updated record!', 'success');
 
             return Redirect::route('back.system.actions.index');
@@ -75,9 +75,9 @@ class ActionsController extends BackController
 
     public function destroy($id)
     {
-        $user = Action::find($id);
+        $action = Action::find($id);
 
-        if ($user->delete()) {
+        if ($action->delete()) {
             $this->addFlash('Successfully delete record!', 'success');
 
             return Redirect::route('back.system.actions.index');

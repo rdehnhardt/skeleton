@@ -14,8 +14,10 @@ class CreateActionsTable extends Migration
     {
         Schema::create('actions', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('slug');
+            $table->string('uri');
             $table->string('name');
+            $table->string('label');
+            $table->string('controller');
             $table->string('type');
             $table->timestamps();
         });

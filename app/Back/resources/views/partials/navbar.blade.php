@@ -6,12 +6,12 @@
         <a class="navbar-brand" href="#">SKELETON</a>
         <ul class="nav navbar-nav pull-xs-right pull-sm-right pull-md-right pull-lg-right">
             <li class="nav-item active">
-                <a class="nav-link" href="{{ route('back.dashboard') }}">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="{{ route('dashboard') }}">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">System</a>
                 <div class="dropdown-menu">
-                    <a class="dropdown-item" href="{{ route('back.system.users.index') }}">Users</a>
+                    <a class="dropdown-item" href="{{ route('users.index') }}">Users</a>
                 </div>
             </li>
             <li class="nav-item">

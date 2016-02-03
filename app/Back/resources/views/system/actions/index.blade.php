@@ -14,6 +14,7 @@
             <thead>
                 <tr>
                     <th width="33%">Name</th>
+                    <th width="33%">URI</th>
                     <th width="33%">Type</th>
                     <th width="1%">&nbsp;</th>
                 </tr>
@@ -22,6 +23,7 @@
                 @forelse ($records as $record)
                     <tr>
                         <td>{{ $record->name }}</td>
+                        <td>{{ $record->uri }}</td>
                         <td>{{ $record->type }}</td>
                         <td class="table-actions">
                             {!! Form::open(['method' => 'get', 'route' => ['back.system.actions.edit', $record->id]]) !!}

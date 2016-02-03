@@ -14,6 +14,8 @@ class Action extends Model
     protected $fillable = [
         'slug',
         'name',
+        'label',
+        'uri',
         'type',
     ];
 }

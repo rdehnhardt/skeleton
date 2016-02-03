@@ -17,15 +17,15 @@ class UserRequest extends BackRequest
         switch ($this->method()) {
             case 'POST': {
                 return [
-                    'email' => "required|email|unique:users,email",
-                    'name' => "required",
+                    'email' => 'required|email|unique:users,email',
+                    'name' => 'required',
                 ];
             }
             case 'PUT':
             case 'PATCH': {
                 return [
                     'email' => "required|email|unique:users,email,{$this->users}",
-                    'name' => "required",
+                    'name' => 'required',
                 ];
             }
         }
