@@ -7,14 +7,15 @@
 @stop
 
 @section('page-actions')
-    <a href="{{ route('back.system.users.index') }}" class="btn btn-brand"><i class="fa fa-arrow-left"></i> Back</a>
+    <a href="{{ route('back.system.users.index') }}" class="btn btn-default"><i class="fa fa-arrow-left"></i> Back</a>
 @stop
 
 @section('content')
-    <div class="card">
-        <div class="card-block">
-            <h4 class="card-title">Create user</h4>
-
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title">Create user</h3>
+        </div>
+        <div class="panel-body">
             {!! Form::open(['method' => 'post', 'route' => ['back.system.users.store']]) !!}
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">

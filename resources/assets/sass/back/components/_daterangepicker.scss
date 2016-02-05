@@ -10,7 +10,7 @@ $color_steel_blue_approx: $brand-color;
 $color_astral_approx: darken($brand-color, 10%);
 $color_fuscous_gray_approx: #555;
 $color_wild_sand_approx: #f5f5f5;
-$color_lochmara_approx: lighten($brand-color, 10%);
+$color_lochmara_approx: $brand-color;
 
 %extend_1 {
     white-space: nowrap;

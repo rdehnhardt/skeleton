@@ -1,22 +1,25 @@
-<nav class="navbar navbar-light bg-faded">
-    <button class="navbar-toggler hidden-sm-up" type="button" data-toggle="collapse" data-target="#exCollapsingNavbar2">
-        &#9776;
-    </button>
-    <div class="collapse navbar-toggleable-xs" id="exCollapsingNavbar2">
-        <a class="navbar-brand" href="#">SKELETON</a>
-        <ul class="nav navbar-nav pull-xs-right pull-sm-right pull-md-right pull-lg-right">
-            <li class="nav-item active">
-                <a class="nav-link" href="{{ route('back') }}">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">System</a>
-                <div class="dropdown-menu">
-                    <a class="dropdown-item" href="{{ route('back.system.users.index') }}">Users</a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="{{ route('logout') }}">Logout</a>
-            </li>
-        </ul>
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            <a class="navbar-brand" href="/back">Skeleton</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="{{ route('back') }}">Home</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">System <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{{ route('back.system.users.index') }}">Users</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!--/.nav-collapse -->
     </div>
 </nav>

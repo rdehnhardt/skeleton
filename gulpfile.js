@@ -5,8 +5,7 @@ var bower = './bower_components/';
 var vendor = [
     bower + 'jquery/dist/jquery.js',
     bower + 'jquery.easing/js/jquery.easing.js',
-    bower + 'tether/dist/js/tether.js',
-    bower + 'bootstrap/dist/js/bootstrap.js',
+    bower + 'bootstrap-sass/assets/javascripts/bootstrap.js',
     bower + 'sweetalert/dist/sweetalert.min.js',
     bower + 'jquery-form/jquery.form.js',
     bower + 'moment/moment.js'
