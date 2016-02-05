@@ -1,12 +1,6 @@
 $web-font-path: "https://fonts.googleapis.com/css?family=Lato:400,700,400italic" !default;
 @import url($web-font-path);
 
-body {
-    padding-top: $navbar-height;
-    background: #f3f3f3;
-    font-size: 14px;
-}
-
 // Navbar =====================================================================
 
 .navbar {
