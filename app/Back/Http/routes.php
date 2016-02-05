@@ -3,24 +3,22 @@
 $actions = DB::select('select * from actions');
 
 foreach ($actions as $action) {
-    switch (strtoupper($action->type)) {
-        case 'GET':
-            Route::get($action->uri, ['as' => $action->name, 'uses' => $action->controller]);
-            break;
-        case 'POST':
-            Route::post($action->uri, ['as' => $action->name, 'uses' => $action->controller]);
-            break;
-        case 'PUT':
-            Route::put($action->uri, ['as' => $action->name, 'uses' => $action->controller]);
-            break;
-        case 'DELETE':
-            Route::delete($action->uri, ['as' => $action->name, 'uses' => $action->controller]);
-            break;
+    if (strtoupper(trim($action->type)) === 'GET') {
+        Route::get($action->uri, ['as' => $action->name, 'uses' => $action->controller]);
     }
 
+//    if (strtoupper(trim($action->type)) === 'POST') {
+//        Route::post($action->uri, ['as' => $action->name, 'uses' => $action->controller]);
+//    }
+//
+//    if (strtoupper(trim($action->type)) === 'PUT') {
+//        Route::put($action->uri, ['as' => $action->name, 'uses' => $action->controller]);
+//    }
+//
+//    if (strtoupper(trim($action->type)) === 'DELETE') {
+//        Route::delete($action->uri, ['as' => $action->name, 'uses' => $action->controller]);
+//    }
 }
-
-//dd($actions);
 
 //Route::get('/', ['as' => 'back', 'uses' => 'Dashboard\DefaultController@index']);
 //
