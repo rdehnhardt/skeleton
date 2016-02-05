@@ -7,15 +7,12 @@
 $brand-color: #2C3E50 !default;
 
 // Variables
-// @import "back/variables";
-@import "../../../bower_components/bootswatch/united/variables";
+@import "back/variables";
 
 // Bower Components
 @import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
 @import "../../../bower_components/font-awesome/scss/font-awesome";
 
 // Back Componnets
-// @import "back/theme";
-@import "../../../bower_components/bootswatch/united/bootswatch";
-
+@import "back/theme";
 @import "back/components";
