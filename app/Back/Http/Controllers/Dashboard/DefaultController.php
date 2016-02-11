@@ -27,7 +27,7 @@ class DefaultController extends BackController
     {
         $startDate = Carbon::createFromFormat('Y-m-d H:i:s', "{$startDate} 00:00:00");
         $endDate = Carbon::createFromFormat('Y-m-d H:i:s', "{$endDate} 23:59:59");
-        $records = $getVisitByPeriod->fire($startDate, $endDate);
+        $getVisitByPeriod->fire($startDate, $endDate);
 
         $output = [
             'labels' => $getVisitByPeriod->getLabels(),
