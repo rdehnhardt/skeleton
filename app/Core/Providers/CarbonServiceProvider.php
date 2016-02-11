@@ -2,8 +2,8 @@
 
 namespace App\Core\Providers;
 
+use Illuminate\Support\ServiceProvider;
 use Carbon\Carbon;
-use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
 
 class CarbonServiceProvider extends ServiceProvider
 {

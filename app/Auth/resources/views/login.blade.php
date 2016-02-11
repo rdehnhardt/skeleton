@@ -3,39 +3,42 @@
 @section('content')
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-            <div class="card">
-                <div class="card-block">
-                    <h4 class="card-title">Login</h4>
-
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">{{ trans('auth::text.login.title') }}</h3>
+                </div>
+                <div class="panel-body">
                     {!! Form::open(['method' => 'post', 'route' => ['login']]) !!}
 
-                    {!! Form::openGroup('email', 'Email') !!}
+                    {!! Form::openGroup('email', trans('auth::text.login.email')) !!}
                     {!! Form::text('email') !!}
                     {!! Form::closeGroup() !!}
 
-                    {!! Form::openGroup('password', 'Password') !!}
+                    {!! Form::openGroup('password', trans('auth::text.login.password')) !!}
                     {!! Form::password('password') !!}
                     {!! Form::closeGroup() !!}
 
                     <div class="checkbox">
                         <label>
-                            <input type="checkbox" name="remember"> Remember Me
+                            <input type="checkbox" name="remember"> {{ trans('auth::text.login.remember') }}
                         </label>
                     </div>
 
                     <div class="form-actions">
                         <button type="submit" class="btn btn-primary">
-                            <i class="fa fa-btn fa-sign-in"></i> Login
+                            <i class="fa fa-btn fa-sign-in"></i> {{ trans('auth::text.login.actions.login') }}
                         </button>
 
-                        <a class="btn btn-link" href="{{ url('/password/reset') }}">Forgot Your Password?</a>
+                        <a class="btn btn-link" href="{{ url('/password/reset') }}">{{ trans('auth::text.login.actions.forgot') }}</a>
                     </div>
 
                     {!! Form::close() !!}
                 </div>
             </div>
 
-            <a class="btn btn-link" href="{{ route('register') }}">Need an account?</a>
+            <div class="text-center">
+                <a class="btn btn-default btn-sm" href="{{ route('register') }}">{{ trans('auth::text.login.actions.account') }}</a>
+            </div>
         </div>
     </div>
 @endsection
