@@ -6,12 +6,23 @@ use App\Back\Http\Controllers\BackController;
 use App\Back\Http\Requests\System\UserRequest;
 use App\Core\Models\User;
 use Redirect;
+use Request;
 
 class UsersController extends BackController
 {
     public function index()
     {
-        $records = User::paginate();
+        $query = User::select(['id', 'name', 'email', 'created_at']);
+
+        if (Request::get('name')) {
+            $query->where('name', 'LIKE', '%' . Request::get('name') . '%');
+        }
+
+        if (Request::get('email')) {
+            $query->where('email', 'LIKE', '%' . Request::get('email') . '%');
+        }
+
+        $records = $query->paginate();
 
         return view('back::system.users.index', compact('records'));
     }
