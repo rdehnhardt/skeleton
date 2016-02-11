@@ -7,7 +7,7 @@
 @stop
 
 @section('page-actions')
-    <a href="{{ route('back.system.users.create') }}" class="btn btn-primary"><i class="fa fa-plus"></i> New</a>
+    <a href="{{ route('back.system.users.create') }}" class="btn btn-brand"><i class="fa fa-plus"></i> New</a>
 @stop
 
 @section('content')
