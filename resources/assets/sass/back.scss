@@ -4,13 +4,13 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,600');
 @import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
 
-$brand-color: #2C3E50 !default;
-
 // Variables
 @import "back/variables";
 
 // Bower Components
+@import "../../../bower_components/bootswatch/flatly/variables";
 @import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "../../../bower_components/bootswatch/flatly/bootswatch";
 @import "../../../bower_components/font-awesome/scss/font-awesome";
 
 // Back Componnets
