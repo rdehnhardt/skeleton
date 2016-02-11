@@ -1,6 +1,6 @@
 header {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-    margin-bottom: 30px;
+    margin-bottom: $line-height-computed;
     padding: 7px 0;
 
     h1, h2, h3, h4, h5, h6 {
