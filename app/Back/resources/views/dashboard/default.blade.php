@@ -7,7 +7,7 @@
 @stop
 
 @section('content')
-    <div class="panel panel-default">
+    <div class="panel panel-brand">
         <div class="panel-heading">
             <h3 class="panel-title">Visits</h3>
         </div>

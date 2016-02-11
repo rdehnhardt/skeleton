@@ -13,3 +13,88 @@
         }
     }
 }
+
+// Panel =====================================================================
+
+.panel {
+    border-bottom: none;
+    border-right: none;
+    border-width: 5px;
+    border-top: none;
+    position:relative;
+    margin-bottom: 35px;
+    box-shadow: none;
+
+    //&:before, &:after
+    //{
+    //    content:"";
+    //    position:absolute;
+    //    z-index:-1;
+    //    box-shadow:0 0 4px rgba(0,0,0,0.2);
+    //    top:50%;
+    //    bottom:0;
+    //    left:10px;
+    //    right:10px;
+    //    border-radius:100px / 10px;
+    //}
+
+    .panel-heading {
+        padding: 10px 0 0 10px;
+        border-bottom: none;
+        background: none;
+
+        .panel-title {
+            text-shadow: 1px 1px 0px rgba(255, 255, 255, .3);
+            text-transform: uppercase;
+            font-family: $font-title;
+            color: $gray-dark;
+            font-size: 1.5rem;
+
+            small {
+                font-size: 1rem;
+                display: block;
+            }
+        }
+
+    }
+
+    .panel-body {
+        color: $gray-dark;
+    }
+
+    .panel-view {
+        legend {
+            border-bottom: 3px solid darken(#ffffff, 20%);
+            background: darken(#ffffff, 7%);
+            margin-bottom: 30px;
+            padding: 10px;
+        }
+
+        .data {
+            margin-bottom: 20px;
+            padding: 0 30px;
+
+            .item {
+                border: 2px dotted darken(#ffffff, 10%);
+                margin-bottom: 30px;
+                padding: 10px;
+
+                label {
+                    text-transform: uppercase;
+                    display: block;
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    &-default {
+        .close {
+            color: $text-color;
+        }
+    }
+}
+
+.panel-brand {
+    @include panel-variant($brand-color, #666, #fff, #fff);
+}
