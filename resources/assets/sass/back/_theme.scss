@@ -98,3 +98,31 @@
 .panel-brand {
     @include panel-variant($brand-color, #666, #fff, #fff);
 }
+
+// Tables =====================================================================
+
+table, .table {
+    > thead > tr > th,
+    > thead > tr > td {
+        border-bottom: 3px solid darken($table-border-color, 10%);
+    }
+
+    > tbody > tr > th,
+    > tbody > tr > td {
+        border-bottom: 1px solid darken($table-border-color, 10%);
+    }
+
+    > tfoot > tr > th,
+    > tfoot > tr > td {
+        border-bottom: 1px solid darken($table-border-color, 10%);
+    }
+
+    &-bordered > thead > tr > th,
+    &-bordered > tbody > tr > th,
+    &-bordered > tfoot > tr > th,
+    &-bordered > thead > tr > td,
+    &-bordered > tbody > tr > td,
+    &-bordered > tfoot > tr > td {
+        border: 1px solid darken($table-border-color, 10%);
+    }
+}
