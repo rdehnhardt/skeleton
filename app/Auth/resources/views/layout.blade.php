@@ -16,7 +16,7 @@
 <body class="@yield('page-name')">
     <div class="container">
         <div class="row">
-            <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-md-offset-3 col-lg-offset-3" style="padding-top: 7%">
+            <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5 col-centered" style="padding-top: 7%">
                 @include('back::partials.messages')
                 @include('back::partials.errors')
 

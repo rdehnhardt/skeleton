@@ -49,7 +49,7 @@ $color_lochmara_approx: $brand-color;
 //original selectors
 //.daterangepicker select.monthselect, .daterangepicker select.yearselect
 %extend_5 {
-    font-size: 12px;
+    font-size: 0.8rem;
     padding: 1px;
     height: auto;
     margin: 0;
@@ -331,7 +331,7 @@ $color_lochmara_approx: $brand-color;
         }
     }
     .ranges {
-        font-size: 11px;
+        font-size: 0.8rem;
         float: none;
         margin: 4px;
         text-align: left;
@@ -342,7 +342,7 @@ $color_lochmara_approx: $brand-color;
             width: 100%;
         }
         li {
-            font-size: 13px;
+            font-size: 0.8rem;
             background: $color_wild_sand_approx;
             border: 1px solid $color_wild_sand_approx;
             color: $color_lochmara_approx;

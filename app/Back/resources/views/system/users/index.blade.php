@@ -33,7 +33,7 @@
                             <td>{{ $record->created_at->format('d/m/Y') }}</td>
                             <td class="table-actions">
                                 {!! Form::open(['method' => 'get', 'route' => ['back.system.users.edit', $record->id]]) !!}
-                                {!! Form::button('<i class="fa fa-pencil"></i>', ['type' => 'submit', 'class' => 'btn btn-primary btn-xs']) !!}
+                                {!! Form::button('<i class="fa fa-pencil"></i>', ['type' => 'submit', 'class' => 'btn btn-brand btn-xs']) !!}
                                 {!! Form::close() !!}
 
                                 {!! Form::open(['method' => 'delete', 'data-confirm' => 'You will not be able to recover this record!', 'route' => ['back.system.users.destroy', $record->id]]) !!}

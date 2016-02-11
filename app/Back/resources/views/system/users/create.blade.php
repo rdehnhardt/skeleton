@@ -38,7 +38,7 @@
             </div>
 
             <div class="form-actions">
-                <button type="submit" class="btn btn-primary">Save</button>
+                <button type="submit" class="btn btn-brand">Save</button>
             </div>
             {!! Form::close() !!}
         </div>
