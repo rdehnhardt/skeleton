@@ -1,11 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Dosis:400,300,500,600,700,200,800');
 
+// Fonts
 $line-height-base: 1.25 !default; // 20/16
-
 $font-title: 'Dosis', sans-serif !important;
+
+// Colors
 $brand-color: #0973BA !default;
 $brand-color-contrast: #FFF !default;
 $link-color: $brand-color !default;
+$body-bg: lighten($brand-color, 59%);
+
+// Paddings
 $padding-xs-vertical: 0;
 $padding-xs-horizontal: 4px;
 

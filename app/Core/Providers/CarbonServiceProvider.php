@@ -13,6 +13,6 @@ class CarbonServiceProvider extends ServiceProvider
 
     public function register()
     {
-        Carbon::setLocale($this->app->getLocale());
+        Carbon::setLocale(str_replace('-', '_', $this->app->getLocale()));
     }
 }
