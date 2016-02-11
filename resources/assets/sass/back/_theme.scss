@@ -1,0 +1,15 @@
+// Navbar =====================================================================
+
+.navbar {
+    border-bottom: 1px solid lighten(#000000, 90%);
+
+    .navbar-nav {
+        li {
+            border-bottom: 3px solid #fff;
+
+            &.active {
+                border-bottom: 3px solid $brand-color;
+            }
+        }
+    }
+}

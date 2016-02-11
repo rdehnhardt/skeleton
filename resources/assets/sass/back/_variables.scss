@@ -2,3 +2,27 @@
 
 $font-title: 'Dosis', sans-serif !important;
 $brand-color: #0973BA !default;
+
+// Basics of a navbar
+$navbar-height: 45px !default;
+$navbar-default-color: #444 !default;
+$navbar-default-bg: #fff !default;
+
+// Navbar links
+$navbar-default-link-color: #444 !default;
+$navbar-default-link-hover-color: $brand-color !default;
+$navbar-default-link-hover-bg: transparent !default;
+$navbar-default-link-active-color: #333 !default;
+$navbar-default-link-active-bg: #fff !default;
+$navbar-default-link-disabled-color: #ccc !default;
+$navbar-default-link-disabled-bg: transparent !default;
+
+// Navbar brand label
+$navbar-default-brand-color: $navbar-default-link-color !default;
+$navbar-default-brand-hover-color: $navbar-default-link-hover-color !default;
+$navbar-default-brand-hover-bg: transparent !default;
+
+// Navbar toggle
+$navbar-default-toggle-hover-bg: darken($navbar-default-bg, 10%) !default;
+$navbar-default-toggle-icon-bar-bg: #fff !default;
+$navbar-default-toggle-border-color: darken($navbar-default-bg, 10%) !default;
