@@ -16,19 +16,23 @@
 <body class="@yield('module')">
     @include('back::partials.navbar')
 
-    <header>
-        <div class="container-fluid">
-        	<div class="row">
-        		<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-        			@yield('page-title')
-        		</div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <header>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                            @yield('page-title')
+                        </div>
 
-                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-right">
-                    @yield('page-actions')
-                </div>
-        	</div>
+                        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 text-right">
+                            @yield('page-actions')
+                        </div>
+                    </div>
+                </header>
+            </div>
         </div>
-    </header>
+    </div>
 
     <div class="container-fluid @yield('page-name')">
         <div class="row">
