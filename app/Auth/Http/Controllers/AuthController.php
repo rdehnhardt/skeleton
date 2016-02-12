@@ -3,8 +3,10 @@
 namespace App\Auth\Http\Controllers;
 
 use App\Core\Http\Controllers\CoreController;
+use App\Core\Models\User;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
+use Validator;
 
 class AuthController extends CoreController
 {

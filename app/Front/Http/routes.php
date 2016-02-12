@@ -5,3 +5,7 @@ Route::group(['middleware' => ['web']], function () {
         return view('front::welcome');
     });
 });
+
+Route::group(['middleware' => ['api'], 'prefix' => 'api'], function () {
+    Route::resource('users', 'UsersController');
+});
