@@ -110,6 +110,7 @@ return [
 
         /* Back Service Providers */
         App\Back\Providers\BackServiceProvider::class,
+        App\Back\Providers\AuthServiceProvider::class,
         App\Back\Providers\EventServiceProvider::class,
         App\Back\Providers\RouteServiceProvider::class,
     ],

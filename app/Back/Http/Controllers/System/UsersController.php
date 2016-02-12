@@ -5,6 +5,7 @@ namespace App\Back\Http\Controllers\System;
 use App\Back\Http\Controllers\BackController;
 use App\Back\Http\Requests\System\UserRequest;
 use App\Core\Models\User;
+use Gate;
 use Redirect;
 use Request;
 
@@ -74,14 +75,20 @@ class UsersController extends BackController
             $user->password = $request->get('password');
         }
 
-        if ($user->save()) {
-            $this->addFlash(trans('back::dictionary.success'), 'success');
+        if (Gate::denies('update', $user)) {
+            $this->addFlash('Not Allowed!', 'info');
 
             return Redirect::route('back.system.users.index');
         } else {
-            $this->addFlash(trans('back::dictionary.exception'), 'danger');
+            if ($user->save()) {
+                $this->addFlash(trans('back::dictionary.success'), 'success');
 
-            return Redirect::route('back.system.users.edit', ['id' => $id])->withInputs();
+                return Redirect::route('back.system.users.index');
+            } else {
+                $this->addFlash(trans('back::dictionary.exception'), 'danger');
+
+                return Redirect::route('back.system.users.edit', ['id' => $id])->withInputs();
+            }
         }
     }
 
@@ -89,14 +96,20 @@ class UsersController extends BackController
     {
         $user = User::find($id);
 
-        if ($user->delete()) {
-            $this->addFlash(trans('back::dictionary.success'), 'success');
+        if (Gate::denies('update', $user)) {
+            $this->addFlash('Not Allowed!', 'info');
 
             return Redirect::route('back.system.users.index');
         } else {
-            $this->addFlash(trans('back::dictionary.exception'), 'danger');
+            if ($user->delete()) {
+                $this->addFlash(trans('back::dictionary.success'), 'success');
 
-            return Redirect::route('back.system.users.index')->withInputs();
+                return Redirect::route('back.system.users.index');
+            } else {
+                $this->addFlash(trans('back::dictionary.exception'), 'danger');
+
+                return Redirect::route('back.system.users.index')->withInputs();
+            }
         }
     }
 }
