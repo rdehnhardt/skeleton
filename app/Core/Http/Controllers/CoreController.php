@@ -24,6 +24,8 @@ class CoreController extends BaseController
     public function __construct(Request $request)
     {
         $this->request = $request;
+
+        $this->boot();
     }
 
     /**
@@ -32,5 +34,12 @@ class CoreController extends BaseController
     public function getRequest()
     {
         return $this->request;
+    }
+
+    /**
+     * Controller Boot
+     */
+    public function boot()
+    {
     }
 }
