@@ -10,6 +10,8 @@ $brand-color-contrast: #FFF !default;
 $brand-primary: $brand-color;
 $link-color: $brand-color !default;
 $body-bg: lighten($brand-color, 42%);
+$input-color: lighten(#000000, 30%);
+$input-border: lighten(#000000, 70%);
 
 // Paddings
 $padding-xs-vertical: 0;

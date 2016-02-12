@@ -4,7 +4,6 @@ bower_components
 .env
 .idea
 
-/public/build
 /public/css
 /public/img
 /public/js

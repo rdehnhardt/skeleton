@@ -4,6 +4,7 @@ namespace App\Back\Http\Controllers\Dashboard;
 
 use App\Back\Http\Controllers\BackController;
 use App\Back\Http\Requests\ProfileRequest;
+use Redirect;
 use Auth;
 
 class ProfileController extends BackController
