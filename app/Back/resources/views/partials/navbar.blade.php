@@ -19,7 +19,6 @@
                         <li><a href="{{ route('back.system.users.index') }}">{{ trans('back::system.user.title') }}</a></li>
                     </ul>
                 </li>
-                <li><a href="/logout">{{ trans('back::dictionary.logout') }}</a></li>
             </ul>
 
             <ul class="nav navbar-nav navbar-right">
