@@ -10,7 +10,7 @@
                 <div class="panel-body">
                     {!! Form::open(['method' => 'post', 'route' => ['password.email']]) !!}
 
-                    {!! Form::openGroup('email', trans('auth::messages.email.email')) !!}
+                    {!! Form::openGroup('email', trans('validation.attributes.email')) !!}
                     {!! Form::text('email') !!}
                     {!! Form::closeGroup() !!}
 

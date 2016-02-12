@@ -10,15 +10,15 @@
                 <div class="panel-body">
                     {!! Form::open(['method' => 'post', 'route' => ['register']]) !!}
 
-                    {!! Form::openGroup('name', trans('auth::messages.register.name')) !!}
+                    {!! Form::openGroup('name', trans('validation.attributes.name')) !!}
                     {!! Form::text('name') !!}
                     {!! Form::closeGroup() !!}
 
-                    {!! Form::openGroup('email', trans('auth::messages.register.email')) !!}
+                    {!! Form::openGroup('email', trans('validation.attributes.email')) !!}
                     {!! Form::text('email') !!}
                     {!! Form::closeGroup() !!}
 
-                    {!! Form::openGroup('password', trans('auth::messages.register.password')) !!}
+                    {!! Form::openGroup('password', trans('validation.attributes.password')) !!}
                     {!! Form::password('password') !!}
                     {!! Form::closeGroup() !!}
 
