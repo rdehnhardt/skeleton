@@ -6,8 +6,3 @@ Route::group(['middleware' => ['web']], function () {
     });
 });
 
-Route::group(['middleware' => ['api'], 'prefix' => 'api'], function () {
-
-    Route::resource('users', 'UsersController', ['only' => ['index', 'show', 'store', 'update', 'destroy']]);
-
-});
