@@ -12,14 +12,15 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="{{ route('back') }}">Home</a></li>
+                <li><a href="{{ route('back') }}">{{ trans('back::dictionary.home') }}</a></li>
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">System <span class="caret"></span></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">{{ trans('back::dictionary.system') }} <span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="{{ route('back.system.users.index') }}">Users</a></li>
+                        <li><a href="{{ route('back.system.users.index') }}">{{ trans('back::system.user.title') }}</a></li>
                     </ul>
                 </li>
+                <li><a href="/logout">Logout</a></li>
             </ul>
-        </div><!--/.nav-collapse -->
+        </div>
     </div>
 </nav>

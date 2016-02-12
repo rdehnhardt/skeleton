@@ -3,13 +3,13 @@
 @section('page-name', 'dashboard')
 
 @section('page-title')
-    <h1>Dashboard</h1>
+    <h1>{{ trans('back::dashboard.title') }}</h1>
 @stop
 
 @section('content')
     <div class="panel panel-brand">
         <div class="panel-heading">
-            <h3 class="panel-title">Visits</h3>
+            <h3 class="panel-title">{{ trans('back::dashboard.visits') }}</h3>
         </div>
 
         <div class="panel-body">

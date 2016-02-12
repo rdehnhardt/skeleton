@@ -3,6 +3,7 @@
 namespace App\Front\Http\Controllers;
 
 use App\Core\Models\User;
+use App\Front\Http\Requests\UserRequest;
 
 class UsersController extends FrontController
 {
@@ -19,6 +20,28 @@ class UsersController extends FrontController
         return User::all();
     }
 
+    public function store(UserRequest $request)
+    {
+        $user = new User;
+        $user->name = $request->get('name');
+        $user->email = $request->get('email');
+        $user->password = $request->get('password');
+        $user->save();
+
+        return $user;
+    }
+
+    public function update($id, UserRequest $request)
+    {
+        $user = User::find($id);
+        $user->name = $request->get('name');
+        $user->email = $request->get('email');
+        $user->password = $request->get('password');
+        $user->save();
+
+        return $user;
+    }
+
     public function show($id)
     {
         return User::find($id);
@@ -26,6 +49,9 @@ class UsersController extends FrontController
 
     public function destroy($id)
     {
-        return User::delete($id);
+        $user = User::find($id);
+        $user->delete();
+
+        return $user;
     }
 }
