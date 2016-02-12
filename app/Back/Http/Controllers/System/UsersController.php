@@ -40,11 +40,11 @@ class UsersController extends BackController
         $user->password = $request->get('password');
 
         if ($user->save()) {
-            $this->addFlash('Successfully created record!', 'success');
+            $this->addFlash(trans('back::dictionary.success'), 'success');
 
             return Redirect::route('back.system.users.index');
         } else {
-            $this->addFlash('Whooops! Could not create the record.', 'danger');
+            $this->addFlash(trans('back::dictionary.exception'), 'danger');
 
             return Redirect::route('back.system.users.create')->withInputs();
         }
@@ -75,11 +75,11 @@ class UsersController extends BackController
         }
 
         if ($user->save()) {
-            $this->addFlash('Successfully updated record!', 'success');
+            $this->addFlash(trans('back::dictionary.success'), 'success');
 
             return Redirect::route('back.system.users.index');
         } else {
-            $this->addFlash('Whooops! Could not update the record.', 'danger');
+            $this->addFlash(trans('back::dictionary.exception'), 'danger');
 
             return Redirect::route('back.system.users.edit', ['id' => $id])->withInputs();
         }
@@ -90,11 +90,11 @@ class UsersController extends BackController
         $user = User::find($id);
 
         if ($user->delete()) {
-            $this->addFlash('Successfully delete record!', 'success');
+            $this->addFlash(trans('back::dictionary.success'), 'success');
 
             return Redirect::route('back.system.users.index');
         } else {
-            $this->addFlash('Whooops! Could not delete the record.', 'danger');
+            $this->addFlash(trans('back::dictionary.exception'), 'danger');
 
             return Redirect::route('back.system.users.index')->withInputs();
         }

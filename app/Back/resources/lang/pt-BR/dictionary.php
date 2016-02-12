@@ -12,4 +12,6 @@ return [
     'edit' => 'Editar',
     'delete' => 'Remover',
     'no-records' => 'Nenhum registro encontrado',
+    'success' => 'Operação realizada com sucesso!',
+    'exception' => 'Whooops! Não foi possível realizar a operação.',
 ];

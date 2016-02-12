@@ -5,10 +5,11 @@ $line-height-base: 1.25 !default; // 20/16
 $font-title: 'Dosis', sans-serif !important;
 
 // Colors
-$brand-color: #0973BA !default;
+$brand-color: #FBA617 !default;
 $brand-color-contrast: #FFF !default;
+$brand-primary: $brand-color;
 $link-color: $brand-color !default;
-$body-bg: lighten($brand-color, 59%);
+$body-bg: lighten($brand-color, 42%);
 
 // Paddings
 $padding-xs-vertical: 0;
