@@ -75,7 +75,7 @@ MAINTENANCE_ALLOWED_IPS=999.999.999.999,888.888.888.888
 # Screenshots
 
 ## Front
-![alt text](https://raw.githubusercontent.com/rdehnhardt/skeleton/master/public/img/screen/skeleton-home.jpg "Home")
+![alt text](https://raw.githubusercontent.com/baconfy/skeleton/master/public/screenshots/skeleton-home.jpg "Home")
 
 ## Login
 ![alt text](https://raw.githubusercontent.com/baconfy/skeleton/master/public/screenshots/skeleton-auth.jpg "Login")
