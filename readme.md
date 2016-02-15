@@ -78,31 +78,31 @@ MAINTENANCE_ALLOWED_IPS=999.999.999.999,888.888.888.888
 ![alt text](https://raw.githubusercontent.com/rdehnhardt/skeleton/master/public/img/screen/skeleton-home.jpg "Home")
 
 ## Login
-![alt text](https://raw.githubusercontent.com/rdehnhardt/skeleton/master/public/img/screen/skeleton-auth.jpg "Login")
+![alt text](https://raw.githubusercontent.com/baconfy/skeleton/master/public/screenshots/skeleton-auth.jpg "Login")
 
 ## Dashboard
-![alt text](https://raw.githubusercontent.com/rdehnhardt/skeleton/master/public/img/screen/skeleton-dashboard.jpg "Dashboard")
+![alt text](https://raw.githubusercontent.com/baconfy/skeleton/master/public/screenshots/skeleton-dashboard.jpg "Dashboard")
 
 ## List
-![alt text](https://raw.githubusercontent.com/rdehnhardt/skeleton/master/public/img/screen/skeleton-list.jpg "List")
+![alt text](https://raw.githubusercontent.com/baconfy/skeleton/master/public/screenshots/skeleton-list.jpg "List")
 
 ## Create
-![alt text](https://raw.githubusercontent.com/rdehnhardt/skeleton/master/public/img/screen/skeleton-create.jpg "Create")
+![alt text](https://raw.githubusercontent.com/baconfy/skeleton/master/public/screenshots/skeleton-create.jpg "Create")
 
 ## Edit
-![alt text](https://raw.githubusercontent.com/rdehnhardt/skeleton/master/public/img/screen/skeleton-edit.jpg "Edit")
+![alt text](https://raw.githubusercontent.com/baconfy/skeleton/master/public/screenshots/skeleton-edit.jpg "Edit")
 
 ## Validation
-![alt text](https://raw.githubusercontent.com/rdehnhardt/skeleton/master/public/img/screen/skeleton-with-validation.jpg "Validation")
+![alt text](https://raw.githubusercontent.com/baconfy/skeleton/master/public/screenshots/skeleton-with-validation.jpg "Validation")
 
 ## Messages
-![alt text](https://raw.githubusercontent.com/rdehnhardt/skeleton/master/public/img/screen/skeleton-with-messages.jpg "Validation")
+![alt text](https://raw.githubusercontent.com/baconfy/skeleton/master/public/screenshots/skeleton-with-messages.jpg "Validation")
 
 ## Panel with tabs
-![alt text](https://raw.githubusercontent.com/rdehnhardt/skeleton/master/public/img/screen/skeleton-panel-with-tabs.jpg "Validation")
+![alt text](https://raw.githubusercontent.com/baconfy/skeleton/master/public/screenshots/skeleton-panel-with-tabs.jpg "Validation")
 
 ## sweetAlerts
-![alt text](https://raw.githubusercontent.com/rdehnhardt/skeleton/master/public/img/screen/skeleton-with-alerts.jpg "Alerts")
+![alt text](https://raw.githubusercontent.com/baconfy/skeleton/master/public/screenshots/skeleton-with-alerts.jpg "Alerts")
 
 ### Donate
 [![PayPayl donate button](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=WKPHKUSVC2YLC&lc=BR&item_name=rdehnhardt&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted "Donate once-off to this project using Paypal")
