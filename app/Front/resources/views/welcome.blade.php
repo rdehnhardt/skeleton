@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Skeleton</title>
+        {!! SEO::generate() !!}
 
         <link href="https://fonts.googleapis.com/css?family=Lato:300" rel="stylesheet" type="text/css">
 
