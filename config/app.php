@@ -98,6 +98,7 @@ return [
         /* Packages */
         Baconfy\Analytics\Providers\AnalyticsServiceProvider::class,
         Rdehnhardt\Html\HtmlServiceProvider::class,
+        Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
 
         /* Core Service Providers */
         App\Core\Providers\AppServiceProvider::class,
