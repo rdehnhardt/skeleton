@@ -1,4 +1,4 @@
-@extends('back::app')
+@extends('back::layout.app')
 
 @section('page-name', 'system users')
 

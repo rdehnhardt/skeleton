@@ -1,15 +1,15 @@
 {
   "name": "rdehnhardt/skeleton",
   "dependencies": {
-    "bootstrap-sass": "^3.3",
-    "bootstrap-sass-datepicker": "^1.3",
-    "bootstrap-daterangepicker": "^2.0",
-    "bootswatch": "^3.3",
+    "bootstrap-sass": "^3.3.5",
     "font-awesome": "^4.5",
     "Chart.js": "^1.0.2",
     "jquery-form": "^3.46",
     "jquery.easing": "^1.3",
     "sweetalert": "^1.1",
-    "moment": "^2.11"
+    "moment": "^2.11",
+    "AdminLTE": "admin-lte#^2.3",
+    "ionic": "^1.2",
+    "jquery-easing-original": "^1.3.2"
   }
 }

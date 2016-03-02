@@ -8,11 +8,9 @@
 @import "back/variables";
 
 // Bower Components
-@import "../../../bower_components/bootswatch/flatly/variables";
 @import "../../../bower_components/bootstrap-sass/assets/stylesheets/bootstrap";
-@import "../../../bower_components/bootswatch/flatly/bootswatch";
 @import "../../../bower_components/font-awesome/scss/font-awesome";
+@import "../../../bower_components/ionic/scss/ionicons/ionicons";
+@import "../../../bower_components/AdminLTE/dist/css/AdminLTE";
+@import "../../../bower_components/AdminLTE/dist/css/skins/_all-skins";
 
-// Back Componnets
-@import "back/theme";
-@import "back/components";

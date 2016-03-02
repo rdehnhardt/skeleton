@@ -2,18 +2,18 @@
 
 return [
     'login' => [
-        'title' => 'Login',
+        'title' => 'Sign in to start your session',
         'email' => 'E-Mail Address',
         'password' => 'Password',
         'remember' => 'Remember Me',
         'actions' => [
             'login' => 'Login',
             'forgot' => 'Forgot Your Password?',
-            'account' => 'Need an account?',
+            'account' => 'Register a new membership',
         ],
     ],
     'email' => [
-        'title' => 'Reset Password',
+        'title' => 'Reset Your Password',
         'email' => 'E-Mail Address',
         'actions' => [
             'send' => 'Send Password Reset Link',
@@ -31,7 +31,7 @@ return [
         ],
     ],
     'register' => [
-        'title' => 'Register',
+        'title' => 'Create Your Account',
         'name' => 'Name',
         'email' => 'E-Mail Address',
         'password' => 'Password',

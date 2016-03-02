@@ -8,6 +8,7 @@ return [
     'system' => 'Sistema',
     'logout' => 'Sair',
     'search' => 'Pesquisar',
+    'main-menu' => 'MENU PRINCIPAL',
     'save' => 'Salvar',
     'edit' => 'Editar',
     'delete' => 'Remover',

@@ -1,6 +1,7 @@
 <?php
 
 return [
+    'title' => 'Sistema',
     'user' => [
         'title' => 'Usuários',
         'create' => 'Criar novo usuário',

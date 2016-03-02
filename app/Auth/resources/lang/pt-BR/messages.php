@@ -2,7 +2,7 @@
 
 return [
     'login' => [
-        'title' => 'Área Restrita',
+        'title' => 'Sign in to start your session',
         'email' => 'Endereço de E-Mail',
         'password' => 'Senha',
         'remember' => 'Lembrar senha',
