@@ -1,7 +1,6 @@
 vendor
 node_modules
 bower_components
-.env
 .idea
 
 /public/css
