@@ -14,12 +14,12 @@
 @stop
 
 @section('content')
-    <div class="panel panel-brand">
-        <div class="panel-heading">
-            <h3 class="panel-title">{{ trans('back::system.user.create') }}</h3>
+    {!! Form::open(['method' => 'post', 'route' => ['back.system.users.store']]) !!}
+    <div class="box box-primary">
+        <div class="box-header with-border">
+            <h3 class="box-title">{{ trans('back::dictionary.filter') }}</h3>
         </div>
-        <div class="panel-body">
-            {!! Form::open(['method' => 'post', 'route' => ['back.system.users.store']]) !!}
+        <div class="box-body">
             <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
                     {!! Form::openGroup('name', trans('validation.attributes.name')) !!}
@@ -39,14 +39,17 @@
                     {!! Form::closeGroup() !!}
                 </div>
             </div>
+        </div>
 
-            <div class="form-actions">
-                <button type="submit" class="btn btn-brand">
-                    <i class="fa fa-floppy-o"></i>
-                    {{ trans('back::dictionary.save') }}
-                </button>
-            </div>
-            {!! Form::close() !!}
+        <div class="box-footer">
+            <button type="submit" class="btn btn-flat btn-primary">
+                <i class="fa fa-floppy-o"></i> {{ trans('back::dictionary.save') }}
+            </button>
+
+            <a href="{{ route('back.system.users.index') }}" type="button" class="btn btn-flat btn-default" data-toggle="tooltip" title="{{ trans('back::dictionary.new') }}">
+                <i class="fa fa-arrow-left"></i> &nbsp; {{ trans('back::dictionary.back') }}
+            </a>
         </div>
     </div>
+    {!! Form::close() !!}
 @stop

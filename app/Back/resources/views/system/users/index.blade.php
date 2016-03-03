@@ -14,7 +14,7 @@
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
             {!! Form::open(['method' => 'get', 'route' => ['back.system.users.index']]) !!}
-            <div class="box">
+            <div class="box box-primary">
                 <div class="box-header with-border">
                     <h3 class="box-title">{{ trans('back::dictionary.filter') }}</h3>
                 </div>
@@ -30,21 +30,21 @@
                     </div>
                 </div>
                 <div class="box-footer">
-                    <button type="submit" class="btn btn-brand pull-left">
+                    <button type="submit" class="btn btn-flat btn-default pull-left">
                         <i class="fa fa-search"></i>
                         {{ trans('back::dictionary.search') }}
                     </button>
 
-                    <button type="button" class="btn btn-brand pull-right" data-widget="collapse" data-toggle="tooltip" title="{{ trans('back::dictionary.new') }}">
+                    <a href="{{ route('back.system.users.create') }}" type="button" class="btn btn-flat btn-default pull-right" data-toggle="tooltip" title="{{ trans('back::dictionary.new') }}">
                         <i class="fa fa-plus"></i> &nbsp; {{ trans('back::dictionary.new') }}
-                    </button>
+                    </a>
                 </div>
             </div>
             {!! Form::close() !!}
         </div>
 
         <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
-            <div class="box">
+            <div class="box box-primary">
                 <div class="box-header with-border">
                     <h3 class="box-title">{{ trans('back::system.user.list') }}</h3>
                 </div>
@@ -67,11 +67,11 @@
                                     <td>{{ $record->created_at->format('d/m/Y H:i') }}</td>
                                     <td class="table-actions">
                                         {!! Form::open(['method' => 'get', 'route' => ['back.system.users.edit', $record->id]]) !!}
-                                        {!! Form::button('<i class="fa fa-pencil"></i>', ['type' => 'submit', 'class' => 'btn btn-brand btn-xs', 'data-toggle' => 'tooltip', 'data-placement' => 'top', 'title' => trans('back::dictionary.edit')]) !!}
+                                        {!! Form::button('<i class="fa fa-pencil"></i>', ['type' => 'submit', 'class' => 'btn btn-flat btn-default btn-xs', 'data-toggle' => 'tooltip', 'data-placement' => 'top', 'title' => trans('back::dictionary.edit')]) !!}
                                         {!! Form::close() !!}
 
                                         {!! Form::open(['method' => 'delete', 'data-confirm' => 'You will not be able to recover this record!', 'route' => ['back.system.users.destroy', $record->id]]) !!}
-                                        {!! Form::button('<i class="fa fa-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'data-toggle' => 'tooltip', 'data-placement' => 'top', 'title' => trans('back::dictionary.delete')]) !!}
+                                        {!! Form::button('<i class="fa fa-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-flat btn-danger btn-xs', 'data-toggle' => 'tooltip', 'data-placement' => 'top', 'title' => trans('back::dictionary.delete')]) !!}
                                         {!! Form::close() !!}
                                     </td>
                                 </tr>
