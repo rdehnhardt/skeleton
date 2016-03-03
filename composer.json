@@ -9,7 +9,8 @@
         "laravel/framework": "5.2.*",
         "baconfy/laravel-analytics": "5.2.*",
         "rdehnhardt/html": "^5.2",
-        "artesaos/seotools": "^0.8.2"
+        "artesaos/seotools": "^0.8.2",
+        "guzzlehttp/guzzle": "^6.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
