@@ -13,7 +13,7 @@
         </a>
 
         <ul class="treeview-menu">
-            <li class="{{ $route->is('back/system/users') ? 'active' : '' }}"><a href="{{ route('back.system.users.index') }}"><i class="fa fa-circle-o"></i> {{ trans('back::system.user.title') }}</a></li>
+            <li class="{{ $route->match('back/system/users') ? 'active' : '' }}"><a href="{{ route('back.system.users.index') }}"><i class="fa fa-circle-o"></i> {{ trans('back::system.user.title') }}</a></li>
         </ul>
     </li>
 </ul>
