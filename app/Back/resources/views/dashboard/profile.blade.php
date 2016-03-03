@@ -49,7 +49,7 @@
                     </div>
 
                     <div class="form-actions">
-                        <button type="submit" class="btn btn-brand">
+                        <button type="submit" class="btn btn-default btn-flat">
                             <i class="fa fa-floppy-o"></i>
                             {{ trans('back::dictionary.save') }}
                         </button>
