@@ -18,25 +18,25 @@
                     {!! Form::model(Auth::user(), ['route' => ['post.profile'], 'method' => 'post', 'files' => true]) !!}
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            {!! Form::openGroup('name', trans('validation.attributes.name')) !!}
+                            {!! Form::openGroup('name', ucfirst(trans('validation.attributes.name'))) !!}
                             {!! Form::text('name') !!}
                             {!! Form::closeGroup() !!}
                         </div>
 
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            {!! Form::openGroup('email', trans('validation.attributes.email')) !!}
+                            {!! Form::openGroup('email', ucfirst(trans('validation.attributes.email'))) !!}
                             {!! Form::text('email') !!}
                             {!! Form::closeGroup() !!}
                         </div>
 
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            {!! Form::openGroup('picture', trans('validation.attributes.picture')) !!}
+                            {!! Form::openGroup('picture', ucfirst(trans('validation.attributes.picture'))) !!}
                             {!! Form::file('picture') !!}
                             {!! Form::closeGroup() !!}
                         </div>
 
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            {!! Form::openGroup('password', trans('validation.attributes.password')) !!}
+                            {!! Form::openGroup('password', ucfirst(trans('validation.attributes.password'))) !!}
                             {!! Form::password('password') !!}
                             {!! Form::closeGroup() !!}
                         </div>
