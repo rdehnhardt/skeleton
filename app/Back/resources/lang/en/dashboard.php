@@ -2,7 +2,10 @@
 
 return [
     'title' => 'Dashboard',
-    'visits' => 'site visits chart',
+    'visits' => [
+        'title' => 'Site Visits Chart',
+        'date-range' => 'Date Range'
+    ],
     'profile' => [
         'title' => 'Profile',
         'data' => 'Profile',

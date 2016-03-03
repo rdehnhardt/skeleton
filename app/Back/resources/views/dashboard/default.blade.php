@@ -12,21 +12,20 @@
 @section('content')
     <div class="box box-primary">
         <div class="box-header with-border">
-            <h3 class="box-title">{{ trans('back::dictionary.visits') }}</h3>
+            <h3 class="box-title">{{ trans('back::dashboard.visits.title') }}</h3>
 
             <div class="box-tools pull-right">
-                <button type="button" class="btn btn-box-tool" data-widget="collapse">
-                    <i class="fa fa-minus"></i>
-                </button>
-
-                <button type="button" class="btn btn-box-tool" data-widget="remove">
-                    <i class="fa fa-times"></i>
-                </button>
+                <div class="input-group">
+                    <button type="button" class="btn btn-sm btn-flat btn-default pull-right" id="reportrange">
+                        <i class="fa fa-calendar"></i> {{ trans('back::dashboard.visits.date-range') }}
+                        <i class="fa fa-caret-down"></i>
+                    </button>
+                </div>
             </div>
         </div>
         <div class="box-body">
             <div class="chart">
-                <canvas id="areaChart" style="height:350px"></canvas>
+                <div id="visits" data-height="400" style="color: #375879"></div>
             </div>
         </div>
     </div>

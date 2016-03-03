@@ -99,6 +99,7 @@ return [
         Baconfy\Analytics\Providers\AnalyticsServiceProvider::class,
         Rdehnhardt\Html\HtmlServiceProvider::class,
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
 
         /* Core Service Providers */
         App\Core\Providers\AppServiceProvider::class,
@@ -162,5 +163,6 @@ return [
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
         'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
+        'Image' => Intervention\Image\Facades\Image::class,
     ],
 ];
