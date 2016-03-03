@@ -21,20 +21,26 @@
         </div>
         <div class="box-body">
             <div class="row">
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                    {!! Form::openGroup('name', trans('validation.attributes.name')) !!}
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    {!! Form::openGroup('name', ucfirst(trans('validation.attributes.name'))) !!}
                     {!! Form::text('name') !!}
                     {!! Form::closeGroup() !!}
                 </div>
 
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                    {!! Form::openGroup('email', trans('validation.attributes.email')) !!}
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    {!! Form::openGroup('email', ucfirst(trans('validation.attributes.email'))) !!}
                     {!! Form::text('email') !!}
                     {!! Form::closeGroup() !!}
                 </div>
 
-                <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
-                    {!! Form::openGroup('password', trans('validation.attributes.password')) !!}
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    {!! Form::openGroup('role', ucfirst(trans('validation.attributes.role'))) !!}
+                    {!! Form::text('role') !!}
+                    {!! Form::closeGroup() !!}
+                </div>
+
+                <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    {!! Form::openGroup('password', ucfirst(trans('validation.attributes.password'))) !!}
                     {!! Form::password('password') !!}
                     {!! Form::closeGroup() !!}
                 </div>

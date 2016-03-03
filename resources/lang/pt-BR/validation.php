@@ -88,11 +88,12 @@ return [
     |--------------------------------------------------------------------------
     */
     'attributes' => [
-        'name' => 'Nome',
-        'email' => 'Endereço de E-mail',
-        'created_at' => 'Criado em',
-        'password' => 'Senha',
-        'picture' => 'Foto',
+        'name' => 'nome',
+        'email' => 'endereço de e-mail',
+        'created_at' => 'criado em',
+        'password' => 'senha',
+        'picture' => 'foto',
+        'role' => 'cargo',
     ],
 
 ];

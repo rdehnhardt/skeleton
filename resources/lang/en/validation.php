@@ -106,11 +106,12 @@ return [
     */
 
     'attributes' => [
-        'name' => 'Name',
-        'email' => 'E-mail Address',
-        'created_at' => 'Created At',
-        'password' => 'Password',
-        'picture' => 'Picture',
+        'name' => 'name',
+        'email' => 'e-mail address',
+        'created_at' => 'created At',
+        'password' => 'password',
+        'picture' => 'picture',
+        'role' => 'role',
     ],
 
 ];

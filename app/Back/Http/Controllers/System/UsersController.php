@@ -37,6 +37,7 @@ class UsersController extends BackController
     {
         $user = new User();
         $user->name = $request->get('name');
+        $user->role = $request->get('role');
         $user->email = $request->get('email');
         $user->password = $request->get('password');
 
@@ -69,6 +70,7 @@ class UsersController extends BackController
     {
         $user = User::find($id);
         $user->name = $request->get('name');
+        $user->role = $request->get('role');
         $user->email = $request->get('email');
 
         if ($request->get('password')) {

@@ -18,6 +18,7 @@ class UserRequest extends BackRequest
             case 'POST': {
                 return [
                     'email' => 'required|email|unique:users,email',
+                    'role' => 'required',
                     'name' => 'required',
                 ];
             }
@@ -26,6 +27,7 @@ class UserRequest extends BackRequest
                 return [
                     'email' => "required|email|unique:users,email,{$this->users}",
                     'name' => 'required',
+                    'role' => 'required',
                 ];
             }
         }
