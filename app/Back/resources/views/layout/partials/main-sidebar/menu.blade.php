@@ -1,5 +1,3 @@
-@inject('route', 'App\Core\Services\RouteMatch')
-
 <ul class="sidebar-menu">
     <li class="header">{{ trans('back::dictionary.main-menu') }}</li>
     <li>
