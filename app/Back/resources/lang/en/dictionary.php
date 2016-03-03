@@ -12,6 +12,7 @@ return [
     'save' => 'Save',
     'edit' => 'Edit',
     'delete' => 'Delete',
+    'visits' => 'Visits',
     'no-records' => 'No records found',
     'success' => 'Operation was successful!',
     'exception' => 'Whooops! Could not perform the operation.',

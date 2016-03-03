@@ -12,7 +12,7 @@
 
 @section('content')
     <div class="row">
-    	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+        <div class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
             {!! Form::open(['method' => 'get', 'route' => ['back.system.users.index']]) !!}
             <div class="box">
                 <div class="box-header with-border">
@@ -23,40 +23,43 @@
                     {!! Form::text('name') !!}
                     {!! Form::closeGroup() !!}
 
-                    {!! Form::openGroup('email', trans('validation.attributes.email')) !!}
-                    {!! Form::text('email') !!}
-                    {!! Form::closeGroup() !!}
+                    <div class="hidden-sm hidden-xs">
+                        {!! Form::openGroup('email', trans('validation.attributes.email')) !!}
+                        {!! Form::text('email') !!}
+                        {!! Form::closeGroup() !!}
+                    </div>
                 </div>
                 <div class="box-footer">
-                    <button type="submit" class="btn btn-brand">
+                    <button type="submit" class="btn btn-brand pull-left">
                         <i class="fa fa-search"></i>
                         {{ trans('back::dictionary.search') }}
                     </button>
 
-                    <button type="button" class="btn btn-brand" data-widget="collapse" data-toggle="tooltip" title="{{ trans('back::dictionary.new') }}">
+                    <button type="button" class="btn btn-brand pull-right" data-widget="collapse" data-toggle="tooltip" title="{{ trans('back::dictionary.new') }}">
                         <i class="fa fa-plus"></i> &nbsp; {{ trans('back::dictionary.new') }}
                     </button>
                 </div>
             </div>
             {!! Form::close() !!}
-    	</div>
+        </div>
 
-        <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+        <div class="col-xs-12 col-sm-12 col-md-9 col-lg-9">
             <div class="box">
                 <div class="box-header with-border">
                     <h3 class="box-title">{{ trans('back::system.user.list') }}</h3>
                 </div>
                 <div class="box-body">
-                    <table class="table table-hover table-condensed">
-                        <thead>
+                    <div class="table-responsive">
+                        <table class="table table-hover table-condensed">
+                            <thead>
                             <tr>
                                 <th width="33%">{{ trans('validation.attributes.name') }}</th>
                                 <th width="33%">{{ trans('validation.attributes.email') }}</th>
                                 <th width="33%">{{ trans('validation.attributes.created_at') }}</th>
                                 <th width="1%">&nbsp;</th>
                             </tr>
-                        </thead>
-                        <tbody>
+                            </thead>
+                            <tbody>
                             @forelse ($records as $record)
                                 <tr>
                                     <td>{{ $record->name }}</td>
@@ -77,15 +80,16 @@
                                     <td colspan="3">{{  trans('back::dictionary.no-records') }}</td>
                                 </tr>
                             @endforelse
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
 
                 <div class="box-footer">
                     <div class="row">
-                    	<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+                        <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
                             {{ sprintf(trans('back::paginator.showing'), $records->currentPage(), $records->perPage(), $records->total()) }}
-                    	</div>
+                        </div>
 
                         <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
                             {{ $records->render() }}

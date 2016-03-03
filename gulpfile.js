@@ -15,6 +15,7 @@ elixir(function (mix) {
         bower + 'jquery-easing-original/jquery.easing.js',
         bower + 'bootstrap-sass/assets/javascripts/bootstrap.js',
         bower + 'AdminLTE/dist/js/app.js',
+        bower + 'Chart.js/Chart.js',
         './app/Back/resources/assets/js/**/*.js'
     ], './public/js/back.js');
 

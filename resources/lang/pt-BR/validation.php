@@ -92,6 +92,7 @@ return [
         'email' => 'Endereço de E-mail',
         'created_at' => 'Criado em',
         'password' => 'Senha',
+        'picture' => 'Foto',
     ],
 
 ];

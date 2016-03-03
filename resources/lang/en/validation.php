@@ -110,6 +110,7 @@ return [
         'email' => 'E-mail Address',
         'created_at' => 'Created At',
         'password' => 'Password',
+        'picture' => 'Picture',
     ],
 
 ];
