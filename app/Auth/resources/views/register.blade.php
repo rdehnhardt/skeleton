@@ -3,7 +3,7 @@
 @section('content')
     <p class="login-box-msg">{{ trans('auth::messages.register.title') }}</p>
 
-    {!! Form::open(['method' => 'post', 'route' => ['password.email']]) !!}
+    {!! Form::open(['method' => 'post']) !!}
 
     {!! Form::openGroup('name', trans('validation.attributes.name')) !!}
     {!! Form::text('name') !!}
