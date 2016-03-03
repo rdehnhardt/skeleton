@@ -21,7 +21,7 @@ class RouteMatch
      * @param string $pattern
      * @return int
      */
-    public function is($pattern)
+    public function match($pattern)
     {
         return Str::startsWith($this->request->path(), $pattern);
     }

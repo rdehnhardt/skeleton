@@ -7,7 +7,7 @@
             <i class="fa fa-dashboard"></i> <span>{{ trans('back::dashboard.title') }}</span>
         </a>
     </li>
-    <li class="treeview {{ $route->is('back/system') ? 'active' : '' }}">
+    <li class="treeview {{ $route->match('back/system') ? 'active' : '' }}">
         <a href="#">
             <i class="fa fa-cogs"></i> <span>{{ trans('back::system.title') }}</span>
         </a>
