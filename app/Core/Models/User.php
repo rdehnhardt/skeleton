@@ -35,4 +35,12 @@ class User extends Authenticatable
     {
         $this->attributes['password'] = bcrypt($value);
     }
+
+    /**
+     * @return string
+     */
+    public function getImage()
+    {
+        return md5($this->id);
+    }
 }

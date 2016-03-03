@@ -11,11 +11,11 @@
     	<div class="col-xs-12 col-sm-12 col-md-3 col-lg-3 col-centered">
             <div class="box box-primary">
                 <div class="box-body box-profile">
-                    <img class="profile-user-img img-responsive img-circle" src="/build/img/user6-128x128.jpg" alt="User profile picture">
+                    <img class="profile-user-img img-responsive img-circle" src="/img/avatars/128/128/{{ Auth::user()->getImage() }}" alt="{{ Auth::user()->name }}">
                     <h3 class="profile-username text-center">{{ Auth::user()->name }}</h3>
                     <p class="text-muted text-center">{{ Auth::user()->role }}</p>
 
-                    {!! Form::model(Auth::user(), ['route' => ['post.profile'], 'method' => 'post']) !!}
+                    {!! Form::model(Auth::user(), ['route' => ['post.profile'], 'method' => 'post', 'files' => true]) !!}
                     <div class="row">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             {!! Form::openGroup('name', trans('validation.attributes.name')) !!}

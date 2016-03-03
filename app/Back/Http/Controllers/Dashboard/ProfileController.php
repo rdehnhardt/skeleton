@@ -21,9 +21,16 @@ class ProfileController extends BackController
     {
         Auth::user()->name = $request->get('name');
         Auth::user()->email = $request->get('email');
-        Auth::user()->password = $request->get('password');
+
+        if ($request->has('password')) {
+            Auth::user()->password = $request->get('password');
+        }
 
         if (Auth::user()->save()) {
+            if ($request->files->get('picture')->isValid()) {
+                $request->files->get('picture')->move(storage_path('app/avatars'), md5(Auth::user()->id));
+            }
+
             $this->addFlash(trans('back::dictionary.success'), 'success');
         } else {
             $this->addFlash(trans('back::dictionary.exception'), 'danger');

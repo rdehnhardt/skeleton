@@ -17,7 +17,7 @@ class ProfileRequest extends BackRequest
         return [
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users,email,' . Auth::user()->id,
-            'password' => 'required|confirmed|min:6',
+            'password' => 'confirmed|min:6',
         ];
     }
 
