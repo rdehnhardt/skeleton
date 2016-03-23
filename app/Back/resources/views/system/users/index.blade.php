@@ -19,7 +19,7 @@
                     <h3 class="box-title">{{ trans('back::dictionary.filter') }}</h3>
                 </div>
                 <div class="box-body">
-                    {!! Form::openGroup('name', trans('validation.attributes.name')) !!}
+                    {!! Form::openGroup('name', _ucwords(trans('validation.attributes.name'))) !!}
                     {!! Form::text('name') !!}
                     {!! Form::closeGroup() !!}
 

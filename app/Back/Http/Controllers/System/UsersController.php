@@ -13,7 +13,7 @@ class UsersController extends BackController
 {
     public function index()
     {
-        $query = User::select(['id', 'name', 'email', 'created_at']);
+        $query = User::select(['id', 'name', 'email', 'role', 'created_at']);
 
         if (Request::get('name')) {
             $query->where('name', 'LIKE', '%' . Request::get('name') . '%');
@@ -24,7 +24,7 @@ class UsersController extends BackController
         }
 
         $records = $query->paginate();
-
+        
         return view('back::system.users.index', compact('records'));
     }
 
