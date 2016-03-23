@@ -1,5 +1,3 @@
-@inject('route', 'App\Core\Services\RouteMatch')
-
 <!DOCTYPE html>
 <html>
 <head>
