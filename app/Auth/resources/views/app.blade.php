@@ -15,7 +15,7 @@
 <body class="hold-transition login-page">
     <div class="login-box">
         <div class="login-logo">
-            <a href="/"><b>{{ config('app.name') }}</b></a>
+            <a href="/"><b>{{ _ucwords(config('app.name')) }}</b></a>
         </div>
         <div class="login-box-body">
             @yield('content')
