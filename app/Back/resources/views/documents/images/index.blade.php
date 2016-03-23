@@ -6,10 +6,6 @@
     <h1>{{ trans('back::documents.images.title') }}</h1>
 @stop
 
-@section('page-actions')
-    <a href="{{ route('back.documents.images.create') }}" class="btn btn-brand"><i class="fa fa-plus"></i> {{ trans('back::dictionary.new') }}</a>
-@stop
-
 @section('content')
     <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">

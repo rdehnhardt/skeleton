@@ -64,8 +64,8 @@ return [
     | Logging Configuration
     |--------------------------------------------------------------------------
     */
-    'log' => env('APP_LOG', 'single'),
-
+    'log' => env('APP_LOG', 'daily'),
+    
     /*
     |--------------------------------------------------------------------------
     | Autoloaded Service Providers
@@ -100,6 +100,7 @@ return [
         Rdehnhardt\Html\HtmlServiceProvider::class,
         Artesaos\SEOTools\Providers\SEOToolsServiceProvider::class,
         Intervention\Image\ImageServiceProvider::class,
+        Rap2hpoutre\LaravelLogViewer\LaravelLogViewerServiceProvider::class,
 
         /* Core Service Providers */
         App\Core\Providers\AppServiceProvider::class,

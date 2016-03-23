@@ -34,3 +34,8 @@ Route::group(['prefix' => 'documents', 'namespace' => 'Documents'], function () 
 Route::group(['prefix' => 'system', 'namespace' => 'System'], function () {
     Route::resource('users', 'UsersController');
 });
+
+/**
+ * Logs
+ */
+Route::get('logs', '\Rap2hpoutre\LaravelLogViewer\LogViewerController@index');
