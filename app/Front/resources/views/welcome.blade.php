@@ -52,7 +52,7 @@
         <div class="container">
             <div class="content">
                 <div class="title">Skeleton</div>
-                <a href="/back">Restricted Area</a>
+                <a href="/back/dashboard">Restricted Area</a>
             </div>
         </div>
     </body>
