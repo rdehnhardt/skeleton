@@ -1,12 +1,9 @@
 <?php
 
 /**
- * Profile
+ * Home
  */
-Route::group(['prefix' => 'profile', 'namespace' => 'Dashboard'], function () {
-    Route::get('/', ['as' => 'get.profile', 'uses' => 'ProfileController@index']);
-    Route::post('/', ['as' => 'post.profile', 'uses' => 'ProfileController@store']);
-});
+Route::get('/', ['as' => 'back.home', 'uses' => 'Dashboard\DefaultController@index']);
 
 /**
  * Dashboard
@@ -14,6 +11,14 @@ Route::group(['prefix' => 'profile', 'namespace' => 'Dashboard'], function () {
 Route::group(['prefix' => 'dashboard', 'namespace' => 'Dashboard'], function () {
     Route::get('/', ['as' => 'back.dashboard', 'uses' => 'DefaultController@index']);
     Route::get('/visits/{start}/{end}', ['as' => 'back.dashboard.visits', 'uses' => 'DefaultController@visits']);
+});
+
+/**
+ * Profile
+ */
+Route::group(['prefix' => 'profile', 'namespace' => 'Dashboard'], function () {
+    Route::get('/', ['as' => 'get.profile', 'uses' => 'ProfileController@index']);
+    Route::post('/', ['as' => 'post.profile', 'uses' => 'ProfileController@store']);
 });
 
 /**
