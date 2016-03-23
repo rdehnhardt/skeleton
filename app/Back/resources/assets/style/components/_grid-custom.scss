@@ -20,9 +20,16 @@
     float: left;
 
     .image {
-        backgrund: darken(#ff0000, 2%);
-        padding: 5px;
-        margin: 5px;
+        box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+        border-top: 3px solid $brand-primary;
+        background: darken(#ffffff, 1%);
+        margin: 10px 10px 20px 10px;
+        border-radius: 3px;
+        padding: 10px;
+
+        .tags {
+            padding: 5px 0;
+        }
 
         .actions {
             text-align: center;
