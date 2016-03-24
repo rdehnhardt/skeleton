@@ -7,7 +7,9 @@
 @stop
 
 @section('page-actions')
-    <a href="{{ route('back.system.users.create') }}" class="btn btn-brand"><i class="fa fa-plus"></i> {{ trans('back::dictionary.new') }}</a>
+    <a href="{{ route('back.system.users.create') }}" class="btn btn-default">
+        <i class="fa fa-plus"></i> {{ trans('back::dictionary.new') }}
+    </a>
 @stop
 
 @section('content')
@@ -24,7 +26,7 @@
                     {!! Form::closeGroup() !!}
 
                     <div class="hidden-sm hidden-xs">
-                        {!! Form::openGroup('email', trans('validation.attributes.email')) !!}
+                        {!! Form::openGroup('email', _ucwords(trans('validation.attributes.email'))) !!}
                         {!! Form::text('email') !!}
                         {!! Form::closeGroup() !!}
                     </div>
@@ -34,10 +36,6 @@
                         <i class="fa fa-search"></i>
                         {{ trans('back::dictionary.search') }}
                     </button>
-
-                    <a href="{{ route('back.system.users.create') }}" type="button" class="btn btn-flat btn-default pull-right" data-toggle="tooltip" title="{{ trans('back::dictionary.new') }}">
-                        <i class="fa fa-plus"></i> &nbsp; {{ trans('back::dictionary.new') }}
-                    </a>
                 </div>
             </div>
             {!! Form::close() !!}
@@ -69,11 +67,11 @@
                                     <td>{{ $record->created_at->format('d/m/Y H:i') }}</td>
                                     <td class="table-actions">
                                         {!! Form::open(['method' => 'get', 'route' => ['back.system.users.edit', $record->id]]) !!}
-                                        {!! Form::button('<i class="fa fa-pencil"></i>', ['type' => 'submit', 'class' => 'btn btn-flat btn-default btn-xs', 'data-toggle' => 'tooltip', 'data-placement' => 'top', 'title' => trans('back::dictionary.edit')]) !!}
+                                        {!! Form::button('<i class="fa fa-pencil"></i>', ['type' => 'submit', 'class' => 'btn btn-flat btn-default btn-xs']) !!}
                                         {!! Form::close() !!}
 
                                         {!! Form::open(['method' => 'delete', 'data-confirm' => 'You will not be able to recover this record!', 'route' => ['back.system.users.destroy', $record->id]]) !!}
-                                        {!! Form::button('<i class="fa fa-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-flat btn-danger btn-xs', 'data-toggle' => 'tooltip', 'data-placement' => 'top', 'title' => trans('back::dictionary.delete')]) !!}
+                                        {!! Form::button('<i class="fa fa-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-flat btn-danger btn-xs']) !!}
                                         {!! Form::close() !!}
                                     </td>
                                 </tr>

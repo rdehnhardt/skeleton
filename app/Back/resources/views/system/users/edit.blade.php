@@ -3,13 +3,12 @@
 @section('page-name', 'system users')
 
 @section('page-title')
-    <h1>{{ trans('back::system.user.title') }}</h1>
+    <h1>{{ _ucwords(trans('back::system.user.edit', ['name' => $record->name])) }}</h1>
 @stop
 
 @section('page-actions')
     <a href="{{ route('back.system.users.index') }}" class="btn btn-default">
-        <i class="fa fa-arrow-left"></i>
-        {{ trans('back::dictionary.back') }}
+        <i class="fa fa-arrow-left"></i> {{ _ucwords(trans('back::dictionary.back')) }}
     </a>
 @stop
 
@@ -50,10 +49,6 @@
             <button type="submit" class="btn btn-flat btn-primary">
                 <i class="fa fa-floppy-o"></i> {{ trans('back::dictionary.save') }}
             </button>
-
-            <a href="{{ route('back.system.users.index') }}" type="button" class="btn btn-flat btn-default" data-toggle="tooltip" title="{{ trans('back::dictionary.new') }}">
-                <i class="fa fa-arrow-left"></i> &nbsp; {{ trans('back::dictionary.back') }}
-            </a>
         </div>
     </div>
     {!! Form::close() !!}

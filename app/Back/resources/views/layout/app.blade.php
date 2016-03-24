@@ -20,6 +20,10 @@
 
         <div class="content-wrapper">
             <section class="content-header">
+                <div class="pull-right">
+                    @yield('page-actions')
+                </div>
+
                 @yield('page-title')
             </section>
 

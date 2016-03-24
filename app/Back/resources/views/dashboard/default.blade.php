@@ -1,12 +1,11 @@
 @extends('back::layout.app')
 
 @section('page-title')
-    <h1>{{ trans('back::dashboard.title') }}</h1>
-@stop
+    <h1>{{ _ucwords(trans('back::dashboard.title')) }}</h1>
 
-@section('page-breadcrumb')
-    <li><a href="#"><i class="fa fa-dashboard"></i> Level</a></li>
-    <li class="active">Here</li>
+    <ol class="breadcrumb">
+        <li><a href="{{ route('back.dashboard') }}"><i class="fa fa-dashboard"></i> {{ _ucwords(trans('back::dashboard.title')) }}</a></li>
+    </ol>
 @stop
 
 @section('content')
