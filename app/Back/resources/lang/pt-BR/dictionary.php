@@ -7,6 +7,7 @@ return [
     'home' => 'Início',
     'system' => 'Sistema',
     'logout' => 'Sair',
+    'image' => 'Imagem',
     'search' => 'Pesquisar',
     'main-menu' => 'MENU PRINCIPAL',
     'save' => 'Salvar',

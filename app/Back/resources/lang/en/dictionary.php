@@ -8,6 +8,7 @@ return [
     'system' => 'System',
     'logout' => 'Sign out',
     'search' => 'Search',
+    'image' => 'Imagem',
     'main-menu' => 'MAIN NAVIGATION',
     'save' => 'Save',
     'edit' => 'Edit',
