@@ -7,7 +7,7 @@
 @stop
 
 @section('page-actions')
-    <a href="#" class="btn btn-flat btn-default" data-toggle="modal" data-target="#newImage">
+    <a href="{{ route('back.documents.images.create') }}" class="btn btn-flat btn-default">
         <i class="fa fa-plus"></i> {{ _ucwords(trans('back::dictionary.new')) }}
     </a>
 @stop
@@ -41,6 +41,4 @@
             @endif
         </div>
     </div>
-
-    @include('back::documents.images.new')
 @stop

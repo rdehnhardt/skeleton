@@ -39,7 +39,6 @@
         </div>
 
         @include('back::layout.partials.footer.component')
-        @include('back::layout.partials.control-sidebar.component')
     </div>
 
 <script src="{{ elixir('js/back.js') }}"></script>

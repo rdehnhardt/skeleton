@@ -14,6 +14,7 @@ elixir(function (mix) {
         bower + 'jquery/dist/jquery.js',
         bower + 'jquery-easing-original/jquery.easing.js',
         bower + 'bootstrap-sass/assets/javascripts/bootstrap.js',
+        bower + 'bootstrap-tagsinput/dist/bootstrap-tagsinput.js',
         bower + 'salvattore/dist/salvattore.js',
         bower + 'AdminLTE/plugins/bootstrap-slider/bootstrap-slider.js',
         bower + 'AdminLTE/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js',

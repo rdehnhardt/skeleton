@@ -6,3 +6,9 @@
     border-width: 2px;
     font-weight: bold;
 }
+
+.form-control[type=file] {
+    border: none;
+    padding: 0;
+    margin: 0;
+}

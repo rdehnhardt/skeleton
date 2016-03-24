@@ -3,7 +3,7 @@
 namespace App\Back\Http\Controllers\Documents;
 
 use App\Back\Http\Controllers\BackController;
-use App\Back\Http\Requests\System\UserRequest;
+use App\Back\Http\Requests\Documents\ImageRequest;
 use App\Core\Models\Image;
 
 class ImagesController extends BackController
@@ -15,7 +15,13 @@ class ImagesController extends BackController
         return view('back::documents.images.index', compact('records'));
     }
 
-    public function store(UserRequest $request)
+    public function create()
     {
+        return view('back::documents.images.create');
+    }
+
+    public function store(ImageRequest $request)
+    {
+        dd($request->file('image'));
     }
 }
