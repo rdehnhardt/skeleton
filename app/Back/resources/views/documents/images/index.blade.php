@@ -28,7 +28,7 @@
 
                                 <p class="tags">
                                     @foreach($record->tags() as $tag)
-                                        <span class="badge">{{ $tag }}</span>
+                                        <span class="label label-info">{{ $tag }}</span>
                                     @endforeach
                                 </p>
                             </div>
