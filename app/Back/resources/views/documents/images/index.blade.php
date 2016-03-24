@@ -19,7 +19,7 @@
                 <div id="grid" data-columns>
                     @foreach($records as $record)
                         <div class="image">
-                            <img src="{{ $record->image }}" class="img-responsive"/>
+                            <img src="{{ route('image.view', ['folder' => 'images', 'file' => $record->file]) }}" class="img-responsive"/>
 
                             <p class="tags">
                                 @foreach($record->tags() as $tag)
