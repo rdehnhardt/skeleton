@@ -18287,12 +18287,17 @@ tbody,
     background: #fcfcfc;
     margin: 10px 10px 20px 10px;
     border-radius: 3px;
-    padding: 5px 10px; }
-    .column .image .tags {
-      padding: 5px 0; }
+    padding: 0 0 0 0; }
+    .column .image .info {
+      padding: 0 10px; }
+      .column .image .info h3 {
+        margin: 5px 0;
+        padding: 0; }
+      .column .image .info .tags {
+        padding: 5px 0; }
     .column .image .actions {
-      text-align: center;
-      padding-top: 5px; }
+      padding-bottom: 10px;
+      text-align: center; }
 
 .size-1of1 {
   width: 100%; }

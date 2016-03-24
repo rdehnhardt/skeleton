@@ -21,12 +21,17 @@
                         <div class="image">
                             <img src="{{ route('image.view', ['folder' => 'images', 'file' => $record->file]) }}" class="img-responsive"/>
 
-                            <p class="tags">
-                                @foreach($record->tags() as $tag)
-                                    <span class="badge">{{ $tag }}</span>
-                                @endforeach
-                            </p>
+                            <div class="info">
+                                <h3>{{ $record->title }}</h3>
 
+                                <p>{{ $record->description }}</p>
+
+                                <p class="tags">
+                                    @foreach($record->tags() as $tag)
+                                        <span class="badge">{{ $tag }}</span>
+                                    @endforeach
+                                </p>
+                            </div>
                             <div class="actions">
                                 <a href="#" class="btn btn-default btn-xs"><i class="fa fa-pencil"></i> Edit</a>
                                 <a href="#" class="btn btn-default btn-xs"><i class="fa fa-crop"></i> Crop</a>
