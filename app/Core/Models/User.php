@@ -29,15 +29,6 @@ class User extends Authenticatable
     ];
 
     /**
-     * @param string $value
-     * @return string
-     */
-    public function setPasswordAttribute($value)
-    {
-        $this->attributes['password'] = bcrypt($value);
-    }
-
-    /**
      * @return string
      */
     public function getImage()
