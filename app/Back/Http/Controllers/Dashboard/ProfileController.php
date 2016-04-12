@@ -23,7 +23,7 @@ class ProfileController extends BackController
         Auth::user()->email = $request->get('email');
 
         if ($request->has('password')) {
-            Auth::user()->password = $request->get('password');
+            Auth::user()->password = bcrypt($request->get('password'));
         }
 
         if (Auth::user()->save()) {
