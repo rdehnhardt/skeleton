@@ -39,7 +39,7 @@ class UsersController extends BackController
         $user->name = $request->get('name');
         $user->role = $request->get('role');
         $user->email = $request->get('email');
-        $user->password = $request->get('password');
+        $user->password = bcrypt($request->get('password'));
 
         if ($user->save()) {
             $this->addFlash(trans('back::dictionary.success'), 'success');
@@ -74,7 +74,7 @@ class UsersController extends BackController
         $user->email = $request->get('email');
 
         if ($request->get('password')) {
-            $user->password = $request->get('password');
+            $user->password = bcrypt($request->get('password'));
         }
 
         if (Gate::denies('update', $user)) {
