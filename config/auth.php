@@ -100,5 +100,5 @@ return [
     | Enable or Disable Register
     |--------------------------------------------------------------------------
     */
-    'register' => false,
+    'register' => true,
 ];

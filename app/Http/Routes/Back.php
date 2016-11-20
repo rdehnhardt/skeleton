@@ -11,7 +11,7 @@ class Back
      */
     public function map(Registrar $router)
     {
-        $router->group(['prefix' => 'back'], function (Registrar $router) {
+        $router->group(['prefix' => 'back', 'middleware' => ['web']], function (Registrar $router) {
             $router->get('/', 'DashboardController@index');
         });
     }

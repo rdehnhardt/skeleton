@@ -11,6 +11,8 @@ class Front
      */
     public function map(Registrar $router)
     {
-        $router->get('/', 'IndexController@index');
+        $router->group(['middleware' => ['web']], function (Registrar $router) {
+            $router->get('/', 'IndexController@index');
+        });
     }
 }
