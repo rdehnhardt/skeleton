@@ -30,7 +30,4 @@ return [
 
     'compiled' => realpath(storage_path('framework/views')),
 
-    'date_format' => 'd/m/Y',
-    'time_format' => 'H:i',
-    'datetime_format' => 'd/m/Y H:i',
 ];
