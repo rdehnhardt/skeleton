@@ -4,7 +4,7 @@ namespace App\Http\Routes;
 
 use Illuminate\Contracts\Routing\Registrar;
 
-class Auth
+class Authentication
 {
     /**
      * @param \Illuminate\Contracts\Routing\Registrar $router
