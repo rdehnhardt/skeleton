@@ -1,7 +1,28 @@
-@extends('back.layouts.app')
+@extends('auth.layout')
 
-<!-- Main Content -->
 @section('content')
+    <div class="login-box-body">
+        <p class="login-box-msg">Reset Your Password</p>
+
+        <form action="/bower_components/AdminLTE/index2.html" method="post">
+            <div class="form-group has-feedback">
+                <input type="email" class="form-control" placeholder="E-Mail Address">
+                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+            </div>
+            <div class="row">
+                <div class="col-xs-8">
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">Send Password Reset Link</button>
+                </div>
+            </div>
+        </form>
+
+        <a href="#">I already have a membership</a><br>
+
+        @if (config('auth.register'))
+            <a href="register.html" class="text-center">Register a new membership</a>
+        @endif
+    </div>
+    <!--
     <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
@@ -44,4 +65,5 @@
             </div>
         </div>
     </div>
+    -->
 @endsection

@@ -37,7 +37,7 @@
             </div>
         </form>
 
-        <a href="login.html" class="text-center">I already have a membership</a>
+        <a href="/login" class="text-center">I already have a membership</a>
     </div>
     <!--
     <div class="container">

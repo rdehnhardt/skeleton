@@ -28,7 +28,10 @@
         </form>
 
         <a href="#">I forgot my password</a><br>
-        <a href="register.html" class="text-center">Register a new membership</a>
+
+        @if (config('auth.register'))
+            <a href="register.html" class="text-center">Register a new membership</a>
+        @endif
     </div>
     <!--
     <div class="container">
