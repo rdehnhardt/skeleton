@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Skeleton</title>
+    <title>{{ config('app.name') }}</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
@@ -67,9 +67,7 @@
 <body>
 <div class="flex-center position-ref full-height">
     <div class="content">
-        <div class="title m-b-md">
-            Skeleton
-        </div>
+        <div class="title m-b-md">{{ config('app.name') }}</div>
 
         <div class="links">
             <a href="/login">Login</a>
