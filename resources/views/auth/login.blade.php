@@ -27,10 +27,10 @@
             </div>
         </form>
 
-        <a href="#">I forgot my password</a><br>
+        <a href="/password/reset">I forgot my password</a><br>
 
         @if (config('auth.register'))
-            <a href="register.html" class="text-center">Register a new membership</a>
+            <a href="/register" class="text-center">Register a new membership</a>
         @endif
     </div>
     <!--

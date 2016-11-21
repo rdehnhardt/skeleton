@@ -16,10 +16,10 @@
             </div>
         </form>
 
-        <a href="#">I already have a membership</a><br>
+        <a href="/login">I already have a membership</a><br>
 
         @if (config('auth.register'))
-            <a href="register.html" class="text-center">Register a new membership</a>
+            <a href="/register" class="text-center">Register a new membership</a>
         @endif
     </div>
     <!--
