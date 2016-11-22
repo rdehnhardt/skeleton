@@ -41,6 +41,8 @@
         </div>
         {!! Form::close() !!}
 
+        <hr />
+
         <a href="/login" class="text-center">{{ trans('auth.login.membership') }}</a>
     </div>
     <!--

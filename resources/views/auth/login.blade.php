@@ -20,7 +20,7 @@
             <div class="col-xs-8">
                 <div class="checkbox icheck">
                     <label>
-                        <input type="checkbox"> {{ trans('dictionary.remember') }}
+                        <input type="checkbox"> &nbsp; {{ trans('dictionary.remember') }}
                     </label>
                 </div>
             </div>
@@ -31,10 +31,12 @@
         </div>
         {!! Form::close() !!}
 
-        <a href="/password/reset">{{ trans('auth.forgot.title') }}</a><br>
+        <hr />
+
+        <p><a href="/password/reset">{{ trans('auth.forgot.title') }}</a></p>
 
         @if (config('auth.register'))
-            <a href="/register" class="text-center">{{ trans('auth.register.title') }}</a>
+            <p><a href="/register" class="text-center">{{ trans('auth.register.title') }}</a></p>
         @endif
     </div>
     <!--

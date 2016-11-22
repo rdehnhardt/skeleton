@@ -18,13 +18,13 @@
             </div>
         {!! Form::close() !!}
 
-        <p>
-            <a href="/login" class="text-center">{{ trans('auth.login.membership') }}</a> <br />
+        <hr />
 
-            @if (config('auth.register'))
-                <a href="/register" class="text-center">{{ trans('auth.register.title') }}</a>
-            @endif
-        </p>
+        <p><a href="/login" class="text-center">{{ trans('auth.login.membership') }}</a></p>
+
+        @if (config('auth.register'))
+            <p><a href="/register" class="text-center">{{ trans('auth.register.title') }}</a></p>
+        @endif
     </div>
     <!--
     <div class="container">

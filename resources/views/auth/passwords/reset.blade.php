@@ -28,10 +28,12 @@
             </div>
         {!! Form::close() !!}
 
-        <a href="/login" class="text-center">{{ trans('auth.login.membership') }}</a> <br />
+        <hr />
+
+        <p><a href="/login" class="text-center">{{ trans('auth.login.membership') }}</a></p>
 
         @if (config('auth.register'))
-            <a href="/register" class="text-center">{{ trans('auth.register.title') }}</a>
+            <p><a href="/register" class="text-center">{{ trans('auth.register.title') }}</a></p>
         @endif
     </div>
     <!--

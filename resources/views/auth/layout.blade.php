@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="/bower_components/AdminLTE/dist/css/AdminLTE.min.css">
     <link rel="stylesheet" href="/bower_components/AdminLTE/plugins/iCheck/square/blue.css">
-    <link rel="stylesheet" href="{{ elixir('css/auth.css') }}">
+    <link rel="stylesheet" href="{{ elixir('css/auth.css') }}" />
 
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
