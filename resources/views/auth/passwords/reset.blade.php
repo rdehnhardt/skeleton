@@ -4,30 +4,34 @@
     <div class="login-box-body">
         <p class="login-box-msg">Reset Password</p>
 
-        <form action="/bower_components/AdminLTE/index2.html" method="post">
-            <div class="form-group has-feedback">
-                <input type="email" class="form-control" placeholder="E-Mail Address">
-                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-            </div>
-            <div class="form-group has-feedback">
-                <input type="password" class="form-control" placeholder="Password">
-                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-            </div>
-            <div class="form-group has-feedback">
-                <input type="password" class="form-control" placeholder="Confirm Password">
-                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-            </div>
+        {!! Form::open() !!}
+
+        {!! Form::openGroup('email', null, ['class' => 'has-feedback']) !!}
+        {!! Form::email('email', null, ['placeholder' => trans('dictionary.email')]) !!}
+        <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+        {!! Form::closeGroup() !!}
+
+        {!! Form::openGroup('password', null, ['class' => 'has-feedback']) !!}
+        {!! Form::password('password', ['placeholder' => trans('dictionary.password')]) !!}
+        <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+        {!! Form::closeGroup() !!}
+
+        {!! Form::openGroup('password_confirmation', null, ['class' => 'has-feedback']) !!}
+        {!! Form::password('password_confirmation', ['placeholder' => trans('auth.register.confirmation')]) !!}
+        <span class="glyphicon glyphicon-log-in form-control-feedback"></span>
+        {!! Form::closeGroup() !!}
+
             <div class="row">
                 <div class="col-xs-5">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">Reset Password</button>
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">{{ trans('auth.reset.submit') }}</button>
                 </div>
             </div>
-        </form>
+        {!! Form::close() !!}
 
-        <a href="#">I forgot my password</a><br>
+        <a href="/login" class="text-center">{{ trans('auth.login.membership') }}</a> <br />
 
         @if (config('auth.register'))
-            <a href="/register" class="text-center">Register a new membership</a>
+            <a href="/register" class="text-center">{{ trans('auth.register.title') }}</a>
         @endif
     </div>
     <!--
