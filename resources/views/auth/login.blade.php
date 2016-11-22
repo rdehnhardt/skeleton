@@ -4,33 +4,36 @@
     <div class="login-box-body">
         <p class="login-box-msg">Sign in to start your session</p>
 
-        <form action="/bower_components/AdminLTE/index2.html" method="post">
-            <div class="form-group has-feedback">
-                <input type="email" class="form-control" placeholder="Email">
-                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-            </div>
-            <div class="form-group has-feedback">
-                <input type="password" class="form-control" placeholder="Password">
-                <span class="glyphicon glyphicon-lock form-control-feedback"></span>
-            </div>
+        {!! Form::open() !!}
+            {!! Form::openGroup('email', null, ['class' => 'has-feedback']) !!}
+            {!! Form::email('email', null, ['placeholder' => 'email@domain.com']) !!}
+            <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+            {!! Form::closeGroup() !!}
+
+            {!! Form::openGroup('password', null, ['class' => 'has-feedback']) !!}
+            {!! Form::password('password', ['placeholder' => trans('dictionary.password')]) !!}
+            <span class="glyphicon glyphicon-lock form-control-feedback"></span>
+            {!! Form::closeGroup() !!}
+
             <div class="row">
                 <div class="col-xs-8">
                     <div class="checkbox icheck">
                         <label>
-                            <input type="checkbox"> Remember Me
+                            <input type="checkbox"> {{ trans('dictionary.remember') }}
                         </label>
                     </div>
                 </div>
+
                 <div class="col-xs-4">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">Sign In</button>
+                    <button type="submit" class="btn btn-primary btn-block btn-flat">{{ trans('dictionary.sign-in') }}</button>
                 </div>
             </div>
-        </form>
+        {!! Form::close() !!}
 
-        <a href="/password/reset">I forgot my password</a><br>
+        <a href="/password/reset">{{ trans('auth.forgot-password') }}</a><br>
 
         @if (config('auth.register'))
-            <a href="/register" class="text-center">Register a new membership</a>
+            <a href="/register" class="text-center">{{ trans('auth.register') }}</a>
         @endif
     </div>
     <!--

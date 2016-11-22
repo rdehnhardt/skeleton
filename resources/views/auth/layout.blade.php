@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <link rel="stylesheet" href="/bower_components/AdminLTE/dist/css/AdminLTE.min.css">
     <link rel="stylesheet" href="/bower_components/AdminLTE/plugins/iCheck/square/blue.css">
+    <link rel="stylesheet" href="{{ elixir('css/auth.css') }}">
 
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -19,7 +20,7 @@
 <body class="hold-transition login-page">
 <div class="login-box">
     <div class="login-logo">
-        <a href="/bower_components/AdminLTE/index2.html">{{ config('app.name') }}</a>
+        <a href="/login">{{ config('app.name') }}</a>
     </div>
 
     @yield('content')
@@ -33,7 +34,7 @@
         $('input').iCheck({
             checkboxClass: 'icheckbox_square-blue',
             radioClass: 'iradio_square-blue',
-            increaseArea: '20%' // optional
+            increaseArea: '10%'
         });
     });
 </script>

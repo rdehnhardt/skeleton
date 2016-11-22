@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e2055eca0e86412f08777d29a0add1e6",
-    "content-hash": "82644a7e8fa39a1f4eee9418a1106549",
+    "hash": "7e63ab90c017d803b5ccfccec2c69638",
+    "content-hash": "8d9ca82229d4d5c19742dbbe63aebed0",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -602,6 +602,60 @@
                 "laravel"
             ],
             "time": "2016-11-14 15:41:06"
+        },
+        {
+            "name": "laravelcollective/html",
+            "version": "v5.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/LaravelCollective/html.git",
+                "reference": "961ce141c16c6b085128f209496c26efd3e681ca"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/LaravelCollective/html/zipball/961ce141c16c6b085128f209496c26efd3e681ca",
+                "reference": "961ce141c16c6b085128f209496c26efd3e681ca",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/http": "5.3.*",
+                "illuminate/routing": "5.3.*",
+                "illuminate/session": "5.3.*",
+                "illuminate/support": "5.3.*",
+                "illuminate/view": "5.3.*",
+                "php": ">=5.6.4"
+            },
+            "require-dev": {
+                "illuminate/database": "5.3.*",
+                "mockery/mockery": "~0.9.4",
+                "phpunit/phpunit": "~5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Collective\\Html\\": "src/"
+                },
+                "files": [
+                    "src/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taylor Otwell",
+                    "email": "taylorotwell@gmail.com"
+                },
+                {
+                    "name": "Adam Engebretson",
+                    "email": "adam@laravelcollective.com"
+                }
+            ],
+            "description": "HTML and Form Builders for the Laravel Framework",
+            "homepage": "http://laravelcollective.com",
+            "time": "2016-08-27 23:52:43"
         },
         {
             "name": "league/flysystem",
@@ -1213,6 +1267,41 @@
                 "uuid"
             ],
             "time": "2016-10-02 15:51:17"
+        },
+        {
+            "name": "rdehnhardt/html",
+            "version": "5.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/rdehnhardt/html.git",
+                "reference": "b7c1e30d02764f179f7c8d34027d470b3d18dcf4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/rdehnhardt/html/zipball/b7c1e30d02764f179f7c8d34027d470b3d18dcf4",
+                "reference": "b7c1e30d02764f179f7c8d34027d470b3d18dcf4",
+                "shasum": ""
+            },
+            "require": {
+                "laravelcollective/html": "~5.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Rdehnhardt\\Html\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Renato Dehnhardt",
+                    "email": "renatotkd@gmail.com"
+                }
+            ],
+            "time": "2016-04-28 18:46:48"
         },
         {
             "name": "swiftmailer/swiftmailer",
