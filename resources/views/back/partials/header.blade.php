@@ -214,6 +214,7 @@
                         <img src="{{ Gravatar::src(Auth::user()->email, 25) }}" class="user-image" alt="{{ Auth::user()->name }}">
                         <span class="hidden-xs">{{ Auth::user()->name }}</span>
                     </a>
+
                     <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header">
