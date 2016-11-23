@@ -12,7 +12,8 @@
     "laravel/framework": "5.3.*",
     "barryvdh/laravel-ide-helper": "^2.2",
     "barryvdh/laravel-debugbar": "^2.3",
-    "rdehnhardt/html": "^5.2"
+    "rdehnhardt/html": "^5.2",
+    "thomaswelton/laravel-gravatar": "^1.1"
   },
   "require-dev": {
     "fzaninotto/faker": "~1.4",

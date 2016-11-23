@@ -155,6 +155,7 @@ return [
          */
         Barryvdh\Debugbar\ServiceProvider::class,
         Rdehnhardt\Html\HtmlServiceProvider::class,
+        Thomaswelton\LaravelGravatar\LaravelGravatarServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -209,6 +210,11 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+
+        /**
+         * Packages
+         */
+        'Gravatar' => Thomaswelton\LaravelGravatar\Facades\Gravatar::class,
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,

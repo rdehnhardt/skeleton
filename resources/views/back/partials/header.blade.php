@@ -211,20 +211,21 @@
                 <!-- User Account: style can be found in dropdown.less -->
                 <li class="dropdown user user-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                        <img src="/bower_components/AdminLTE/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                        <span class="hidden-xs">Alexander Pierce</span>
+                        <img src="{{ Gravatar::src(Auth::user()->email, 25) }}" class="user-image" alt="{{ Auth::user()->name }}">
+                        <span class="hidden-xs">{{ Auth::user()->name }}</span>
                     </a>
                     <ul class="dropdown-menu">
                         <!-- User image -->
                         <li class="user-header">
-                            <img src="/bower_components/AdminLTE/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                            <img src="{{ Gravatar::src(Auth::user()->email, 160) }}" class="img-circle" alt="{{ Auth::user()->name }}">
 
                             <p>
-                                Alexander Pierce - Web Developer
-                                <small>Member since Nov. 2012</small>
+                                {{ Auth::user()->name }} - Web Developer
+                                <small>Member since {{ Auth::user()->created_at->format('m/Y') }}</small>
                             </p>
                         </li>
-                        <!-- Menu Body -->
+
+                        <!-- Menu Body
                         <li class="user-body">
                             <div class="row">
                                 <div class="col-xs-4 text-center">
@@ -237,15 +238,15 @@
                                     <a href="#">Friends</a>
                                 </div>
                             </div>
-                            <!-- /.row -->
                         </li>
-                        <!-- Menu Footer-->
+                         -->
+
                         <li class="user-footer">
                             <div class="pull-left">
-                                <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                <a href="/profile" class="btn btn-default btn-flat">{{ trans('dictionary.profile') }}</a>
                             </div>
                             <div class="pull-right">
-                                <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                <a href="/logout" class="btn btn-default btn-flat">{{ trans('dictionary.sign-out') }}</a>
                             </div>
                         </li>
                     </ul>
