@@ -14,7 +14,7 @@ class Authentication
         $router->group(['middleware' => ['web']], function (Registrar $router) {
             $router->get('login', 'LoginController@showLoginForm')->name('login');
             $router->post('login', 'LoginController@login');
-            $router->post('logout', 'LoginController@logout')->name('logout');
+            $router->get('logout', 'LoginController@logout')->name('logout');
 
             $router->get('password/reset', 'ForgotPasswordController@showLinkRequestForm');
             $router->post('password/email', 'ForgotPasswordController@sendResetLinkEmail');
