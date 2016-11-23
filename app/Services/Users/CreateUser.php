@@ -37,12 +37,15 @@ class CreateUser
         }
 
         $user = new User();
+        $user->role_id = 1;
         $user->name = $data['name'];
         $user->email = $data['email'];
         $user->password = bcrypt($data['password']);
 
         if ($user->save()) {
             event(new UserWasCreated($user));
+
+            return $user;
         }
 
         return false;

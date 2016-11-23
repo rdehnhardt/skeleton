@@ -221,7 +221,7 @@
                             <img src="{{ Gravatar::src(Auth::user()->email, 160) }}" class="img-circle" alt="{{ Auth::user()->name }}">
 
                             <p>
-                                {{ Auth::user()->name }} - Web Developer
+                                {{ Auth::user()->name }} - {{ Auth::user()->role->name }}
                                 <small>Member since {{ Auth::user()->created_at->format('m/Y') }}</small>
                             </p>
                         </li>
