@@ -6,6 +6,8 @@ return [
     ],
     'aside' => [
         'title' => 'main navigation',
-        'dashboard' => 'Dashboard',
+    ],
+    'home' => [
+        'title' => 'Dashboard',
     ],
 ];

@@ -15,7 +15,7 @@
             <li>
                 <a href="/back">
                     <i class="fa fa-dashboard"></i>
-                    <span>{{ trans('back.aside.dashboard') }}</span>
+                    <span>{{ trans('back.home.title') }}</span>
                 </a>
             </li>
         </ul>
