@@ -5,6 +5,12 @@ return [
         'records-not-found' => 'Records not found.',
         'search' => 'Search',
         'open' => 'Open',
+        'back' => 'Back',
+        'add' => 'Add',
+        'name' => 'Name',
+        'email' => 'Email',
+        'password' => 'Password',
+        'save' => 'Save',
     ],
     'header' => [
         'toggle' => 'Toggle navigation'
