@@ -16,7 +16,7 @@
         <a href="/back/system/users" class="btn btn-default btn-flat margin-bottom">{{ trans('back.common.back') }}</a>
     </div>
 
-    {!! Form::open() !!}
+    {!! Form::open(['method' => 'post', 'route' => ['users.store']]) !!}
 
     <div class="box">
         <div class="box-header with-border">
