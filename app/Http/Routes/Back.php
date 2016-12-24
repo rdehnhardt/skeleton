@@ -13,6 +13,12 @@ class Back
     {
         $router->group(['prefix' => 'back', 'middleware' => ['web', 'auth']], function (Registrar $router) {
             $router->get('/', 'DashboardController@index');
+
+            $router->group(['prefix' => 'system', 'namespace' => 'System'], function (Registrar $router) {
+                $router->get('/', ['as' => 'back.system', 'uses' => 'DashboardController@index']);
+
+                $router->resource('users', 'UsersController');
+            });
         });
     }
 }

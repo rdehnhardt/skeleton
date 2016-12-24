@@ -47,7 +47,5 @@
 <script src="/bower_components/AdminLTE/plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
 <script src="/bower_components/AdminLTE/plugins/slimScroll/jquery.slimscroll.min.js"></script>
 <script src="/bower_components/AdminLTE/plugins/chartjs/Chart.min.js"></script>
-<script src="/bower_components/AdminLTE/dist/js/pages/dashboard2.js"></script>
-<script src="/bower_components/AdminLTE/dist/js/demo.js"></script>
 </body>
 </html>
