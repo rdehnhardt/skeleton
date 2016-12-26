@@ -31,6 +31,7 @@
         </section>
 
         <section class="content">
+            @include('back.partials.messages')
             @yield('content')
         </section>
     </div>

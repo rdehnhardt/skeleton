@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Events;
+namespace App\Events\Users;
 
 use App\Models\User;
 use Illuminate\Broadcasting\Channel;
@@ -8,7 +8,7 @@ use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Broadcasting\PrivateChannel;
 use Illuminate\Queue\SerializesModels;
 
-class UserWasCreated
+class UserWasUpdated
 {
     use InteractsWithSockets, SerializesModels;
 

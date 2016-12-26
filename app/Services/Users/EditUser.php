@@ -2,18 +2,18 @@
 
 namespace App\Services\Users;
 
-use App\Events\Users\UserWasCreated;
+use App\Events\Users\UserWasUpdated;
 use App\Models\User;
 use Illuminate\Support\Facades\Validator;
 
-class CreateUser
+class EditUser
 {
     /**
      * @var array
      */
     private $rules = [
         'name' => 'required|max:255',
-        'email' => 'required|email|max:255|unique:users',
+        'email' => 'required|email|unique:users,email,%s',
         'password' => 'required|min:6|confirmed',
     ];
 
@@ -23,6 +23,8 @@ class CreateUser
      */
     public function isValid(array $data)
     {
+        $this->rules['email'] = sprintf($this->rules['email'], $data['id']);
+
         return Validator::make($data, $this->rules);
     }
 
@@ -36,13 +38,16 @@ class CreateUser
             return false;
         }
 
-        $user = new User();
+        $user = User::find($data['id']);
         $user->name = $data['name'];
         $user->email = $data['email'];
-        $user->password = bcrypt($data['password']);
+
+        if ($data['password']) {
+            $user->password = bcrypt($data['password']);
+        }
 
         if ($user->save()) {
-            event(new UserWasCreated($user));
+            event(new UserWasUpdated($user));
 
             return $user;
         }

@@ -156,6 +156,7 @@ return [
         Barryvdh\Debugbar\ServiceProvider::class,
         Rdehnhardt\Html\HtmlServiceProvider::class,
         Thomaswelton\LaravelGravatar\LaravelGravatarServiceProvider::class,
+        Laracasts\Flash\FlashServiceProvider::class,
 
         /*
          * Application Service Providers...

@@ -6,7 +6,7 @@
             </div>
             <div class="pull-left info">
                 <p>{{ Auth::user()->name }}</p>
-                <a href="#">{{ Auth::user()->role->name }}</a>
+                <a href="#">{{ trans('back.common.since') }} {{ Auth::user()->created_at->format('d/m/Y') }}</a>
             </div>
         </div>
 
