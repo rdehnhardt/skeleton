@@ -2,27 +2,16 @@
 
 namespace App\Listeners;
 
-use App\Events\UserWasCreated;
-use Illuminate\Queue\InteractsWithQueue;
-use Illuminate\Contracts\Queue\ShouldQueue;
+use App\Events\Users\UserWasCreated;
 
 class SendEmailConfirmation
 {
     /**
-     * Create the event listener.
-     */
-    public function __construct()
-    {
-        //
-    }
-
-    /**
      * Handle the event.
      *
-     * @param  UserWasCreated  $event
+     * @param  UserWasCreated $event
      */
     public function handle(UserWasCreated $event)
     {
-        //
     }
 }

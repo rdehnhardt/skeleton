@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Back\UserRequest;
 use App\Models\User;
 use App\Services\Users\CreateUser;
+use App\Services\Users\EditUser;
 
 class UsersController extends Controller
 {
@@ -73,20 +74,13 @@ class UsersController extends Controller
      * Update the specified resource in storage.
      *
      * @param UserRequest $request
+     * @param EditUser $editUser
      * @param int $id
      * @return \Illuminate\Http\Response
      */
-    public function update(UserRequest $request, $id)
+    public function update(UserRequest $request, EditUser $editUser, $id)
     {
-        $user = User::find($id);
-        $user->name = $request->get('name');
-        $user->email = $request->get('email');
-
-        if ($request->get('password')) {
-            $user->password = bcrypt($request->get('password'));
-        }
-
-        if ($user->save()) {
+        if ($editUser->execute($id, $request->all())) {
             return $this->goToUsers(trans('back.common.success'));
         }
     }

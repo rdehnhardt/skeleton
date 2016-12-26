@@ -25,11 +25,11 @@
 
         <div class="box-body">
             <div class="row">
-            	<div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                     {!! Form::openGroup('name', trans('back.common.name'), ['class' => 'has-feedback']) !!}
                     {!! Form::text('name', null, ['placeholder' => trans('back.common.name')]) !!}
                     {!! Form::closeGroup() !!}
-            	</div>
+                </div>
 
                 <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                     {!! Form::openGroup('email', trans('back.common.email'), ['class' => 'has-feedback']) !!}
@@ -47,9 +47,10 @@
 
         <div class="box-footer clearfix">
             <div class="row">
-            	<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
                     <button type="submit" class="btn btn-primary btn-flat">{{ trans('back.common.save') }}</button>
-            	</div>
+                    {!! Form::close() !!}
+                </div>
 
                 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 text-right">
                     {!! Form::open(['method' => 'delete', 'data-confirm' => 'You will not be able to recover this record!', 'route' => ['users.destroy', $record->id]]) !!}
@@ -59,6 +60,4 @@
             </div>
         </div>
     </div>
-
-    {!! Form::close() !!}
 @endsection

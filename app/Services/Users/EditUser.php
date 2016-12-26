@@ -21,24 +21,25 @@ class EditUser
      * @param array $data
      * @return mixed
      */
-    public function isValid(array $data)
+    public function isValid($id, array $data)
     {
-        $this->rules['email'] = sprintf($this->rules['email'], $data['id']);
+        $this->rules['email'] = sprintf($this->rules['email'], $id);
 
         return Validator::make($data, $this->rules);
     }
 
     /**
+     * @param $id
      * @param array $data
      * @return bool
      */
-    public function execute(array $data)
+    public function execute($id, array $data)
     {
-        if (!$this->isValid($data)) {
+        if (!$this->isValid($id, $data)) {
             return false;
         }
 
-        $user = User::find($data['id']);
+        $user = User::find($id);
         $user->name = $data['name'];
         $user->email = $data['email'];
 
