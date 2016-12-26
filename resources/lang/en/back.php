@@ -13,6 +13,7 @@ return [
         'password' => 'Password',
         'save' => 'Save',
         'remove' => 'Remove',
+        'edit' => 'Edit',
         'success' => 'Operation has been successful',
     ],
     'header' => [
