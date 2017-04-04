@@ -26,5 +26,5 @@ Vue.http.interceptors.push((request, next) => {
 Vue.component('example', require('./components/Example.vue'));
 
 const app = new Vue({
-    el: '#app'
+    el: '#auth'
 });
