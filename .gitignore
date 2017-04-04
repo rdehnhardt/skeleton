@@ -13,3 +13,5 @@ public/bower_components
 public/build
 public/css
 public/js
+
+npm-debug.log
