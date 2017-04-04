@@ -1,6 +1,0 @@
-{
-  "name": "baconfy/skeleton",
-  "dependencies": {
-    "AdminLTE": "admin-lte#^2.3.8"
-  }
-}
