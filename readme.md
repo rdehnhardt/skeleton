@@ -1,11 +1,6 @@
-# Laravel  5.4 Skeleton 
-
 <p align="center">
   <img src="https://raw.githubusercontent.com/rdehnhardt/skeleton/master/public/img/logo.png">
 </p>
-
-<p align="center">This is a app skeleton with website analytics.</p>
-<p align="center">To use this project, make a fork</p>
 
 ## Disable register
 
