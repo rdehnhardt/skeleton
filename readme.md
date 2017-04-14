@@ -1,9 +1,11 @@
 # Laravel  5.4 Skeleton 
 
-[![PayPayl donate button](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=WKPHKUSVC2YLC&lc=BR&item_name=rdehnhardt&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted "Donate once-off to this project using Paypal")
+<p align="center">
+  <img src="https://raw.githubusercontent.com/rdehnhardt/skeleton/master/public/img/logo.png">
+</p>
 
-This is a app skeleton with website analytics.
-To use this project, make a fork
+<p align="center">This is a app skeleton with website analytics.</p>
+<p align="center">To use this project, make a fork</p>
 
 ## Disable register
 
@@ -48,6 +50,3 @@ npm run watch
 ```
 npm run production
 ```
-
-### Donate
-[![PayPayl donate button](https://img.shields.io/badge/paypal-donate-yellow.svg)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=WKPHKUSVC2YLC&lc=BR&item_name=rdehnhardt&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted "Donate once-off to this project using Paypal")
