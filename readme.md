@@ -50,25 +50,25 @@ npm run production
 
 #### Front
 <p align="center">
-  <img src="https://raw.githubusercontent.com/rdehnhardt/skeleton/master/public/img//screen/front.png" width="90%">
+  <img src="https://raw.githubusercontent.com/rdehnhardt/skeleton/master/public/img//screen/front.png">
 </p>
 
 #### Login
 <p align="center">
-  <img src="https://raw.githubusercontent.com/rdehnhardt/skeleton/master/public/img//screen/login.png" width="90%">
+  <img src="https://raw.githubusercontent.com/rdehnhardt/skeleton/master/public/img//screen/login.png">
 </p>
 
 #### Dashboard
 <p align="center">
-  <img src="https://raw.githubusercontent.com/rdehnhardt/skeleton/master/public/img//screen/dashboard.png" width="90%">
+  <img src="https://raw.githubusercontent.com/rdehnhardt/skeleton/master/public/img//screen/dashboard.png">
 </p>
 
 #### User List
 <p align="center">
-  <img src="https://raw.githubusercontent.com/rdehnhardt/skeleton/master/public/img//screen/users-list.png" width="90%">
+  <img src="https://raw.githubusercontent.com/rdehnhardt/skeleton/master/public/img//screen/users-list.png">
 </p>
 
 #### User Edit
 <p align="center">
-  <img src="https://raw.githubusercontent.com/rdehnhardt/skeleton/master/public/img//screen/user-edit.png" width="90%">
+  <img src="https://raw.githubusercontent.com/rdehnhardt/skeleton/master/public/img//screen/user-edit.png">
 </p>
