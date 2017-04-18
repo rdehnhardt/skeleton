@@ -11,12 +11,6 @@ class Restricted
      */
     public function map(Registrar $router)
     {
-        // Guest
-        $router->group(['prefix' => 'api', 'middleware' => ['api']], function (Registrar $router) {
-            // Create your public routes here
-        });
-
-        // Restricted
         $router->group(['prefix' => 'api', 'middleware' => ['auth:api']], function (Registrar $router) {
             $router->resource('users', 'UsersController');
         });
