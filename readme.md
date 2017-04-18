@@ -6,6 +6,12 @@
 
 This application has disabled registration page.
 
+## Route system
+
+The routing folder for this application has been changed to the application Http folder.
+ 
+Directory: `app/Http/Routes`
+
 ## How to install
 
 First make storage folder writable. 

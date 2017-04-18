@@ -18,7 +18,6 @@ themeScripts = [
     'resources/assets/js/theme/fullcalendar.min.js',
     'resources/assets/js/theme/light-bootstrap-dashboard.js',
     'resources/assets/js/theme/jquery.sharrre.js',
-    'resources/assets/js/theme/demo.js'
 ];
 
 mix.js('resources/assets/js/app.js', 'public/js')

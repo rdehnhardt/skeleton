@@ -7,7 +7,7 @@
 
     <div class="logo logo-mini">
         <a href="{{ route('restricted.dashboard') }}" class="logo-text">
-            <img src="/img/rentcars-76.png" width="48"/>
+            <img src="/img/icon.png" width="40"/>
         </a>
     </div>
 
