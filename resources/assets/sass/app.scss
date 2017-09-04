@@ -1,9 +1,54 @@
-
-// Fonts
-@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
-
-// Variables
-@import "variables";
+// Overwrite bootstrap variables
+@import "lbd/bootstrap";
 
 // Bootstrap
-@import "~bootstrap-sass/assets/stylesheets/bootstrap";
+@import "../../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+// variables and mixins
+@import "lbd/variables";
+@import "lbd/mixins";
+
+//plugins css
+@import "../../../node_modules/animate.css/animate";
+@import "../../../node_modules/sweetalert2/src/sweetalert2";
+@import "../../../node_modules/jvectormap/jquery-jvectormap";
+@import "../../../node_modules/bootstrap-table/src/bootstrap-table";
+@import "../../../node_modules/fullcalendar/dist/fullcalendar";
+@import "../../../node_modules/chartist/dist/chartist";
+@import "../../../node_modules/perfect-scrollbar/src/css/main";
+@import "../../../node_modules/bootstrap-select/sass/bootstrap-select";
+
+// Core CSS
+@import "lbd/typography";
+@import "lbd/sidebar-and-main-panel";
+@import "lbd/buttons";
+@import "lbd/misc";
+@import "lbd/inputs";
+@import "lbd/cursor";
+@import "lbd/progress-bars";
+@import "lbd/sliders";
+@import "lbd/forms";
+@import "lbd/alerts";
+@import "lbd/tables";
+@import "lbd/tags";
+@import "lbd/tooltips-and-popovers";
+@import "lbd/checkbox-radio-switch";
+@import "lbd/navbars";
+@import "lbd/footers";
+
+// Fancy Stuff
+@import "lbd/social-buttons";
+@import "lbd/dropdown";
+@import "lbd/common";
+@import "lbd/list";
+@import "lbd/cards";
+@import "lbd/collapse";
+@import "lbd/carousel";
+@import "lbd/plugins/datetime-picker";
+
+// SCSS for Pages
+@import "lbd/pages.scss";
+
+// Responsive adjustments
+@import "lbd/responsive";
+@import "lbd/tabs-navs-pagination";

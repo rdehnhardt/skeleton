@@ -1,0 +1,121 @@
+.list {
+    @media (max-width: 767px) {
+        .visible-xs {
+            display: inline-block !important;
+        }
+        .block {
+            display: block !important;
+            width: 100%;
+            height: 1px !important;
+        }
+    }
+
+    #back-to-bootsnipp {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+    }
+
+    .list-group {
+        border-top: none;
+        margin-top: 20px
+    }
+
+    .list-group-item {
+        &:first-child {
+            border-top: none;
+        }
+
+        .text {
+            font-size: 12px;
+            color: darken(#ffffff, 40%);
+        }
+
+        .link {
+            font-size: 12px;
+            color: #3258fa;
+            cursor: pointer;
+        }
+
+        &:last-child {
+            border-bottom: none;
+        }
+
+        &:hover {
+            background: darken(#ffffff, 10%);
+            cursor: pointer;
+        }
+        border-right: none;
+        border-left: none;
+    }
+
+    .c-search > .form-control {
+        border-radius: 0px;
+        border-width: 0px;
+        border-bottom-width: 1px;
+        font-size: 1.3em;
+        padding: 12px 12px;
+        height: 44px;
+        outline: none !important;
+    }
+    .c-search > .form-control:focus {
+        outline: 0px !important;
+        -webkit-appearance: none;
+        box-shadow: none;
+    }
+    .c-search > .input-group-btn .btn {
+        border-radius: 0px;
+        border-width: 0px;
+        border-left-width: 1px;
+        border-bottom-width: 1px;
+        height: 44px;
+    }
+
+    .c-list {
+        padding: 0px;
+        min-height: 44px;
+    }
+    .title {
+        display: inline-block;
+        font-size: 1.7em;
+        font-weight: bold;
+        padding: 5px 15px;
+    }
+    ul.c-controls {
+        list-style: none;
+        margin: 0px;
+        min-height: 44px;
+    }
+
+    ul.c-controls li {
+        margin-top: 8px;
+        float: left;
+    }
+
+    ul.c-controls li a {
+        font-size: 1.7em;
+        padding: 11px 10px 6px;
+    }
+    ul.c-controls li a i {
+        min-width: 24px;
+        text-align: center;
+    }
+
+    ul.c-controls li a:hover {
+        background-color: rgba(51, 51, 51, 0.2);
+    }
+
+    .c-toggle {
+        font-size: 1.7em;
+    }
+
+    .name {
+        font-size: 1.7em;
+        font-weight: 700;
+    }
+
+    .c-info {
+        padding: 5px 10px;
+        font-size: 1.25em;
+    }
+}
