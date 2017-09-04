@@ -19,10 +19,6 @@ return [
         'secret' => env('MAILGUN_SECRET'),
     ],
 
-    'mandrill' => [
-        'secret' => env('MANDRILL_SECRET'),
-    ],
-
     'ses' => [
         'key' => env('SES_KEY'),
         'secret' => env('SES_SECRET'),
@@ -34,7 +30,7 @@ return [
     ],
 
     'stripe' => [
-        'model' => App\Models\User::class,
+        'model' => App\User::class,
         'key' => env('STRIPE_KEY'),
         'secret' => env('STRIPE_SECRET'),
     ],

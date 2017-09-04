@@ -10,7 +10,9 @@ return [
     | This value is the name of your application. This value is used when the
     | framework needs to place the application's name in a notification or
     | any other location as required by the application or its packages.
+    |
     */
+
     'name' => env('APP_NAME', 'Laravel'),
 
     /*
@@ -23,6 +25,7 @@ return [
     | services your application utilizes. Set this in your ".env" file.
     |
     */
+
     'env' => env('APP_ENV', 'production'),
 
     /*
@@ -35,6 +38,7 @@ return [
     | application. If disabled, a simple generic error page is shown.
     |
     */
+
     'debug' => env('APP_DEBUG', false),
 
     /*
@@ -47,6 +51,7 @@ return [
     | your application so that it is used when running Artisan tasks.
     |
     */
+
     'url' => env('APP_URL', 'http://localhost'),
 
     /*
@@ -59,7 +64,8 @@ return [
     | ahead and set this to a sensible default for you out of the box.
     |
     */
-    'timezone' => 'America/Sao_Paulo',
+
+    'timezone' => 'UTC',
 
     /*
     |--------------------------------------------------------------------------
@@ -71,7 +77,8 @@ return [
     | to any of the locales which will be supported by the application.
     |
     */
-    'locale' => 'pt-BR',
+
+    'locale' => 'en',
 
     /*
     |--------------------------------------------------------------------------
@@ -83,6 +90,7 @@ return [
     | the language folders that are provided through your application.
     |
     */
+
     'fallback_locale' => 'en',
 
     /*
@@ -95,7 +103,9 @@ return [
     | will not be safe. Please do this before deploying an application!
     |
     */
+
     'key' => env('APP_KEY'),
+
     'cipher' => 'AES-256-CBC',
 
     /*
@@ -110,7 +120,9 @@ return [
     | Available Settings: "single", "daily", "syslog", "errorlog"
     |
     */
+
     'log' => env('APP_LOG', 'single'),
+
     'log_level' => env('APP_LOG_LEVEL', 'debug'),
 
     /*
@@ -123,7 +135,9 @@ return [
     | this array to grant expanded functionality to your applications.
     |
     */
+
     'providers' => [
+
         /*
          * Laravel Framework Service Providers...
          */
@@ -153,12 +167,6 @@ return [
         /*
          * Package Service Providers...
          */
-        Laravel\Tinker\TinkerServiceProvider::class,
-        Cviebrock\ImageValidator\ImageValidatorServiceProvider::class,
-        Laracasts\Flash\FlashServiceProvider::class,
-        Spatie\Fractal\FractalServiceProvider::class,
-        Fedeisas\LaravelMailCssInliner\LaravelMailCssInlinerServiceProvider::class,
-        Creativeorange\Gravatar\GravatarServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -168,6 +176,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+
     ],
 
     /*
@@ -180,7 +189,9 @@ return [
     | the aliases are "lazy" loaded so they don't hinder performance.
     |
     */
+
     'aliases' => [
+
         'App' => Illuminate\Support\Facades\App::class,
         'Artisan' => Illuminate\Support\Facades\Artisan::class,
         'Auth' => Illuminate\Support\Facades\Auth::class,
@@ -214,7 +225,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'Fractal' => Spatie\Fractal\FractalFacade::class,
-        'Gravatar' => Creativeorange\Gravatar\Facades\Gravatar::class,
+
     ],
+
 ];

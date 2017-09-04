@@ -7,12 +7,6 @@
 /.vagrant
 Homestead.json
 Homestead.yaml
+npm-debug.log
+yarn-error.log
 .env
-public/build
-public/css
-public/images
-public/fonts
-public/js
-_ide_helper.php
-.phpstorm.meta.php
-mix-manifest.json
