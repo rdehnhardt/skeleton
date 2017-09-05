@@ -1,6 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Guest;
+
+use App\Http\Controllers\Controller;
 
 class HomeController extends Controller
 {
@@ -11,6 +13,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('back.home');
+        return view('guest.home');
     }
 }

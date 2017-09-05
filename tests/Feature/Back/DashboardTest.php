@@ -13,7 +13,7 @@ class DashboardTest extends TestCase
     public function an_unauthenticated_user_may_not_visit_dashboard()
     {
         $this
-            ->get('/home')
+            ->get('/back')
             ->assertRedirect('/login');
     }
 
@@ -23,7 +23,7 @@ class DashboardTest extends TestCase
         $this->signIn();
 
         $this
-            ->get('/home')
+            ->get('/back')
             ->assertSee(trans('back.dashboard'));
     }
 }
