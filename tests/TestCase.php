@@ -25,12 +25,16 @@ abstract class TestCase extends BaseTestCase
         $this->fake = Factory::create();
     }
 
-    protected function signIn(User $user = null)
+    /**
+     * @param null $user
+     * @return $this
+     */
+    protected function signIn($user = null)
     {
-        if (!$user instanceof User) {
-            $user = factory(User::class)->create();
-        }
+        $user = $user ?: create(User::class);
 
-        $this->be($user);
+        $this->actingAs($user);
+
+        return $this;
     }
 }
