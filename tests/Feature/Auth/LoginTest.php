@@ -13,7 +13,7 @@ class LoginTest extends TestCase
     /** @test */
     public function a_user_login_with_valid_credentials()
     {
-        $user = factory(User::class)->create();
+        $user = create(User::class);
 
         $this
             ->post(route('login'), ['email' => $user->email, 'password' => 'secret'])
@@ -23,7 +23,7 @@ class LoginTest extends TestCase
     /** @test */
     public function a_user_login_with_invalid_credentials()
     {
-        $user = factory(User::class)->create();
+        $user = create(User::class);
 
         $this
             ->post(route('login'), ['email' => $user->email, 'password' => 'anotherpassword'])

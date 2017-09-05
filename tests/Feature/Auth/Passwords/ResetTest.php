@@ -13,7 +13,7 @@ class ResetTest extends TestCase
     /** @test */
     public function a_user_can_send_password_reset_link()
     {
-        $user = factory(User::class)->create();
+        $user = create(User::class);
 
         $this->post(route('password.request'), [
             'email' => $user->email,

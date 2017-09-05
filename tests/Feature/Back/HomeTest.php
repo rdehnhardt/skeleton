@@ -7,7 +7,7 @@ use Tests\TestCase;
 class HomeTest extends TestCase
 {
     /** @test */
-    public function a_unauthenticated_user_can_not_visit_homepage()
+    public function an_unauthenticated_user_may_not_visit_dashboard()
     {
         $this
             ->get('/home')
