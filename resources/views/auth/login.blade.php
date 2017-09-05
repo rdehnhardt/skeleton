@@ -1,49 +1,36 @@
 @extends('layouts.auth')
 
-@section('title', 'Login')
+@section('title', trans('dictionary.login'))
 
 @section('content')
     {!! Form::open(['method' => 'post', 'route' => ['login']]) !!}
         <div class="card {{ !$errors->isEmpty() ?: 'card-hidden' }}">
-            <div class="header text-center">Acesso Restrito</div>
+            <div class="header text-center">{{ trans('auth.restricted-access') }}</div>
 
-            <div class="content padding-h-40">
-                {!! Form::openGroup('email', 'Email Address') !!}
-                {!! Form::email('email', null, ['placeholder' => 'Type your email address']) !!}
+            <div class="content-no-padding padding-h-40">
+                {!! Form::openGroup('email', trans('dictionary.email')) !!}
+                {!! Form::email('email', null) !!}
                 {!! Form::closeGroup() !!}
 
-                {!! Form::openGroup('password', 'Your Password') !!}
-                {!! Form::password('password', ['placeholder' => 'Type your password']) !!}
+                {!! Form::openGroup('password', trans('dictionary.password')) !!}
+                {!! Form::password('password') !!}
                 {!! Form::closeGroup() !!}
 
                 <div class="form-group">
                     <label class="checkbox">
                         <input type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }} data-toggle="checkbox">
-                        Remember Password
+                        {{ trans('auth.remember') }}
                     </label>
                 </div>
             </div>
 
             <div class="footer text-center">
-                <button type="submit" class="btn btn-fill btn-primary btn-wd">Acessar</button>
+                <button class="btn btn-fill btn-primary btn-wd">{{ trans('dictionary.login') }}</button>
             </div>
 
             <div class="footer text-center">
-                <a href="{{ route('password.request') }}">Esqueceu sua senha?</a>
+                <a href="{{ route('password.request') }}">{{ trans('auth.forgot') }}</a>
             </div>
         </div>
     {!! Form::close() !!}
-@endsection
-
-@section('page-scripts')
-    <script type="text/javascript">
-        $().ready(function () {
-            lbd.checkFullPageBackgroundImage();
-
-            setTimeout(function () {
-                // after 1000 ms we add the class animated to the login/register card
-                $('.card').removeClass('card-hidden');
-            }, 700)
-        });
-    </script>
 @endsection

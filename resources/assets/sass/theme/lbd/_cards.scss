@@ -67,11 +67,10 @@
     }
 
     .header {
-        padding: $padding-default-horizontal $padding-default-horizontal 0px;
-        color: $black-color;
+        padding: ($padding-default-horizontal / 2) $padding-default-horizontal;
         font-weight: $font-weight-light;
         font-size: $font-size-h4;
-
+        color: $black-color;
     }
     .category,
     .form-group > label {

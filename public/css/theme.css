@@ -17117,10 +17117,10 @@ star {
 }
 
 .card .header {
-  padding: 15px 15px 0px;
-  color: #333333;
+  padding: 7.5px 15px;
   font-weight: 300;
   font-size: 22px;
+  color: #333333;
 }
 
 .card .category,
@@ -17961,7 +17961,7 @@ star {
 
 .login-page > .content,
 .lock-page > .content {
-  padding-top: 22vh;
+  padding-top: 14vh;
 }
 
 .login-page .card {
@@ -17981,7 +17981,7 @@ star {
 }
 
 .login-page .card .header {
-  padding-bottom: 30px;
+  padding-bottom: 22.5px;
 }
 
 .login-page .card .btn-wd {
@@ -19199,27 +19199,27 @@ star {
 }
 
 .padding-h-10 {
-  padding-right: 10px;
-  padding-left: 10px;
+  padding-right: 10px !important;
+  padding-left: 10px !important;
 }
 
 .padding-h-20 {
-  padding-right: 20px;
-  padding-left: 20px;
+  padding-right: 20px !important;
+  padding-left: 20px !important;
 }
 
 .padding-h-30 {
-  padding-right: 30px;
-  padding-left: 30px;
+  padding-right: 30px !important;
+  padding-left: 30px !important;
 }
 
 .padding-h-40 {
-  padding-right: 40px;
-  padding-left: 40px;
+  padding-right: 40px !important;
+  padding-left: 40px !important;
 }
 
 .padding-h-50 {
-  padding-right: 50px;
-  padding-left: 50px;
+  padding-right: 50px !important;
+  padding-left: 50px !important;
 }
 
