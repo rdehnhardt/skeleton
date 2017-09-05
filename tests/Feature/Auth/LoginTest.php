@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Auth\Feature;
+namespace Tests\Feature\Auth;
 
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Tests\TestCase;
