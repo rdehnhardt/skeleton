@@ -1,4 +1,4 @@
-@extends('theme')
+@extends('back.theme')
 
 @section('body')
     <nav class="navbar navbar-transparent navbar-absolute">

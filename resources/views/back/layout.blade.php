@@ -1,4 +1,4 @@
-@extends('theme')
+@extends('back.theme')
 
 @section('body')
     <div class="wrapper">
@@ -9,11 +9,7 @@
 
             <div class="content">
                 <div class="container-fluid">
-                    @if (session()->has('flash_notification.message'))
-                        <div class="alert alert-{{ session('flash_notification.level') }}">
-                            {!! session('flash_notification.message') !!}
-                        </div>
-                    @endif
+                    @include('flash::message')
 
                     @yield('content')
                 </div>

@@ -29,7 +29,11 @@
             </div>
 
             <div class="footer text-center">
-                <a href="{{ route('password.request') }}">{{ trans('auth.forgot') }}</a>
+                <a href="{{ route('password.request') }}">{{ trans('auth.forgot') }}</a> <br />
+
+                @if (config('auth.register'))
+                    <a href="{{ route('register') }}">{{ trans('dictionary.register') }}</a>
+                @endif
             </div>
         </div>
     {!! Form::close() !!}
