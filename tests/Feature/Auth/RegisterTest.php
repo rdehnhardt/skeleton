@@ -19,11 +19,13 @@ class RegisterTest extends TestCase
             'password_confirmation' => 'secret',
         ];
 
-        $response = $this->post(route('register'), $user);
-        $response->assertRedirect('/home');
+        $this
+            ->post(route('register'), $user)
+            ->assertRedirect('/home');
 
-        $response = $this->post(route('login'), ['email' => $user['email'], 'password' => 'secret']);
-        $response->assertRedirect('/home');
+        $this
+            ->post(route('login'), ['email' => $user['email'], 'password' => 'secret'])
+            ->assertRedirect('/home');
 
         $this->assertDatabaseHas('users', ['email' => $user['email']]);
     }
@@ -37,8 +39,9 @@ class RegisterTest extends TestCase
             'password_confirmation' => 'secret',
         ];
 
-        $response = $this->post(route('register'), $user);
-        $response->assertSessionHasErrors(['email']);
+        $this
+            ->post(route('register'), $user)
+            ->assertSessionHasErrors(['email']);
 
         $this->assertDatabaseMissing('users', ['name' => $user['name']]);
     }
@@ -52,8 +55,9 @@ class RegisterTest extends TestCase
             'password_confirmation' => 'secret',
         ];
 
-        $response = $this->post(route('register'), $user);
-        $response->assertSessionHasErrors(['password']);
+        $this
+            ->post(route('register'), $user)
+            ->assertSessionHasErrors(['password']);
 
         $this->assertDatabaseMissing('users', ['email' => $user['email']]);
     }
@@ -67,8 +71,9 @@ class RegisterTest extends TestCase
             'password' => 'secret',
         ];
 
-        $response = $this->post(route('register'), $user);
-        $response->assertSessionHasErrors(['password']);
+        $this
+            ->post(route('register'), $user)
+            ->assertSessionHasErrors(['password']);
 
         $this->assertDatabaseMissing('users', ['email' => $user['email']]);
     }
@@ -83,8 +88,9 @@ class RegisterTest extends TestCase
             'password_confirmation' => 'secret',
         ];
 
-        $response = $this->post(route('register'), $user);
-        $response->assertSessionHasErrors(['password']);
+        $this
+            ->post(route('register'), $user)
+            ->assertSessionHasErrors(['password']);
 
         $this->assertDatabaseMissing('users', ['email' => $user['email']]);
     }

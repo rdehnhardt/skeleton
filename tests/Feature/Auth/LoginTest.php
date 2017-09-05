@@ -2,9 +2,9 @@
 
 namespace Tests\Feature\Auth;
 
+use App\Models\User;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Tests\TestCase;
-use App\Models\User;
 
 class LoginTest extends TestCase
 {
@@ -15,12 +15,9 @@ class LoginTest extends TestCase
     {
         $user = factory(User::class)->create();
 
-        $response = $this->post(route('login'), [
-            'email' => $user->email,
-            'password' => 'secret',
-        ]);
-
-        $response->assertRedirect('/home');
+        $this
+            ->post(route('login'), ['email' => $user->email, 'password' => 'secret'])
+            ->assertRedirect('/home');
     }
 
     /** @test */
@@ -28,11 +25,8 @@ class LoginTest extends TestCase
     {
         $user = factory(User::class)->create();
 
-        $response = $this->post(route('login'), [
-            'email' => $user->email,
-            'password' => 'anotherpassword',
-        ]);
-
-        $response->assertSessionHasErrors(['email']);
+        $this
+            ->post(route('login'), ['email' => $user->email, 'password' => 'anotherpassword'])
+            ->assertSessionHasErrors(['email']);
     }
 }
