@@ -16,6 +16,7 @@
     <link href="{{ mix('css/theme.css') }}" rel="stylesheet"/>
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,700,300' rel='stylesheet' type='text/css'>
+    @stack('styles')
 
     <!-- Scripts -->
     @if (Auth::guest())
@@ -27,9 +28,9 @@
     @else
         <script>
             window.Laravel = {!! json_encode([
-            'csrfToken' => csrf_token(),
-            'apiToken' => Auth::user()->api_token
-        ]) !!};
+                'csrfToken' => csrf_token(),
+                'apiToken' => Auth::user()->api_token
+            ]) !!};
         </script>
     @endif
 </head>

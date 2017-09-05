@@ -21,5 +21,8 @@ theme = [
 
 mix
     .sass('resources/assets/sass/theme/theme.scss', 'public/css')
-    .scripts(theme, 'public/js/theme.js');
+    .scripts(theme, 'public/js/theme.js')
+
+    .sass('resources/assets/sass/dashboard.scss', 'public/css')
+    .js('resources/assets/js/dashboard.js', 'public/js');
 

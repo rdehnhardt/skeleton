@@ -1,4 +1,4 @@
-@extends('layouts.theme')
+@extends('layouts.dashboard')
 
 @section('title', trans('back.dashboard'))
 
