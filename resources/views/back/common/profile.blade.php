@@ -47,7 +47,7 @@
                             </div>
                         </div>
 
-                        <button class="btn btn-info btn-fill pull-right">Alterar Dados</button>
+                        <button class="btn btn-info btn-fill pull-right">@lang('dictionary.update')</button>
                         <div class="clearfix"></div>
                     </form>
                 </div>

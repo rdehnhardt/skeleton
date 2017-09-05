@@ -9,4 +9,5 @@ return [
     'register' => 'Register',
     'name' => 'Name',
     'picture' => 'Picture',
+    'update' => 'Update',
 ];
