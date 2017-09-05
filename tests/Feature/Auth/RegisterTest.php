@@ -17,11 +17,11 @@ class RegisterTest extends TestCase
 
         $this
             ->post(route('register'), $user)
-            ->assertRedirect('/home');
+            ->assertRedirect('/back');
 
         $this
             ->post(route('login'), $user)
-            ->assertRedirect('/home');
+            ->assertRedirect('/back');
 
         $this->assertDatabaseHas('users', ['email' => $user['email']]);
     }

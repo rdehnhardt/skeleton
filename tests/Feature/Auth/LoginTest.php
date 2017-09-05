@@ -17,7 +17,7 @@ class LoginTest extends TestCase
 
         $this
             ->post(route('login'), ['email' => $user->email, 'password' => 'secret'])
-            ->assertRedirect('/home');
+            ->assertRedirect('/back');
     }
 
     /** @test */
