@@ -1,4 +1,4 @@
-@extends('layouts.guest')
+@extends('guest.layout')
 
 @section('content')
     <div class="flex-center position-ref full-height">

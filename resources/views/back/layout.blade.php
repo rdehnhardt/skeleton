@@ -1,11 +1,11 @@
-@extends('layouts.theme')
+@extends('theme')
 
 @section('body')
     <div class="wrapper">
-        @include('layouts.dashboard.sidebar')
+        @include('back.partials.sidebar')
 
         <div class="main-panel">
-            @include('layouts.dashboard.header')
+            @include('back.partials.header')
 
             <div class="content">
                 <div class="container-fluid">

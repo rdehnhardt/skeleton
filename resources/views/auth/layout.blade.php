@@ -1,4 +1,4 @@
-@extends('layouts.theme')
+@extends('theme')
 
 @section('body')
     <nav class="navbar navbar-transparent navbar-absolute">
