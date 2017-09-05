@@ -25,8 +25,12 @@ class ProfileController extends Controller
      */
     public function update(ProfileRequest $request)
     {
-        dd($request->all());
-        
-        return view('back.common.profile');
+        try {
+            flash(trans('messages.success'), 'success');
+        } catch (\Exception $e) {
+            flash(trans('messages.exception'), 'danger');
+        }
+
+        return redirect(route('back.profile'));
     }
 }

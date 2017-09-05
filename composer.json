@@ -9,7 +9,9 @@
   "type": "project",
   "require": {
     "php": ">=7.0.0",
+    "cviebrock/image-validator": "^2.2",
     "fideloper/proxy": "~3.3",
+    "laracasts/flash": "^3.0",
     "laravel/framework": "5.5.*",
     "laravel/tinker": "~1.0",
     "rdehnhardt/html": "^5.5"
