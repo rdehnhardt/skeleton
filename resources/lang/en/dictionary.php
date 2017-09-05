@@ -8,4 +8,5 @@ return [
     'users' => 'Users',
     'register' => 'Register',
     'name' => 'Name',
+    'picture' => 'Picture',
 ];

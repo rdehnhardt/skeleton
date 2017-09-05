@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Controllers\Back;
+namespace App\Http\Controllers\Back\Common;
 
 use App\Http\Controllers\Controller;
 
-class DashboardController extends Controller
+class ProfileController extends Controller
 {
     /**
      * Show the application dashboard.
@@ -13,6 +13,6 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('back.home');
+        return view('back.common.profile');
     }
 }

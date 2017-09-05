@@ -1,5 +1,7 @@
 <?php
 
 return [
-    'dashboard' => 'Dashboard'
+    'back.success' => 'Operation has been successful',
+    'dashboard' => 'Dashboard',
+    'profile' => 'Profile',
 ];

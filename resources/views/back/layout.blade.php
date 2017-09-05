@@ -2,10 +2,10 @@
 
 @section('body')
     <div class="wrapper">
-        @include('back.partials.sidebar')
+        @include('back.layout.sidebar')
 
         <div class="main-panel">
-            @include('back.partials.header')
+            @include('back.layout.header')
 
             <div class="content">
                 <div class="container-fluid">
