@@ -6,7 +6,7 @@ use App\Models\User;
 use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Tests\TestCase;
 
-class EmailTest extends TestCase
+class ResetTest extends TestCase
 {
     use DatabaseMigrations;
 
@@ -15,7 +15,11 @@ class EmailTest extends TestCase
     {
         $user = factory(User::class)->create();
 
-        $this->post(route('password.email'), ['email' => $user->email]);
+        $this->post(route('password.request'), [
+            'email' => $user->email,
+            'password' => 'new-password',
+            'password_confirmation' => 'new-password',
+        ]);
 
         $this->assertTrue(true);
     }
