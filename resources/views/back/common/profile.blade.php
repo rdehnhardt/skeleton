@@ -7,7 +7,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="content">
-                    {!! Form::open(['method' => 'put', 'route' => ['back.profile'], 'files' => true]) !!}
+                    {!! Form::open(['method' => 'post', 'route' => ['back.profile'], 'files' => true]) !!}
                         <div class="row">
                             <div class="col-md-6">
                                 {!! Form::openGroup('name', trans('dictionary.name')) !!}

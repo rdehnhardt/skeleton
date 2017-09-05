@@ -17,7 +17,7 @@ class Back
 
             # Profile
             $router->get('/profile', 'Common\\ProfileController@index')->name('back.profile');
-            $router->put('/profile', 'Common\\ProfileController@update');
+            $router->post('/profile', 'Common\\ProfileController@update');
         });
     }
 }
