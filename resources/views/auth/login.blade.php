@@ -8,7 +8,7 @@
 
         <div class="card card-hidden">
             <div class="header text-center">Acesso Restrito</div>
-            <div class="content">
+            <div class="content padding-h-40">
                 <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                     <label for="email">Endereço de email</label>
                     <input type="email" id="email" name="email" placeholder="Insira seu email" class="form-control" value="{{ old('email') }}">
@@ -37,11 +37,24 @@
                 </div>
             </div>
             <div class="footer text-center">
-                <button type="submit" class="btn btn-fill btn-warning btn-wd">Acessar</button>
+                <button type="submit" class="btn btn-fill btn-primary btn-wd">Acessar</button>
             </div>
             <div class="footer text-center">
                 <a href="{{ route('password.request') }}">Esqueceu sua senha?</a>
             </div>
         </div>
     </form>
+@endsection
+
+@section('page-scripts')
+    <script type="text/javascript">
+        $().ready(function () {
+            lbd.checkFullPageBackgroundImage();
+
+            setTimeout(function () {
+                // after 1000 ms we add the class animated to the login/register card
+                $('.card').removeClass('card-hidden');
+            }, 700)
+        });
+    </script>
 @endsection
