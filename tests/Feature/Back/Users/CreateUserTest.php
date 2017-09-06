@@ -39,4 +39,14 @@ class CreateUserTest extends TestCase
             ->post(route('back.users.store'), $data)
             ->assertRedirect(route('back.users.index'));
     }
+
+    /** @test */
+    public function unauthorized_user_canot_create_user()
+    {
+        $data = raw(User::class, ['password' => 'password', 'password_confirmation' => 'password']);
+
+        $this
+            ->post(route('back.users.store'), $data)
+            ->assertRedirect(route('login'));
+    }
 }
