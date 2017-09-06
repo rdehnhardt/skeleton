@@ -27,7 +27,7 @@ class ProfileTest extends TestCase
 
         $this
             ->get(route('back.profile'))
-            ->assertSee($user->name)
+            ->assertSee(trans('back.profile'))
             ->assertSee($user->email);
     }
 }

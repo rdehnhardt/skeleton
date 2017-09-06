@@ -52,4 +52,42 @@ class UsersController extends Controller
 
         return redirect(route('back.users.index'));
     }
+
+    /**
+     * Show the users edit page.
+     *
+     * @param User $user
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(User $user)
+    {
+        return view('back.users.edit', compact('user'));
+    }
+
+    /**
+     * Show the users edit page.
+     *
+     * @param User $user
+     * @param UserRequest $request
+     * @return \Illuminate\Http\Response
+     */
+    public function update(User $user, UserRequest $request)
+    {
+        try {
+            $user->name = $request->get('name');
+            $user->email = $request->get('email');
+
+            if ($request->has('password')) {
+                $user->password = bcrypt($request->get('password'));
+            }
+
+            $user->save();
+
+            flash(trans('messages.success'), 'success');
+        } catch (\Exception $e) {
+            flash(trans('messages.exception'), 'danger');
+        }
+
+        return redirect(route('back.users.index'));
+    }
 }
