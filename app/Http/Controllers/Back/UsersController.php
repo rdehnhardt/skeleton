@@ -90,4 +90,23 @@ class UsersController extends Controller
 
         return redirect(route('back.users.index'));
     }
+
+    /**
+     * Show the users edit page.
+     *
+     * @param User $user
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(User $user)
+    {
+        try {
+            $user->delete();
+
+            flash(trans('messages.success'), 'success');
+        } catch (\Exception $e) {
+            flash(trans('messages.exception'), 'danger');
+        }
+
+        return redirect(route('back.users.index'));
+    }
 }
