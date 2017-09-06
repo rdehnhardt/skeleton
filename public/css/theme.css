@@ -14966,6 +14966,11 @@ star {
   min-width: 90px;
 }
 
+.table .td-actions form {
+  float: left;
+  margin: 0 5px;
+}
+
 .table > tbody > tr {
   position: relative;
 }

@@ -13,24 +13,38 @@
                 <div class="content">
                     <table class="table table-hover">
                         <thead>
-                        <tr>
-                            <th>#</th>
-                            <th>@lang('dictionary.name')</th>
-                            <th>@lang('dictionary.email')</th>
-                        </tr>
+                            <tr>
+                                <th>#</th>
+                                <th>@lang('dictionary.name')</th>
+                                <th>@lang('dictionary.email')</th>
+                                <th width="15%">&nbsp;</th>
+                            </tr>
                         </thead>
                         <tbody>
-                        @forelse($users as $user)
-                            <tr>
-                                <td>{{ $user->id }}</td>
-                                <td>{{ $user->name }}</td>
-                                <td>{{ $user->email }}</td>
-                            </tr>
-                        @empty
-                            <tr>
-                                <td colspan="3" class="text-center">@lang('messages.no-records')</td>
-                            </tr>
-                        @endforelse
+                            @forelse($users as $user)
+                                <tr>
+                                    <td>{{ $user->id }}</td>
+                                    <td>{{ $user->name }}</td>
+                                    <td>{{ $user->email }}</td>
+                                    <td class="td-actions">
+                                        {!! Form::open(['method' => 'get', 'route' => ['back.users.edit', $user->id]]) !!}
+                                        <button class="btn btn-default btn-sm">
+                                            <i class="fa fa-pencil"></i>
+                                        </button>
+                                        {!! Form::close() !!}
+
+                                        {!! Form::open(['method' => 'delete', 'route' => ['back.users.destroy', $user->id]]) !!}
+                                        <button class="btn btn-danger btn-sm">
+                                            <i class="fa fa-trash"></i>
+                                        </button>
+                                        {!! Form::close() !!}
+                                    </td>
+                                </tr>
+                            @empty
+                                <tr>
+                                    <td colspan="3" class="text-center">@lang('messages.no-records')</td>
+                                </tr>
+                            @endforelse
                         </tbody>
                     </table>
                 </div>

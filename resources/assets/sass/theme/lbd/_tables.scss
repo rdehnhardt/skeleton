@@ -1,7 +1,5 @@
-.table{
-   
-   .radio,
-   .checkbox{
+.table {
+    .radio, .checkbox {
         position: relative;
         height: 20px;
         display: block;
@@ -9,23 +7,24 @@
         padding: 0px 0px;
         margin: 0px 5px;
         text-align: center;
-        
-        .icons{
+
+        .icons {
             left: 5px;
         }
-   }
-   > thead > tr > th,
-   > tbody > tr > th,
-   > tfoot > tr > th,
-   > thead > tr > td,
-   > tbody > tr > td,
-   > tfoot > tr > td{
-       padding: 12px 8px;
-       vertical-align: middle;
-       border-color: $light-gray;
-   }
-   
-    > thead > tr > th{
+    }
+
+    > thead > tr > th,
+    > tbody > tr > th,
+    > tfoot > tr > th,
+    > thead > tr > td,
+    > tbody > tr > td,
+    > tfoot > tr > td {
+        padding: 12px 8px;
+        vertical-align: middle;
+        border-color: $light-gray;
+    }
+
+    > thead > tr > th {
         border-bottom-width: 1px;
         font-size: $font-size-small;
         text-transform: uppercase;
@@ -34,80 +33,86 @@
         padding-bottom: 5px;
     }
 
-   .td-actions .btn{
+    .td-actions .btn {
         @include opacity(0.36);
-    
-        &.btn-xs{
+
+        &.btn-xs {
             padding-left: 3px;
             padding-right: 3px;
         }
     }
-    .td-actions{
+
+    .td-actions {
         min-width: 90px;
+
+        form {
+            float: left;
+            margin: 0 5px;
+        }
     }
-    
-    > tbody > tr{
+
+    > tbody > tr {
         position: relative;
-        
-        &:hover{
-            .td-actions .btn{
+
+        &:hover {
+            .td-actions .btn {
                 @include opacity(1);
             }
         }
     }
-} 
+}
 
-.table-bigboy{
-    > thead > tr > th{
+.table-bigboy {
+    > thead > tr > th {
         font-size: $font-size-h6;
         text-transform: uppercase;
         color: $dark-gray;
         font-weight: $font-weight-normal;
     }
-    > tbody > tr > td{
+    > tbody > tr > td {
         font-size: $font-size-base;
-        
-        b{
+
+        b {
             display: block;
             margin-bottom: 5px;
         }
-    } 
+    }
     .td-name,
     {
-       font-weight: $font-weight-light;
-       font-size: $font-size-h5;
-   }
-    .td-name{
+        font-weight: $font-weight-light;
+        font-size: $font-size-h5;
+    }
+    .td-name {
         min-width: 240px;
     }
-    .td-number{
+    .td-number {
         text-align: right;
         min-width: 110px;
-        
-        small{
+
+        small {
             margin-right: 3px;
         }
     }
-    
-    .td-actions{
+
+    .td-actions {
         width: 60px;
         min-width: auto;
-        
-        .btn{
+
+        .btn {
             float: right;
         }
     }
-    .img-container{
+    .img-container {
         width: 180px;
         height: 120px;
         overflow: hidden;
         display: block;
-        
+
         border-radius: $border-radius-large;
-        
-        img{
+
+        img {
             width: 100%;
-        }    
+        }
     }
 }
 
