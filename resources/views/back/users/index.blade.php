@@ -17,7 +17,7 @@
                                 <th>#</th>
                                 <th>@lang('dictionary.name')</th>
                                 <th>@lang('dictionary.email')</th>
-                                <th width="15%">&nbsp;</th>
+                                <th width="10%">&nbsp;</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -28,13 +28,13 @@
                                     <td>{{ $user->email }}</td>
                                     <td class="td-actions">
                                         {!! Form::open(['method' => 'get', 'route' => ['back.users.edit', $user->id]]) !!}
-                                        <button class="btn btn-default btn-sm">
+                                        <button class="btn btn-default btn-xs">
                                             <i class="fa fa-pencil"></i>
                                         </button>
                                         {!! Form::close() !!}
 
-                                        {!! Form::open(['method' => 'delete', 'route' => ['back.users.destroy', $user->id]]) !!}
-                                        <button class="btn btn-danger btn-sm">
+                                        {!! Form::open(['method' => 'delete', 'route' => ['back.users.destroy', $user->id], 'data-confirm' => trans('messages.confirm'), 'data-title' => trans('messages.confirm-title'), 'data-type' => 'warning']) !!}
+                                        <button class="btn btn-danger btn-xs">
                                             <i class="fa fa-trash"></i>
                                         </button>
                                         {!! Form::close() !!}
@@ -47,6 +47,8 @@
                             @endforelse
                         </tbody>
                     </table>
+
+                    {{ $users->links() }}
                 </div>
             </div>
         </div>

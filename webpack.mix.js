@@ -24,5 +24,7 @@ mix
     .scripts(theme, 'public/js/theme.js')
 
     .sass('resources/assets/sass/dashboard.scss', 'public/css')
-    .js('resources/assets/js/dashboard.js', 'public/js');
+    .js('resources/assets/js/dashboard.js', 'public/js')
+
+    .version();
 

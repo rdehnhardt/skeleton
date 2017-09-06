@@ -11,4 +11,5 @@ return [
     'picture' => 'Picture',
     'update' => 'Update',
     'create' => 'Create',
+    'back' => 'Back',
 ];

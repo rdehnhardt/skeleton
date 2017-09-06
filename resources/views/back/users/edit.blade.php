@@ -3,7 +3,7 @@
 @section('title', trans('dictionary.users'))
 
 @push('page-actions')
-    <a href="{{ route('back.users.create') }}" class="btn btn-fill btn-primary">@lang('messages.add-new')</a>
+    <a href="{{ route('back.users.index') }}" class="btn btn-default">@lang('dictionary.back')</a>
 @endpush
 
 @section('content')

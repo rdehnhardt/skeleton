@@ -12,10 +12,11 @@ class UsersController extends Controller
      * Show the users page.
      *
      * @return \Illuminate\Http\Response
+     * @throws \InvalidArgumentException
      */
     public function index()
     {
-        $users = User::all();
+        $users = User::paginate(10);
 
         return view('back.users.index', compact('users'));
     }
