@@ -10,7 +10,7 @@ class DashboardTest extends TestCase
     use DatabaseMigrations;
 
     /** @test */
-    public function an_unauthenticated_user_may_not_visit_dashboard()
+    public function unauthorized_user_may_not_visit_dashboard()
     {
         $this
             ->get(route('back.dashboard'))
@@ -18,7 +18,7 @@ class DashboardTest extends TestCase
     }
 
     /** @test */
-    public function an_authenticated_user_may_visit_dashboard()
+    public function authorized_user_may_visit_dashboard()
     {
         $this->signIn();
 

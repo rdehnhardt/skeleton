@@ -11,6 +11,8 @@ class Guest
      */
     public function map(Registrar $router)
     {
-        $router->get('/', 'HomeController@index')->name('guest.home');
+        $router->group(['as' => 'guest.'], function () use ($router) {
+            $router->get('/', 'HomeController@index')->name('home');
+        });
     }
 }

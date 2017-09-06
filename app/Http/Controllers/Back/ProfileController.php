@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers\Back\Common;
+namespace App\Http\Controllers\Back;
 
 use App\Http\Controllers\Controller;
-use App\Http\Requests\Back\Common\ProfileRequest;
+use App\Http\Requests\Back\UserRequest;
 use Illuminate\Http\UploadedFile;
 
 class ProfileController extends Controller
@@ -22,31 +22,31 @@ class ProfileController extends Controller
      */
     public function index()
     {
-        return view('back.common.profile');
+        return view('back.profile');
     }
 
     /**
      * update the user profile
      *
-     * @param ProfileRequest $request
+     * @param UserRequest $request
      * @return \Illuminate\Http\Response
      */
-    public function update(ProfileRequest $request)
+    public function update(UserRequest $request)
     {
         try {
-            if ($request->get('name')) {
+            if ($request->has('name')) {
                 auth()->user()->name = $request->get('name');
             }
 
-            if ($request->get('email')) {
+            if ($request->has('email')) {
                 auth()->user()->email = $request->get('email');
             }
 
-            if ($request->get('password')) {
+            if ($request->has('password')) {
                 auth()->user()->password = bcrypt($request->get('password'));
             }
 
-            if ($request->file('picture')) {
+            if ($request->hasFile('picture')) {
                 if ($filename = $this->upload($request->file('picture'))) {
                     auth()->user()->picture = $filename;
                 }

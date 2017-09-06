@@ -11,13 +11,16 @@ class Back
      */
     public function map(Registrar $router)
     {
-        $router->group(['prefix' => 'back', 'middleware' => 'auth'], function () use ($router) {
+        $router->group(['prefix' => 'back', 'middleware' => 'auth', 'as' => 'back.'], function () use ($router) {
             # Dashboard
-            $router->get('/', 'Common\\DashboardController@index')->name('back.dashboard');
+            $router->get('/', 'DashboardController@index')->name('dashboard');
 
             # Profile
-            $router->get('/profile', 'Common\\ProfileController@index')->name('back.profile');
-            $router->post('/profile', 'Common\\ProfileController@update');
+            $router->post('profile', 'ProfileController@update')->name('profile.store');
+            $router->get('profile', 'ProfileController@index')->name('profile');
+
+            # Users
+            $router->resource('users', 'UsersController');
         });
     }
 }

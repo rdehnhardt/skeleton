@@ -10,4 +10,5 @@ return [
     'name' => 'Name',
     'picture' => 'Picture',
     'update' => 'Update',
+    'create' => 'Create',
 ];

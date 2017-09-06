@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\Back\Common;
+namespace App\Http\Requests\Back;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ProfileRequest extends FormRequest
+class UserRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -23,11 +23,9 @@ class ProfileRequest extends FormRequest
      */
     public function rules()
     {
-        $user = auth()->user()->id;
-
         return [
             'name' => 'required',
-            'email' => "required|email|unique:users,email,$user",
+            'email' => 'required|email|unique:users,email,' . auth()->user()->id,
             'picture' => 'image|mimes:jpeg,jpg,png|image_aspect:1',
             'password' => 'confirmed',
         ];

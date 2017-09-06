@@ -13,7 +13,7 @@ class ProfileTest extends TestCase
     use DatabaseMigrations;
 
     /** @test */
-    public function an_unauthenticated_user_may_not_visit_profile()
+    public function unauthorized_user_may_not_visit_profile()
     {
         $this
             ->get(route('back.profile'))
@@ -21,7 +21,7 @@ class ProfileTest extends TestCase
     }
 
     /** @test */
-    public function an_authenticated_user_may_visit_profile()
+    public function authorized_user_may_visit_profile()
     {
         $this->signIn($user = create(User::class));
 

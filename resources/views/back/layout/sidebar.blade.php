@@ -25,8 +25,8 @@
         </div>
 
         <ul class="nav">
-            <li class="{{ Route::is('restricted.users') ? 'active' : '' }}">
-                <a href="/">
+            <li class="{{ Route::is('back.users.index') ? 'active' : '' }}">
+                <a href="{{ route('back.users.index') }}">
                     <i class="fa fa-users"></i>
                     <p>@lang('dictionary.users')</p>
                 </a>
