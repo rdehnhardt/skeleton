@@ -42,7 +42,7 @@ class ProfileController extends Controller
                 auth()->user()->email = $request->get('email');
             }
 
-            if ($request->has('password')) {
+            if ($request->get('password')) {
                 auth()->user()->password = bcrypt($request->get('password'));
             }
 
