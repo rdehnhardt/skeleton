@@ -25,6 +25,13 @@
         </div>
 
         <ul class="nav">
+            <li class="{{ Route::is('back.contacts.index') ? 'active' : '' }}">
+                <a href="{{ route('back.contacts.index') }}">
+                    <i class="fa fa-address-book"></i>
+                    <p>@lang('dictionary.contacts')</p>
+                </a>
+            </li>
+
             <li class="{{ Route::is('back.users.index') ? 'active' : '' }}">
                 <a href="{{ route('back.users.index') }}">
                     <i class="fa fa-users"></i>

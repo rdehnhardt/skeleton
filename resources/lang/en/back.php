@@ -6,5 +6,8 @@ return [
     'profile' => 'Profile',
     'users' => [
         'create' => 'Create new user'
+    ],
+    'contacts' => [
+        'create' => 'Create new contact'
     ]
 ];

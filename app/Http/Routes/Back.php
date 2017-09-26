@@ -21,6 +21,9 @@ class Back
 
             # Users
             $router->resource('users', 'UsersController');
+
+            # Contacts
+            $router->resource('contacts', 'ContactsController');
         });
     }
 }
