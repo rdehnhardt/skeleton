@@ -61,7 +61,7 @@
                 <div class="content">
                     <div class="author">
                         <a href="{{ route('back.profile') }}">
-                            <img class="avatar border-gray" src="/storage/profile/{{ auth()->user()->picture }}" alt="{{ Auth::user()->name }}"/>
+                            <img class="avatar border-gray" src="{{Auth::user()->picture != NULL ? '/storage/profile/' : '/images/default-profile.png'}}{{ Auth::user()->picture }}" alt="{{ Auth::user()->name }}"/>
 
                             <h4 class="title">{{ auth()->user()->name }}<br/>
                                 <small>{{ auth()->user()->email }}</small>

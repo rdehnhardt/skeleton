@@ -15,7 +15,7 @@
         <div class="user">
             <a href="{{ route('back.profile') }}">
                 <div class="photo">
-                    <img src="/storage/profile/{{ Auth::user()->picture }}" alt="{{ Auth::user()->name }}"/>
+                    <img src="{{Auth::user()->picture != NULL ? '/storage/profile/' : '/images/default-profile.png'}}{{ Auth::user()->picture }}" alt="{{ Auth::user()->name }}"/>
                 </div>
             </a>
 
