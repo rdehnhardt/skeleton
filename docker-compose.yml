@@ -18,13 +18,6 @@ services:
     ports:
       - "9000:9000"
 
-  php-queue:
-    build: .docker/php-worker
-    volumes:
-      - ./:/var/www/app
-    networks:
-      - backend
-
   php-console:
     build: .docker/php-console
     volumes:
@@ -44,20 +37,20 @@ services:
     links:
       - php-fpm
 
-  mysql:
+  db:
     env_file:
-      - .env
-    build: .docker/mysql
-    container_name: ${DB_HOST}
+     - .env
+    build: .docker/postgres
+    container_name: ${DB_CONNECTION}
+    restart: always
     environment:
-      - MYSQL_DATABASE=${DB_DATABASE}
-      - MYSQL_USER=${DB_USERNAME}
-      - MYSQL_PASSWORD=${DB_PASSWORD}
-      - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
+      POSTGRES_DB: ${DB_DATABASE}
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
     ports:
-      - "${DB_PORT}:3306"
+      - "${DB_PORT}:5432"
     networks:
-      - backend
+     - backend
 
   beanstalkd:
     env_file:
