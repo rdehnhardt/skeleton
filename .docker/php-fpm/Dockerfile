@@ -60,9 +60,12 @@ RUN apk add --update --no-cache autoconf g++ imagemagick-dev libtool make pcre-d
     && docker-php-ext-enable imagick \
     && apk del autoconf g++ libtool make pcre-dev
 
-# Install composer
-RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+# Laravel writing rights
+RUN mkdir -p /var/www/app
+RUN chgrp -R www-data /var/www/app
+RUN chmod -R ug+rwx /var/www/app
 
+# Configure workdir
 WORKDIR /var/www/app
 
 # Open port 9000

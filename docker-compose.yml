@@ -1,7 +1,7 @@
 version: '3'
 
 volumes:
-  postgres:
+  database:
   redis:
 
 networks:
@@ -44,27 +44,26 @@ services:
     links:
       - php-fpm
 
-  postgres:
+  mysql:
     env_file:
       - .env
+    build: .docker/mysql
     container_name: ${DB_HOST}
-    build: .docker/postgres
-    volumes:
-      - postgres:/var/lib/postgresql/data
-    ports:
-      - "${DB_PORT}:5432"
     environment:
-      - POSTGRES_DB=${DB_DATABASE}
-      - POSTGRES_USER=${DB_USERNAME}
-      - POSTGRES_PASSWORD=${DB_PASSWORD}
+      - MYSQL_DATABASE=${DB_DATABASE}
+      - MYSQL_USER=${DB_USERNAME}
+      - MYSQL_PASSWORD=${DB_PASSWORD}
+      - MYSQL_ROOT_PASSWORD=${DB_PASSWORD}
+    ports:
+      - "${DB_PORT}:3306"
     networks:
       - backend
 
   beanstalkd:
     env_file:
       - .env
-    container_name: ${BEANSTALKD_HOST}
     build: .docker/beanstalkd
+    container_name: ${BEANSTALKD_HOST}
     ports:
       - "${BEANSTALKD_PORT}:11300"
     privileged: true

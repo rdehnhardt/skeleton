@@ -1,5 +1,7 @@
 FROM nginx:1.13-alpine
 
+WORKDIR /var/www/app
+
 COPY nginx.conf /etc/nginx/nginx.conf
 COPY vhost.conf /etc/nginx/conf.d/default.conf
 
