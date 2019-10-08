@@ -26,7 +26,7 @@ class UserRequest extends FormRequest
         return [
             'name' => 'required',
             'email' => 'required|email|unique:users,email,' . auth()->user()->id,
-            'picture' => 'image|mimes:jpeg,jpg,png|image_aspect:1',
+            'picture' => 'image|mimes:jpeg,jpg,png|dimensions:ratio=1/1',
             'password' => 'confirmed',
         ];
     }
