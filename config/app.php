@@ -167,7 +167,6 @@ return [
         /*
          * Package Service Providers...
          */
-        Cviebrock\ImageValidator\ImageValidatorServiceProvider::class,
 
         /*
          * Application Service Providers...

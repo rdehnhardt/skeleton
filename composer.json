@@ -9,12 +9,11 @@
   "type": "project",
   "require": {
     "php": ">=7.0.0",
-    "cviebrock/image-validator": "^2.2",
-    "fideloper/proxy": "~3.3",
-    "laracasts/flash": "^3.0",
-    "laravel/framework": "5.5.*",
+    "fideloper/proxy": "~4.2",
+    "laracasts/flash": "~3.0",
+    "laravel/framework": "~6.0",
     "laravel/tinker": "~1.0",
-    "rdehnhardt/html": "^5.5"
+    "rdehnhardt/html": "~6.0"
   },
   "require-dev": {
     "filp/whoops": "~2.0",
